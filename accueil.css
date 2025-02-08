@@ -4,7 +4,6 @@ div.entete{
     padding: none;
     width: 100%;
     font-size: 50px;
-    color: white;
     padding-left: 5cm;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -14,6 +13,10 @@ div.entete{
     right: 0;
 }
 
+div.entete > a{
+    text-decoration: none;
+    color: white;
+}
 
 div.barre{
     padding-top: 3cm;

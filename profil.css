@@ -4,7 +4,6 @@ div.entete{
     padding: none;
     width: 100%;
     font-size: 50px;
-    color: white;
     padding-left: 5cm;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -12,6 +11,11 @@ div.entete{
     top: 0; /* Colle en haut */
     left: 0; /* Colle sur le côté gauche */
     right: 0;
+}
+
+div.entete > a{
+    text-decoration: none;
+    color: white;
 }
 
 

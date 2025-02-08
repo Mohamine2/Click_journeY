@@ -1,0 +1,79 @@
+div.entete{
+    background-color: #42a350;
+    border: none;
+    padding: none;
+    width: 100%;
+    font-size: 50px;
+    padding-left: 5cm;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed; /* Fixe l'entête en haut */
+    top: 0; /* Colle en haut */
+    left: 0; /* Colle sur le côté gauche */
+    right: 0;
+}
+
+div.entete > a{
+    text-decoration: none;
+    color: white;
+}
+
+div.form{
+    padding-top: 4cm;
+    border: none;
+}
+
+legend{
+    border: solid;
+    background-color: grey;
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+input[type="date"]{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+}
+
+input[type="number"]{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+}
+
+button[type="submit"]{
+    background-color: lightgreen;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+select{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+}
+
+
+div.pied{
+    background-color: #2c662c;
+    color: white;
+    padding-left: 5cm;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
