@@ -6,6 +6,35 @@
     <title>Recherche</title>
 </head>
 <body>
-    
+    <form method="post">
+        <fieldset>
+            <legend> Trouvez votre excursion </legend>
+            <p> Départ </p>
+            <select name="depart">
+                <option value="Paris" selected="selected" > Paris </option>
+                <option value="Lyon"> Lyon </option>
+                <option value="Marseille"> Marseille </option>
+            </select>
+            <p> Destination </p>
+            <select name="destination">
+                <option value="Marrakech" selected="selected" > Marrakech </option>
+                <option value="Oman"> Oman </option>
+                <option value="Dakar"> Dakar </option>
+            </select>
+            <label for="datedep"> Date de départ </label>
+            <input type="date" name="datedep" required />
+            <p> Durée du Départ </p>
+            <select name="duree">
+                <option value="3j" selected="selected" > 3 jours </option>
+                <option value="5j"> 5 jours </option>
+                <option value="7j"> 7 jours </option>
+            </select>
+            <label for="adultes"> Adultes </label>
+            <input type="number" name="adultes" value="1" min="1" max="15" required />
+            <label for="enfants"> Enfants </label>
+            <input type="number" name="enfants" value="0" min="0" max="15" required />
+            <button type="submit"> Chercher une excursion </button>
+        </fieldset>
+    </form>
 </body>
 </html>
