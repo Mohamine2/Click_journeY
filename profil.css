@@ -1,0 +1,28 @@
+div.entete{
+    background-color: #42a350;
+    border: none;
+    padding: none;
+    width: 100%;
+    font-size: 50px;
+    color: white;
+    padding-left: 5cm;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed; /* Fixe l'entête en haut */
+    top: 0; /* Colle en haut */
+    left: 0; /* Colle sur le côté gauche */
+    right: 0;
+}
+
+
+div.pied{
+    background-color: #2c662c;
+    color: white;
+    padding-left: 5cm;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
