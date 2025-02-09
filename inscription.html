@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="inscription.css" />
     <title>Inscription</title>
 </head>
+
 <body>
 
     <div class="entete">
         <a href="accueil.html"> logo </a>
     </div>
 
-    <h3> Formulaire d"inscription </h3>
-    <form method="post">
-        <label for="nom"> Nom: </label>
-        <input type="text" name="nom" id="nom" required />
-        <label for="prenom"> Prénom: </label>
-        <input type="text" name="prenom" id="prenom" required />
-        <label for="telephone"> Téléphone: </label>
-        <input type="tel" id="telephone" name="telephone" pattern="(\+33|0)[1-9][0-9]{8}" placeholder="+33 6 12 34 56 78" required>
-        <label for="mail"> Adresse Mail: </label>
-        <input type="email" name="mail" id="mail" required/>
-        <label for="mdp"> Création Mot de passe: </label>
-        <input type="password" name="mdp" id="mdp" required/>
-        <label for="mdp"> Confirmer Mot de passe: </label>
-        <input type="password" name="mdp" id="mdp2" required/>
-        <button type="submit"> Confirmer </button>
-    </form>
+    <div class="inscription">
+        <h3> Formulaire d'inscription </h3>
+        <form method="post">
+            <label for="nom"> Nom: </label>
+            <input type="text" name="nom" id="nom" required /> <br>
+            <label for="prenom"> Prénom: </label>
+            <input type="text" name="prenom" id="prenom" required /> <br>
+            <label for="telephone"> Téléphone: </label>
+            <input type="tel" id="telephone" name="telephone" pattern="(\+33|0)[1-9][0-9]{8}"
+                placeholder="+33 6 12 34 56 78" required> <br>
+            <label for="mail"> Adresse Mail: </label>
+            <input type="email" name="mail" id="mail" required /> <br>
+            <label for="mdp"> Création Mot de passe: </label>
+            <input type="password" name="mdp" id="mdp" required /> <br>
+            <label for="mdp"> Confirmer Mot de passe: </label>
+            <input type="password" name="mdp" id="mdp2" required /> <br>
+            <button type="submit"> Confirmer </button>
+        </form>
+    </div>
 
     <div class="pied">
         "nous contacter"
         "droits etc"
         logo
     </div>
-    
+
 </body>
+
 </html>
