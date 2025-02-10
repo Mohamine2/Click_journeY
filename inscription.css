@@ -1,5 +1,5 @@
 div.entete {
-    background-color: #42a350;
+    background-color: #d6bf61;
     border: none;
     padding: none;
     width: 100%;
@@ -24,7 +24,7 @@ div.entete>a {
 h3{
     padding-left: 5cm;
     font-size: 35px;
-    padding-top: 4cm;
+    padding-top: 2cm;
 
 }
 
@@ -34,6 +34,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-bottom: 30px;
     /* Espacement entre les champs */
 
 }
@@ -47,7 +48,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 }
 
 button[type="submit"]{
-    background-color: lightgreen;
+    background-color: rgb(184, 170, 51);
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;

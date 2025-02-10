@@ -1,5 +1,5 @@
 div.entete {
-    background-color: #42a350;
+    background-color: #d6bf61;
     border: none;
     padding: none;
     width: 100%;
@@ -21,19 +21,37 @@ div.entete > a{
     color: white;
 }
 
-div.barre{
-    padding-top: 3cm;
-    padding-left: 5cm;
+.barre {
+    display: flex;         /* Active le mode flexbox */
+    align-items: center;   /* Centre verticalement */
+    justify-content: space-between; /* Répartit les éléments */
+    background-color: #f0f0f0;
+    padding: 10px 20px;
 }
 
-div.barre li{
-    display: inline-block;
-    padding-left: 15px;
+.barre ul {
+    list-style: none; /* Supprime les puces */
+    display: flex;    /* Met les <li> en ligne */
+    gap: 20px;        /* Espacement entre les liens */
+    padding: 0;
+    margin: 0;
 }
 
-div.barre li > a{
+.barre li {
+    display: inline;
+}
+
+.barre a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
+}
+
+.barre input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 div.page{
