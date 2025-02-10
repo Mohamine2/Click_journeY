@@ -2,7 +2,6 @@ div.entete {
     background-color: #d6bf61;
     border: none;
     padding: none;
-    width: 100%;
     font-size: 50px;
     padding-left: 5cm;
     padding-top: 30px;
@@ -55,7 +54,19 @@ div.entete > a{
 }
 
 div.page{
-    padding-left: 5cm;
+    padding-left: 5cm;    
+}
+
+body {
+    background-image: url('desert2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
+    margin: 0; /* Supprime les marges du body */
+
+    background-color: rgba(255, 255, 255, 0.5); /* Couche blanche semi-transparente */
+    background-blend-mode: overlay; /* Fusionne la couleur avec l'image */
 }
 
 /*div.pied{
