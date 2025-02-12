@@ -4,8 +4,8 @@ div.entete {
     padding: none;
     font-size: 50px;
     padding-left: 5cm;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     position: relative;
     margin-top: 0;
 }
@@ -20,13 +20,6 @@ div.entete>a {
     color: white;
 }
 
-h3{
-    padding-left: 5cm;
-    font-size: 35px;
-    padding-top: 2cm;
-
-}
-
 form {
     width: 300px;
     margin: 0 auto;
@@ -38,7 +31,8 @@ form {
 
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="password"]{
+
+input{
     border-radius: 5px;
     border-style: solid;
     border-color: grey;
@@ -46,7 +40,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 
 }
 
-button[type="submit"]{
+button{
     background-color: rgb(184, 170, 51);
     padding-left: 40px;
     padding-right: 40px;
@@ -56,7 +50,55 @@ button[type="submit"]{
     color: white;
     font-size: 25px;
     border-radius: 5px;
-    
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+div.inscription{
+    background-color: white;  
+    width: 400px;  
+    height: 600px;
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+
+    /* Ajout pour centrer au milieu de la page */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button:hover{
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transform: scale(1.1);
+    background-color: blue;
+    cursor: pointer;
+}
+
+input{
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid grey;
+}
+
+input:hover{
+    border-color: yellow;
+    box-shadow: 0 0 5px darkorange;
+}
+
+body{
+    background-image: url('desert2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
+    margin: 0;
 }
 
 /*div.pied{

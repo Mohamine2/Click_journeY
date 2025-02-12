@@ -4,10 +4,8 @@ header {
     padding: none;
     font-size: 50px;
     padding-left: 5cm;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    position: relative;
-    margin-top: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 header > a{
@@ -18,10 +16,6 @@ header > a{
 body {
     margin: 0;
     padding: 0;
-}
-div.entete > a{
-    text-decoration: none;
-    color: white;
 }
 
 
@@ -48,7 +42,7 @@ form{
     flex-direction: column;
     width: 300px;
     margin: 0 auto;
-    gap: 30px;
+    gap: 20px;
     padding-bottom: 30px;
     margin: 20px;
 }
