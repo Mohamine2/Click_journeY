@@ -1,13 +1,10 @@
-div.entete {
+header {
     background-color: #d6bf61;
     border: none;
-    padding: none;
     font-size: 50px;
     padding-left: 5cm;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    position: relative;
-    margin-top: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 body {
@@ -15,18 +12,18 @@ body {
     padding: 0;
 }
 
-div.entete > a{
+header > a{
     text-decoration: none;
     color: white;
 }
 
 div.form{
-    padding-top: 4cm;
+    padding-top: 10px;
     border: none;
 }
 
 legend{
-    background-color: grey;
+    background-color: darkgoldenrod;
     color: white;
     padding-top: 10px;
     padding-left: 20px;
@@ -36,16 +33,35 @@ legend{
     border-style: none;
 }
 
-input[type="date"]{
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid grey;
     border-radius: 5px;
-    border-style: solid;
-    border-color: grey;
+    outline: none;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input[type="number"]{
+/* Effet au focus */
+input[type="number"]:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+}
+
+select, input[type="date"] {
+    appearance: none; /* Supprime le style natif */
+    -webkit-appearance: none; /*pour chrome,edge,safari..*/
+    -moz-appearance: none; /*pour firefox*/
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid grey;
     border-radius: 5px;
-    border-style: solid;
-    border-color: grey;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 button[type="submit"]{
@@ -58,6 +74,12 @@ button[type="submit"]{
     color: white;
     border-radius: 5px;
     
+}
+
+/* Effet au survol du curseur */
+select:hover, input[type="date"]:hover, input[type="number"]:hover, button:hover {
+    border-color: yellow;
+    box-shadow: 0 0 5px darkorange;
 }
 
 select{
