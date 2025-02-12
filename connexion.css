@@ -64,6 +64,27 @@ button{
     border-radius: 5px;
     font-size: 20px;
     margin-top: 40px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover{
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+input{
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid grey;
+}
+
+input:hover{
+    border-color: yellow;
+    box-shadow: 0 0 5px darkorange;
 }
 
 
