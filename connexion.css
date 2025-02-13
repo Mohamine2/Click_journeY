@@ -21,9 +21,10 @@ body {
 
 .card {
     background-color: white;  
-    width: 400px;  
-    height: 100vh;
-    margin-top:3cm;
+    width: 90%; 
+    max-width: 400px; 
+    height: auto; 
+    max-height: 500px; 
     padding: 20px;  
     border-radius: 10px;  
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
@@ -31,9 +32,9 @@ body {
     flex-direction: column;  
     align-items: center;
 
-    /* Ajout pour centrer au milieu de la page */
+    /* Centrage */
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
