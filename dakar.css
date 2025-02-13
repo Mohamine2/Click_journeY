@@ -59,27 +59,14 @@ input[type="search"]{
     border: 2px solid grey;
 }
 
-.barre input {
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-section{
-    margin-left: 3cm;    
-}
-
 body {
     background-image: url('desert2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
-    margin: 0; /* Supprime les marges du body */
+    height: 100vh; 
+    margin: 0; 
 
-    background-color: rgba(255, 255, 255, 0.5); /* Couche blanche semi-transparente */
-    background-blend-mode: overlay; /* Fusionne la couleur avec l'image */
+    background-color: rgba(255, 255, 255, 0.5); 
+    background-blend-mode: overlay; 
 }
-
-
