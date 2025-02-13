@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="profil.css" />
-    <title> Dunes Seekers </title>
-</head>
-<body>
-
+    <title>Dunes Seekers</title>
+  </head>
+  <body>
     <header>
-        <a href="accueil.html"> Dunes Seekers </a>
+      <a href="accueil.html"> Dunes Seekers </a>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="accueil.html"> Accueil </a></li>
-            <li><a href="recherche.html"> Recherche </a></li>
-            <li><a href="connexion.html"> Connectez-vous</a></li>
-            <li><a href="profil.html"> Mon profil</a></li>
-            <li><a href="presentation.html"> A propos de nous </a></li>
-        </ul>
-        <input type="search" placeholder="Rechercher...">
+      <ul>
+        <li><a href="accueil.html"> Accueil </a></li>
+        <li><a href="recherche.html"> Recherche </a></li>
+        <li><a href="connexion.html"> Connectez-vous</a></li>
+        <li><a href="profil.html"> Mon profil</a></li>
+        <li><a href="presentation.html"> A propos de nous </a></li>
+      </ul>
+      <input type="search" placeholder="Rechercher..." />
     </nav>
 
-    <p> Bonjour, [nom de la personne connectée] ! </p>
-    <p> Vos informations personnelles: </p>
-    <p>Nom:</p>
-    <p>Prénom:</p>
-    <p>Adresse mail:</p>
-    <p>Moyen de paiement:</p>
-    <p> Une erreur ? Modifier en cliquant ici</p>
-    <p> Favoris</p>
-    <p> Panier:</p>
-
-    
-</body>
+    <div class="conteneur">
+      <p class="compte">Bonjour, [nom de la personne connectée] !</p>
+      <div id="info">
+        <p>Vos informations personnelles:</p>
+        <p>Nom:</p>
+        <p>Prénom:</p>
+        <p>Adresse mail:</p>
+        <p>Moyen de paiement:</p>
+        <p>Une erreur ? Modifier en cliquant ici</p>
+        <p>Favoris</p>
+        <p>Panier:</p>
+        <button type="submit">Déconnexion</button>
+      </div>
+    </div>
+  </body>
 </html>

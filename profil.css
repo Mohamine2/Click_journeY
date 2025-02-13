@@ -59,3 +59,27 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.conteneur {
+    display: flex;
+    flex-direction: column; /* Empile les box */
+    gap: 20px; /* Espacement entre les box */
+    align-items: center; /* Centre les box horizontalement */
+}
+
+.compte, #info {
+    display: flex;
+    background-color: white;  
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    max-height: 80vh;
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
+    flex-direction: column;  
+    align-items: flex-start; /* Aligne tout à gauche */
+    text-align: left; /* Alignement du texte */
+    overflow-y: auto;
+}
+

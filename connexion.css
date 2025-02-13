@@ -82,7 +82,7 @@ form{
 }
 
 button{
-    background-color: rgb(184, 170, 51);;
+    background-color: rgb(184, 170, 51);
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
@@ -92,7 +92,7 @@ button{
     border-radius: 5px;
     font-size: 20px;
     margin-top: 40px;
-    transition: background-color 0.3s ease, transform 0.3s ease box-shadow 0.3s ease-in-out;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
     
 }
 
