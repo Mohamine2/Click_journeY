@@ -23,10 +23,11 @@ header > a{
 div.form{
     background-color: rgba(255, 255, 255, 0.817);  
     width: 400px;  
-    height: 500px;
+    height: 100vh;
     padding: 20px;
     padding-bottom: 35px;
-    margin-top:70px;  
+    margin-top:3cm;
+    margin-bottom: 3cm;  
     border-radius: 10px;  
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
     display: flex;

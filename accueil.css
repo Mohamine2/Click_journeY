@@ -1,4 +1,4 @@
-div.entete {
+header {
     background-color: #d6bf61;
     border: none;
     padding: none;
@@ -15,12 +15,12 @@ body {
     margin: 0;
     padding: 0;
 }
-div.entete > a{
+header > a{
     text-decoration: none;
     color: white;
 }
 
-.barre {
+nav {
     display: flex;         /* Active le mode flexbox */
     align-items: center;   /* Centre verticalement */
     justify-content: space-between; /* Répartit les éléments */
@@ -37,7 +37,7 @@ li a:hover{
     transform:scale(1.1);
 }
 
-.barre ul {
+nav ul {
     list-style: none; /* Supprime les puces */
     display: flex;    /* Met les <li> en ligne */
     gap: 20px;        /* Espacement entre les liens */
@@ -45,11 +45,11 @@ li a:hover{
     margin: 0;
 }
 
-.barre li {
+nav li {
     display: inline;
 }
 
-.barre a {
+nav a {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -62,8 +62,8 @@ li a:hover{
     border-radius: 5px;
 }
 
-div.page{
-    padding-left: 5cm;    
+section{
+    margin-left: 3cm;    
 }
 
 body {
