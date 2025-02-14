@@ -82,4 +82,43 @@ body {
     background-blend-mode: overlay; /* Fusionne la couleur avec l'image */
 }
 
+.lieu-contenant {
+    border-radius: 15px;
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+}
 
+.lieu {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+}
+
+.lieu img {
+    width: 100%;
+    height: auto;
+}
+
+.lieu h2 {
+    margin: 30px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.lieu a{
+    text-decoration: none;
+}
+
+.lieu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
