@@ -1,0 +1,211 @@
+header {
+    background-color: #d6bf61;
+    border: none;
+    font-size: 50px;
+    padding-left: 2cm;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+header > a{
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;         /* Active le mode flexbox */
+    align-items: center;   /* Centre verticalement */
+    justify-content: space-between; /* Répartit les éléments */
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+}
+
+a{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover{
+    display: inline-block;
+    transform:scale(1.1);
+}
+
+nav ul {
+    list-style: none; /* Supprime les puces */
+    display: flex;    /* Met les <li> en ligne */
+    gap: 20px;        /* Espacement entre les liens */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.barre input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+section{
+    margin-left: 3cm;    
+}
+
+body {
+    background-image: url('desert2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
+    margin: 0; /* Supprime les marges du body */
+
+    background-color: rgba(255, 255, 255, 0.5); /* Couche blanche semi-transparente */
+    background-blend-mode: overlay; /* Fusionne la couleur avec l'image */
+}
+
+.lieu-contenant {
+    border-radius: 15px;
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.lieu {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+}
+
+.lieu img {
+    width: 100%;
+    height: auto;
+}
+
+.lieu h2 {
+    margin: 30px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.lieu a{
+    text-decoration: none;
+}
+
+.lieu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.connexion {
+    background-color: white;  
+    width: 90%; 
+    max-width: 400px; 
+    height: auto; 
+    max-height: 500px; 
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+
+    /* Centrage */
+    margin: auto; /* Centre verticalement */
+    margin-top: 0px;
+}
+
+.boite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    margin-top: 100px; /* Ajoute un espace en haut si nécessaire */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    gap: 20px;
+    padding-bottom: 30px;
+    margin: 20px;
+}
+
+button{
+    background-color: rgb(184, 170, 51);;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
+    
+}
+
+button:hover{
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(184, 125, 75, 0.5);
+    background: linear-gradient(120deg, #b87d4b, #8f5a2a);
+    cursor: pointer;
+}
+
+input{
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid grey;
+}
+
+input:hover{
+    border-color: yellow;
+    box-shadow: 0 0 5px darkorange;
+}
+
+body{
+    background-image: url('desert2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}

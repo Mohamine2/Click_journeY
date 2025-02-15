@@ -1,246 +1,144 @@
-body {
-    background-image: url('desert2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 140vh; /* Assure que le fond couvre toute la fenêtre */
-    margin: 0; /* Supprime les marges du body */
 
-    background-color: rgba(255, 255, 255, 0.5); /* Couche blanche semi-transparente */
-    background-blend-mode: overlay; /* Fusionne la couleur avec l'image */
-}
-
-header {
-    background-color: #d6bf61;
-    border: none;
-    font-size: 50px;
-    padding-left: 2cm;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-header > a{
-    text-decoration: none;
-    color: white;
-}
-
-header h1 {
-    font-size: 50px;
-    color: white;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #f0f0f0;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #d6bf61;
-}
-
-section {
-    padding: 40px 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* choix + FOND */
-
-.presentation {
-    position: relative;
-    background-image: url('oman1.jpg');
-    background-size: cover; 
-    background-position: center;
-    color: white;
-    padding: 60px 0; /* espace autour du contenu */
-}
-
-.presentation .container {
-    position: relative; /* bien positionner le texte */
-    z-index: 1; /* assure texte au-dessus image */
-}
-
-.presentation h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="oman.css">
+    <title>Oman</title>
+</head>
 
 
-/* superposition sombre pour améliorer la lisibilité du texte */
-.presentation::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* couleur sombre avec opacité */
-    z-index: 0; /* image en dessous */
-}
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="recherche.html">Recherche</a></li>
+            <li><a href="connexion.html">Connectez-vous</a></li>
+            <li><a href="profil.html">Mon profil</a></li>
+            <li><a href="presentation.html">À propos</a></li>
+        </ul>
+    </nav>
 
-/*Onglet*/
-.onglets {
-    display: flex;
-    justify-content: center;
-    margin: 120px 0;
-}
+    <!-- choix-->
+    <section class="presentation">
+        <div class="container">
+            <h2><br><br><br><br>Votre voyage au sein du désert Sharqiya Sands</h2>
+       </div>
+    </section>
 
-.tab-container {
-    width: 800px;
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-}
+    <!-- Séjour -->
+    <section class="onglets">
+        <div class="tab-container">
+            <input type="radio" name="option" id="jour1" checked />
+            <label for="jour1">
+                <div class="tab-name">Jour 1</div>
+                <div class="tab-content">
+                    <h3>Mascate</h3>
+                    <p>A votre arrivée, 
+                        vous serez accueillis par le guide (fancophone/anglophone) qui sera le compagnon voyage et vous donnera les renseignements et réponse
+                        nécessaire par rapport au séjour. Il vous fera visiter les alentours notamment Grande Mosquée du Sultan Qaboos et du souk de Muttrah,
+                         jusqu'au soir.</p>
+                </div>
 
-/* cache radio */
-input {
-    display: none;
-}
+            </label>
+    
+            <input type="radio" name="option" id="jour2" />
+            <label for="jour2">
+                <div class="tab-name">Jour 2</div>
+                <div class="tab-content">
+                    <h3>Wahiba Sands</h3>
+                    <p>Exploration du fameux désert avec de la randonnée où vous pourriez voir des canyons spectaculaires, 
+                       des merveilles naturelles et ressentir l'esprit d'un aventurier à travers cette marche.
+                    </p>
+                </div>
+            </label>
+    
+            <input type="radio" name="option" id="jour3" />
+            <label for="jour3">
+                <div class="tab-name">Jour 3</div>
+                <div class="tab-content">
+                    <h3>Wahiba sands</h3>
+                    <p>2e jour de randonnée où vous allez pouvoir vivre comme un nomade, faire baignade dans des piscines naturelles.
+                        et surtout voir les dunes qui s'étendent comme des vagues d'or sous le soleil.
+                    </p>
+                </div>
+            </label>
 
-/* style de l'onglet */
-.tab-name {
-    color: white;
-    font-family: "Poppins", sans-serif;
-    height: 45px;
-    background: rgba(98, 125, 31, 0.25);
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+            <input type="radio" name="option" id="jour4" />
+            <label for="jour4">
+                <div class="tab-name">Jour 4</div>
+                <div class="tab-content">
+                    <h3>Wadi shab</h3>
+                    <p>Voyage unique à travers un safari en 4x4, une balade à dos de chameau et nuit dans un campement traditionnel 
+                        où vous pourriez vous faire l'installation et se détendre sous les étoiles.</p>
+                </div>
+            </label>
 
-/* quand cliqué */
-input:checked + label .tab-name {
-    background: #ffd910;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
+            <input type="radio" name="option" id="jour5" />
+            <label for="jour5">
+                <div class="tab-name">Jour 5</div>
+                <div class="tab-content">
+                    <h3>Découverte de Nizwa</h3>
+                    <p>En route vers Nizwa pour faire avoir l'occasion de visiter la forteresse de Nizwa
+                        et de son marché traditionnel, avant de découvrir ses artisans. 
+                    </p>
+                </div>
+            </label>
 
-/* contenu  onglets */
-.tab-content {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background: #d6bf61;
-    color: black;
-    font-family: "Poppins", sans-serif;
-    padding: 15px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    opacity: 0;
-    z-index: 0;
-    width: 100%;
-    transition: 0.3s;
-}
+            <input type="radio" name="option" id="jour6" />
+            <label for="jour6">
+                <div class="tab-name">Jour 6</div>
+                <div class="tab-content">
+                    <h3>Détente au coté des côte</h3>
+                    <p>Visite des plages de la côte omanaise où vous pourriez faire de la baignade et se reposer.
+                        découvrir des villages de pêcheurs et manger des fruits de mer avec vue sur la mer.
+                    </p>
+                </div>
+            </label>
 
-/* Affichage du contenu de l'onglet actif */
-input:checked + label .tab-content {
-    opacity: 1;
-    z-index: 1;
-}
+            <input type="radio" name="option" id="jour7" />
+            <label for="jour7">
+                <div class="tab-name">Jour 7</div>
+                <div class="tab-content">
+                    <h3>Boutique & départ</h3>
+                    <p>Journée relaxante pour se faire les derniers achats dans le souk de Mascate et avoir du temps libre
+                        avant d'aller prendre l'avion pour revenir en France.
+                    </p>
+                </div>
+            </label>
+            
+        </div>
 
+        
+    <!--Images-->    
+    </section>
+    
+        <div class="lieu-contenant">
+        <div class="lieu">
+                <img src="OmanI1.jpg" alt="img_Marrakech" width="400px" height="300px">
+                <h2>Mosque du Sultan</h2>
+            </a>
+        </div>
+        <div class="lieu">
+                <img src="OmanI2.jpg" alt="img_dakar" width="400px" height="300px">
+                <h2>Wadi shab</h2>
+            </a>
+        </div>
+        <div class="lieu">
+                <img src="OmanI3.jpg" alt="img_oman" width="400px" height="300px">
+                <h2>Nizwa forteresse</h2>
+            </a>
+        </div>
+    </div>
+</body>
 
+    <!-- achat ticket (recherche) -->
+    <section class="contact">
+        <div class="container">
+            <h2>Planifiez votre voyage</h2>
+            <p>Obtenez un devis personnalisé pour votre aventure en Oman.</p>
+            <a href="recherche.html" class="ticket-btn">Demander un ticket</a>
+        </div>
+    </section>
+    
+</body>
 
-
-/* image*/
-
-.lieu-contenant {
-    border-radius: 15px;
-    display: flex;
-    flex-flow: wrap;
-    width: 100%;
-    gap: 20px;
-    justify-content: center;
-}
-
-.lieu {
-    width: 300px;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
-    overflow: hidden;
-    text-align: center;
-}
-
-.lieu img {
-    width: 100%;
-    height: auto;
-}
-
-.lieu h2 {
-    margin: 30px;
-    font-size: 1.5em;
-    color: #333;
-}
-
-.lieu a{
-    text-decoration: none;
-}
-
-.lieu:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-/* ticket */
-.contact {
-    text-align: center;
-    padding: 50px 0;
-    background: #f8f8f8;
-}
-
-.contact .container {
-    max-width: 600px;
-    margin: auto;
-}
-
-.contact h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.contact p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.ticket-btn {
-    display: inline-block;
-    background: #d6bf61;
-    color: white;
-    padding: 12px 24px;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.ticket-btn:hover {
-    background: #b8a24e;
-}
+</html>
