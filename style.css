@@ -514,3 +514,25 @@ input:checked + label .tab-content {
 .ticket-btn:hover {
     background: #b8a24e;
 }
+
+/*code utile à la page présentation*/
+
+div.admin{
+    border: white 2px;
+    background-color: white;
+    margin: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); 
+}
+
+.client{
+    margin-left: 1cm;
+}
+
+button.admin{
+    margin-left: 2cm;
+    margin-right: 2cm;
+    margin-bottom: 1cm;
+}

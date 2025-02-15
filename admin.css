@@ -1,4 +1,4 @@
-header {
+header.admin{
     background-color: #d6bf61;
     border: none;
     font-size: 50px;
@@ -7,14 +7,29 @@ header {
     padding-bottom: 15px;
 }
 
-
-header > a{
-    text-decoration: none;
-    color: white;
+div.admin{
+    border: white 2px;
+    background-color: white;
+    margin: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); 
 }
 
-
-body {
-    margin: 0;
-    padding: 0;
+button.admin{
+    margin-left: 1cm;
+    margin-right: 1cm;
+    margin-bottom: 1cm;
+    background-color: rgb(184, 170, 51);;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
