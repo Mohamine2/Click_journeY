@@ -1,29 +1,246 @@
-<!DOCTYPE html>
-<html lang="fr">
+body {
+    background-image: url('desert2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 140vh; /* Assure que le fond couvre toute la fenêtre */
+    margin: 0; /* Supprime les marges du body */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="oman.css" />
-    <title>Dunes Seekers - Accueil</title>
-</head>
+    background-color: rgba(255, 255, 255, 0.5); /* Couche blanche semi-transparente */
+    background-blend-mode: overlay; /* Fusionne la couleur avec l'image */
+}
 
-<body>
+header {
+    background-color: #d6bf61;
+    border: none;
+    font-size: 50px;
+    padding-left: 2cm;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
-    <header>
-        <a href="accueil.html"> Dunes Seekers </a>
-    </header>
+header > a{
+    text-decoration: none;
+    color: white;
+}
 
-    <nav>
-        <ul>
-            <li><a href="accueil.html"> Accueil </a></li>
-            <li><a href="recherche.html"> Recherche </a></li>
-            <li><a href="connexion.html"> Connectez-vous</a></li>
-            <li><a href="profil.html"> Mon profil</a></li>
-            <li><a href="presentation.html"> A propos de nous </a></li>
-        </ul>
-        <input type="search" placeholder="Rechercher...">
-    </nav>
-</body>
+header h1 {
+    font-size: 50px;
+    color: white;
+}
 
-</html>
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d6bf61;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* choix + FOND */
+
+.presentation {
+    position: relative;
+    background-image: url('oman1.jpg');
+    background-size: cover; 
+    background-position: center;
+    color: white;
+    padding: 60px 0; /* espace autour du contenu */
+}
+
+.presentation .container {
+    position: relative; /* bien positionner le texte */
+    z-index: 1; /* assure texte au-dessus image */
+}
+
+.presentation h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+/* superposition sombre pour améliorer la lisibilité du texte */
+.presentation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* couleur sombre avec opacité */
+    z-index: 0; /* image en dessous */
+}
+
+/*Onglet*/
+.onglets {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0;
+}
+
+.tab-container {
+    width: 800px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* cache radio */
+input {
+    display: none;
+}
+
+/* style de l'onglet */
+.tab-name {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    height: 45px;
+    background: rgba(98, 125, 31, 0.25);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* quand cliqué */
+input:checked + label .tab-name {
+    background: #ffd910;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* contenu  onglets */
+.tab-content {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #d6bf61;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* Affichage du contenu de l'onglet actif */
+input:checked + label .tab-content {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+
+
+/* image*/
+
+.lieu-contenant {
+    border-radius: 15px;
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.lieu {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+}
+
+.lieu img {
+    width: 100%;
+    height: auto;
+}
+
+.lieu h2 {
+    margin: 30px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.lieu a{
+    text-decoration: none;
+}
+
+.lieu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ticket */
+.contact {
+    text-align: center;
+    padding: 50px 0;
+    background: #f8f8f8;
+}
+
+.contact .container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.ticket-btn {
+    display: inline-block;
+    background: #d6bf61;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.ticket-btn:hover {
+    background: #b8a24e;
+}
