@@ -1,3 +1,5 @@
+/*code utile à toutes les pages*/
+
 header {
     background-color: #d6bf61;
     border: none;
@@ -14,7 +16,12 @@ header > a{
 }
 
 body {
-    margin: 0;
+    background-image: url('images/desert2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
+    margin: 0; /* Supprime les marges du body */
     padding: 0;
 }
 
@@ -60,21 +67,49 @@ nav a {
     border-radius: 5px;
 }
 
-section{
+button[type="submit"]{
+    background-color: rgb(184, 170, 51);;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
+    
+}
+
+button[type="submit"]:hover{
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(184, 125, 75, 0.5);
+    background: linear-gradient(120deg, #b87d4b, #8f5a2a);
+    cursor: pointer;
+}
+
+input{
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid grey;
+}
+
+select:hover, input:hover{
+    border-color: yellow;
+    box-shadow: 0 0 5px darkorange;
+}
+
+/*page accueil*/
+
+section.accueil{
     margin-left: 3cm;    
 }
 
-body {
-    background-image: url('desert2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
-    margin: 0; /* Supprime les marges du body */
-
-    background-color: rgba(255, 255, 255, 0.5); /* Couche blanche semi-transparente */
-    background-blend-mode: overlay; /* Fusionne la couleur avec l'image */
-}
 
 .lieu-contenant {
     border-radius: 15px;
@@ -117,13 +152,61 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/*code utile à la page recherche*/
 
+div.form_recherche{
+    background-color: white;  
+    width: 90%;  /* Adaptatif sur petits écrans */
+    max-width: 400px;  /* Ne dépasse jamais 400px */
+    height: auto; /* S'adapte au contenu */
+    max-height: 80vh; /* Ne dépasse jamais 80% de la hauteur de l'écran */
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    
+    /* Ajout pour éviter les débordements */
+    overflow-y: auto; /* Ajoute un scroll si le contenu est trop grand */
 
-body {
-    margin: 0;
-    padding: 0;
+    /* Centrage au milieu de la page */
+    margin: auto; /* Centre verticalement */
+    margin-top: 100px;
 }
 
+legend.recherche{
+    font-weight:bold;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+fieldset.recherche{
+    border:none;
+}
+
+select, input[type="date"] {
+    appearance: none; /* Supprime le style natif */
+    -webkit-appearance: none; /*pour chrome,edge,safari..*/
+    -moz-appearance: none; /*pour firefox*/
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+/*code utile à la page connexion*/
 
 .connexion {
     background-color: white;  
@@ -143,7 +226,7 @@ body {
     margin-top: 0px;
 }
 
-.boite {
+.boite_connexion {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +234,7 @@ body {
     margin-top: 100px; /* Ajoute un espace en haut si nécessaire */
 }
 
-form{
+form.form_connexion{
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -161,8 +244,102 @@ form{
     margin: 20px;
 }
 
-button{
-    background-color: rgb(184, 170, 51);;
+/*code utile à la page inscription*/
+
+div.boite_inscription{
+    background-color: white;  
+    width: 90%;  /* Adaptatif sur petits écrans */
+    max-width: 400px;  /* Ne dépasse jamais 400px */
+    height: auto; /* S'adapte au contenu */
+    max-height: 80vh; /* Ne dépasse jamais 80% de la hauteur de l'écran */
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    
+    /* Ajout pour éviter les débordements */
+    overflow-y: auto; /* Ajoute un scroll si le contenu est trop grand */
+
+    /* Centrage au milieu de la page */
+    /* Centrage */
+    margin: auto; /* Centre verticalement */
+    margin-top: 100px;
+}
+
+form.form_inscription{
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+    /* Espacement entre les champs */
+
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+/*code utile à la page profil*/
+
+.compte{
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.conteneur_compte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.compte, #info, #achat {
+    display: flex;
+    flex-direction: column;
+    /* Empile les box */
+    gap: 20px;
+    /* Espacement entre les box */
+    align-items: left;
+    margin-left: 1cm;
+    /* Centre les box horizontalement */
+    margin-bottom:1cm;
+    background-color: white;
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    max-height: 80vh;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button.edit{
+    border-style:none;
+}
+
+div.logout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.logout {
+    background-color: rgb(184, 170, 51);
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
@@ -171,12 +348,13 @@ button{
     color: white;
     border-radius: 5px;
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 40px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
-    
 }
 
-button:hover{
+button.logout:hover {
     padding-left: 45px;
     padding-right: 45px;
     padding-top: 15px;
@@ -187,25 +365,150 @@ button:hover{
     cursor: pointer;
 }
 
-input{
-    border-radius: 5px;
-    padding: 10px;
-    border: 2px solid grey;
-}
 
-input:hover{
-    border-color: yellow;
-    box-shadow: 0 0 5px darkorange;
-}
+/*code utile à la page présentation*/
 
-body{
-    background-image: url('desert2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
-    margin: 0;
-    padding: 0;
+section.apropos{
+    border: white 2px;
+    background-color: white;
+    margin: 40px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);  
+}
+
+/*code utile aux pages destinations*/
+
+.presentation {
+    position: relative;
+    background-image: url('images/oman1.jpg');
+    background-size: cover; 
+    background-position: center;
+    color: white;
+    padding: 60px 0; /* espace autour du contenu */
+}
+
+.presentation .container {
+    position: relative; /* bien positionner le texte */
+    z-index: 1; /* assure texte au-dessus image */
+}
+
+.presentation h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+/* superposition sombre pour améliorer la lisibilité du texte */
+.presentation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* couleur sombre avec opacité */
+    z-index: 0; /* image en dessous */
+}
+
+/*Onglet*/
+.onglets {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0;
+}
+
+.tab-container {
+    width: 800px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* cache radio */
+input.destination{
+    display: none;
+}
+
+/* style de l'onglet */
+.tab-name {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    height: 45px;
+    background: rgba(98, 125, 31, 0.25);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* quand cliqué */
+input:checked + label .tab-name {
+    background: #ffd910;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* contenu  onglets */
+.tab-content {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #d6bf61;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* Affichage du contenu de l'onglet actif */
+input:checked + label .tab-content {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.contact {
+    text-align: center;
+    padding: 50px 0;
+    background: #f8f8f8;
+}
+
+.contact .container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.ticket-btn {
+    display: inline-block;
+    background: #d6bf61;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.ticket-btn:hover {
+    background: #b8a24e;
 }
