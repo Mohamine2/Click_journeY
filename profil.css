@@ -72,12 +72,21 @@ body {
     /* Empile les box */
     gap: 20px;
     /* Espacement entre les box */
-    align-items: center;
+    margin-left: 1cm;
     /* Centre les box horizontalement */
+    margin-bottom: 20px;
 }
 
-.compte,
-#info {
+.gauche{
+    align-items: left;
+}
+
+.compte{
+    font-weight: bold;
+    font-size: large;
+}
+
+.compte, #info, #achat {
     display: flex;
     background-color: white;
     width: 90%;
@@ -85,12 +94,28 @@ body {
     height: auto;
     max-height: 80vh;
     padding: 20px;
+    padding-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     flex-direction: column;
 }
 
-button {
+#achat{
+    align-items: right;
+}
+
+
+button.edit{
+    border-style:none;
+}
+
+div.logout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.logout {
     background-color: rgb(184, 170, 51);
     padding-left: 40px;
     padding-right: 40px;
@@ -100,12 +125,12 @@ button {
     color: white;
     border-radius: 5px;
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
 
 }
 
-button:hover {
+button.logout:hover {
     padding-left: 45px;
     padding-right: 45px;
     padding-top: 15px;
