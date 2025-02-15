@@ -20,10 +20,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Assure que le fond couvre toute la fenêtre */
+    min-height: 100vh; /* Assure que le fond couvre toute la fenêtre */
     margin: 0; /* Supprime les marges du body */
     padding: 0;
 }
+
+
 
 nav {
     display: flex;         /* Active le mode flexbox */
@@ -416,7 +418,7 @@ section.apropos{
 .onglets {
     display: flex;
     justify-content: center;
-    margin: 120px 0;
+    margin: 175px 0;
 }
 
 .tab-container {
