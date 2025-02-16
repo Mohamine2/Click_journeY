@@ -154,6 +154,16 @@ section.accueil{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+section.accueil>p{
+
+    text-align: center;
+    font-size: 16px;
+}
+
+section.accueil>h1{
+    text-align: center;
+}
+
 /*code utile à la page recherche*/
 
 div.form_recherche{
@@ -376,13 +386,21 @@ section.apropos{
 
 /*code utile aux pages destinations*/
 
-.presentation {
-    position: relative;
-    background-image: url('images/oman1.jpg');
-    background-size: cover; 
-    background-position: center;
-    color: white;
-    padding: 60px 0; /* espace autour du contenu */
+
+section.titre{
+
+    border: white 2px;
+    background-color: white;
+    margin: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);  
+
+}
+
+section.titre>h1{
+    text-align: center;
 }
 
 .presentation .container {
@@ -423,7 +441,7 @@ section.apropos{
 }
 
 /* cache radio */
-input.destination{
+input[type="radio"].destination{
     display: none;
 }
 
@@ -476,6 +494,7 @@ input:checked + label .tab-content {
     text-align: center;
     padding: 50px 0;
     background: #f8f8f8;
+    margin-top: 50px;
 }
 
 .contact .container {
