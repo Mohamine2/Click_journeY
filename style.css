@@ -161,20 +161,18 @@ div.form_recherche{
     width: 90%;  /* Adaptatif sur petits écrans */
     max-width: 400px;  /* Ne dépasse jamais 400px */
     height: auto; /* S'adapte au contenu */
-    max-height: 80vh; /* Ne dépasse jamais 80% de la hauteur de l'écran */
     padding: 20px;  
     border-radius: 10px;  
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
     display: flex;
     flex-direction: column;  
     align-items: center;
-    
-    /* Ajout pour éviter les débordements */
-    overflow-y: auto; /* Ajoute un scroll si le contenu est trop grand */
 
     /* Centrage au milieu de la page */
     margin: auto; /* Centre verticalement */
-    margin-top: 100px;
+    margin-top: 2cm;
+    margin-bottom: 1cm;
+
 }
 
 legend.recherche{
@@ -253,21 +251,17 @@ div.boite_inscription{
     width: 90%;  /* Adaptatif sur petits écrans */
     max-width: 400px;  /* Ne dépasse jamais 400px */
     height: auto; /* S'adapte au contenu */
-    max-height: 80vh; /* Ne dépasse jamais 80% de la hauteur de l'écran */
     padding: 20px;  
     border-radius: 10px;  
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
     display: flex;
     flex-direction: column;  
     align-items: center;
-    
-    /* Ajout pour éviter les débordements */
-    overflow-y: auto; /* Ajoute un scroll si le contenu est trop grand */
-
     /* Centrage au milieu de la page */
     /* Centrage */
     margin: auto; /* Centre verticalement */
-    margin-top: 100px;
+    margin-top: 2cm;
+    margin-bottom:1cm;
 }
 
 form.form_inscription{
