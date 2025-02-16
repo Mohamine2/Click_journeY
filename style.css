@@ -544,6 +544,10 @@ input:checked + label .tab-content {
 
 /*code utile à la page admin*/
 
+header.admin{
+    color: white;
+}
+
 div.admin{
     border: white 2px;
     background-color: white;
