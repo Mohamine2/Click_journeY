@@ -1,7 +1,7 @@
 /*code utile à toutes les pages*/
 
 header {
-    background-color: #d6bf61;
+    background-color: #c2821c;
     border: none;
     font-size: 50px;
     padding-left: 2cm;
@@ -70,7 +70,7 @@ nav a {
 }
 
 button[type="submit"]{
-    background-color: rgb(184, 170, 51);;
+    background-color: #c2821c;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
@@ -102,20 +102,20 @@ input{
 }
 
 select:hover, input:hover{
-    border-color: yellow;
-    box-shadow: 0 0 5px darkorange;
+    box-shadow: 0px 4px 12px rgba(184, 125, 75, 0.5);
 }
 
 /*page accueil*/
 
+
+section.titre{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #AACFEC, #78B6E6, #78B6E6, #AACFEC);
+}
+
 section.accueil{
     width: auto;
     height: auto;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
     overflow: hidden;
     text-align: center;
     margin-left: 2cm; 
@@ -140,7 +140,7 @@ section.accueil{
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
+    background: #f0f0f0;
     overflow: hidden;
     text-align: center;
     margin-bottom:2cm;
@@ -393,17 +393,17 @@ section.apropos{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;  
 }
 
 /*code utile aux pages destinations*/
 
 
 section.titre{
-
-    border: white 2px;
-    background-color: white;
-    margin: 40px;
+    margin-top: 1cm;
+    margin-left:4cm;
+    margin-right:4cm;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -442,7 +442,10 @@ section.titre>h1{
 .onglets {
     display: flex;
     justify-content: center;
-    margin: 175px 0;
+    margin-top: 3cm;
+    margin-bottom:6cm;
+    margin-left: 1cm;
+    margin-right: 1cm;
 }
 
 .tab-container {
@@ -462,7 +465,6 @@ input[type="radio"].destination{
     color: white;
     font-family: "Poppins", sans-serif;
     height: 45px;
-    background: rgba(98, 125, 31, 0.25);
     padding: 10px 20px;
     cursor: pointer;
     transition: 0.3s;
@@ -470,8 +472,8 @@ input[type="radio"].destination{
 
 /* quand cliqué */
 input:checked + label .tab-name {
-    background: #ffd910;
-    color: black;
+    background: linear-gradient(to top, #a86c34, #b87d4b, #8f5a2a);
+    color: white;
     font-size: 18px;
     font-weight: bold;
     border-top-left-radius: 5px;
@@ -483,12 +485,12 @@ input:checked + label .tab-name {
     position: absolute;
     top: 50px;
     left: 0;
-    background: #d6bf61;
-    color: black;
+    background: linear-gradient(to top, #a86c34, #b87d4b, #8f5a2a);
+    color: white;
     font-family: "Poppins", sans-serif;
     padding: 15px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
     opacity: 0;
     z-index: 0;
     width: 100%;
