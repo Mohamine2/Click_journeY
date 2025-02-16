@@ -90,7 +90,7 @@ button[type="submit"]:hover{
     padding-top: 15px;
     padding-bottom: 15px;
     transform: scale(1.1);
-    box-shadow: 0px 4px 12px rgba(184, 125, 75, 0.5);
+    box-shadow: 0px 4px 12px #B87D4B80;
     background: linear-gradient(120deg, #b87d4b, #8f5a2a);
     cursor: pointer;
 }
@@ -357,7 +357,7 @@ div.logout{
 }
 
 button.logout {
-    background-color: rgb(184, 170, 51);
+    background-color: #d6bf61;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
@@ -378,7 +378,7 @@ button.logout:hover {
     padding-top: 15px;
     padding-bottom: 15px;
     transform: scale(1.1);
-    box-shadow: 0px 4px 12px rgba(184, 125, 75, 0.5);
+    box-shadow: 0px 4px 12px #B87D4B80;
     background: linear-gradient(120deg, #b87d4b, #8f5a2a);
     cursor: pointer;
 }
