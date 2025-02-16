@@ -109,7 +109,18 @@ select:hover, input:hover{
 /*page accueil*/
 
 section.accueil{
-    margin-left: 3cm;    
+    width: auto;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 2cm; 
+    margin-right: 2cm;
+    margin-bottom: 2cm; 
 }
 
 
@@ -132,6 +143,7 @@ section.accueil{
     background-color: #fff;
     overflow: hidden;
     text-align: center;
+    margin-bottom:2cm;
 }
 
 .lieu img {
