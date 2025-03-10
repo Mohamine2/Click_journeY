@@ -16,11 +16,11 @@
 
     <nav>
         <ul>
-            <li><a href="accueil.html"> Accueil </a></li>
-            <li><a href="recherche.html"> Recherche </a></li>
+            <li><a href="accueil.php"> Accueil </a></li>
+            <li><a href="recherche.php"> Recherche </a></li>
             <li><a href="connexion.php"> Connectez-vous</a></li>
-            <li><a href="profil.html"> Mon profil</a></li>
-            <li><a href="presentation.html"> A propos de nous </a></li>
+            <li><a href="profil.php"> Mon profil</a></li>
+            <li><a href="presentation.php"> A propos de nous </a></li>
         </ul>
         <input type="search" placeholder="Rechercher...">
     </nav>

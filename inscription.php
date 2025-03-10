@@ -1,7 +1,6 @@
 <?php
 
-
-if(isset($_POST["inscription"])){
+if (isset($_POST["inscription"])) {
 
     $mail = $_POST["mail"];
     $mdp = $_POST["mdp"];
@@ -10,22 +9,61 @@ if(isset($_POST["inscription"])){
     $prenom = $_POST["prenom"];
     $num = $_POST["telephone"];
 
-    if(empty($mail)){
-        echo"Vous devez entrer une addresse mail";
-    }
-    else if(empty($mdp)){
-        echo"Vous devez entrer un mot de passe";
-    }
-    else{
-        echo"Bienvenue {$mail}!";
+    $messages = [];
+
+    //Vérif des champs
+    if (empty($mail)) {
+        $messages[] = "Vous devez entrer une adresse mail";
+    } elseif (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+        $messages[] = "L'adresse mail n'est pas valide";
     }
 
-    if($mdp !=  $mdp2){
-        echo"Erreur, les mots de passes sont différents";
+    if (empty($mdp)) {
+        $messages[] = "Vous devez entrer un mot de passe";
     }
 
+    if ($mdp != $mdp2) {
+        $messages[] = "Erreur, les mots de passe sont différents";
+    }
+
+    if (empty($nom)) {
+        $messages[] = "Vous devez entrer un nom";
+    }
+
+    if (empty($prenom)) {
+        $messages[] = "Vous devez entrer un prénom";
+    }
+
+    if (empty($num)) {
+        $messages[] = "Vous devez entrer un numéro de téléphone";
+    }
+
+    //afficher les msg d'erreurs s'il y en a
+    if (!empty($messages)) {
+        foreach ($messages as $message) {
+            echo "<p style='color: red;'>$message</p>";
+        }
+    } else {
+    
+    //écrire dans le fichier s'il n'y a pas d'erreur
     $fichier = fopen('comptes.txt', 'a+');
 
+    if (!$fichier) {
+        die("Erreur : Impossible d'ouvrir ou de créer le fichier.");
+    }
+
+    if (filesize('comptes.txt') == 0) {
+        fwrite($fichier, "#nom-prenom-mail-telephone-mdp\n");
+    }
+
+    fwrite($fichier, "{$nom}-{$prenom}-{$mail}-{$num}-{$mdp}\n");
+
+    fclose($fichier);
+
+    //rediriger le client sur la page profil
+
+    header("Location: profil.php");
+}
 }
 
 ?>
@@ -43,16 +81,16 @@ if(isset($_POST["inscription"])){
 <body>
 
     <header>
-        <a href="accueil.html"> Dunes Seekers </a>
+        <a href="accueil.php"> Dunes Seekers </a>
     </header>
 
     <nav>
         <ul>
-            <li><a href="accueil.html"> Accueil </a></li>
-            <li><a href="recherche.html"> Recherche </a></li>
+            <li><a href="accueil.php"> Accueil </a></li>
+            <li><a href="recherche.php"> Recherche </a></li>
             <li><a href="connexion.php"> Connectez-vous</a></li>
-            <li><a href="profil.html"> Mon profil</a></li>
-            <li><a href="presentation.html"> A propos de nous </a></li>
+            <li><a href="profil.php"> Mon profil</a></li>
+            <li><a href="presentation.php"> A propos de nous </a></li>
         </ul>
         <input type="search" placeholder="Rechercher...">
     </nav>
@@ -74,7 +112,7 @@ if(isset($_POST["inscription"])){
             <input type="password" name="mdp" id="mdp" required />
             <label for="mdp"> Confirmer Mot de passe: </label>
             <input type="password" name="mdp2" id="mdp2" required />
-            <button type="submit"> Confirmer </button>
+            <button type="submit" name="inscription"> Confirmer </button>
         </form>
     </div>
 
