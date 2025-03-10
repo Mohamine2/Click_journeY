@@ -15,6 +15,8 @@ if(isset($_POST["connexion"])){
     else{
         echo"Bienvenue {$mail}!";
     }
+
+    $fichier = fopen('comptes.txt', 'r');
 }
 
 ?>
@@ -59,7 +61,7 @@ if(isset($_POST["connexion"])){
             </form>
 
             <p>Pas de compte ? </p>
-            <a href="inscription.html"> Créer un compte</a>
+            <a href="inscription.php"> Créer un compte</a>
         </div>
     </div>
 

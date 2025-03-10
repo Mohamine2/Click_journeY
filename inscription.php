@@ -1,3 +1,35 @@
+<?php
+
+
+if(isset($_POST["inscription"])){
+
+    $mail = $_POST["mail"];
+    $mdp = $_POST["mdp"];
+    $mdp2 = $_POST["mdp2"];
+    $nom = $_POST["nom"];
+    $prenom = $_POST["prenom"];
+    $num = $_POST["telephone"];
+
+    if(empty($mail)){
+        echo"Vous devez entrer une addresse mail";
+    }
+    else if(empty($mdp)){
+        echo"Vous devez entrer un mot de passe";
+    }
+    else{
+        echo"Bienvenue {$mail}!";
+    }
+
+    if($mdp !=  $mdp2){
+        echo"Erreur, les mots de passes sont différents";
+    }
+
+    $fichier = fopen('comptes.txt', 'a+');
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -28,7 +60,7 @@
 
     <div class="boite_inscription">
         <h3> Formulaire d'inscription </h3>
-        <form method="post" class="form_inscription">
+        <form method="post" class="form_inscription" action="inscription.php">
             <label for="nom"> Nom: </label>
             <input type="text" name="nom" id="nom" required />
             <label for="prenom"> Prénom: </label>
@@ -41,7 +73,7 @@
             <label for="mdp"> Création Mot de passe: </label>
             <input type="password" name="mdp" id="mdp" required />
             <label for="mdp"> Confirmer Mot de passe: </label>
-            <input type="password" name="mdp" id="mdp2" required />
+            <input type="password" name="mdp2" id="mdp2" required />
             <button type="submit"> Confirmer </button>
         </form>
     </div>
