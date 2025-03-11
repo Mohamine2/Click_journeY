@@ -56,7 +56,7 @@ function creation_utilisateur(){
                 $utilisateurs = json_decode($json_data, true) ?? []; // Décoder en tableau associatif
             }
         
-            // Nouvel utilisateur (exemple)
+            // Nouvel utilisateur
             $nouvel_utilisateur = [
                 "nom" => $nom,
                 "prenom" => $prenom,
