@@ -47,7 +47,7 @@ function creation_utilisateur(){
         } else {
 
             // Fichier JSON où les utilisateurs sont stockés
-            $fichier = "users.json";
+            $fichier = "utilisateurs.json";
         
             // Récupérer les données existantes
             $utilisateurs = [];

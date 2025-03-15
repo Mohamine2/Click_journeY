@@ -1,5 +1,14 @@
 <?php
 
+session_start(); 
+
+
+// Vérifier si l'utilisateur est connecté
+if (isset($_SESSION["utilisateur"])) {
+    // Rediriger vers la page de connexion si non connecté
+    header("Location: profil.php");
+    exit();
+}
 
 if(isset($_POST["connexion"])){
 
@@ -13,11 +22,34 @@ if(isset($_POST["connexion"])){
         echo"Vous devez entrer un mot de passe";
     }
     else{
-        echo"Bienvenue {$mail}!";
+        $fichier = 'utilisateurs.json';
+
+    if (!file_exists($fichier)) {
+        die("Erreur : Le fichier JSON n'existe pas.");
     }
 
-    $fichier = fopen('comptes.txt', 'r');
+    $data = file_get_contents($fichier);
+    $comptes = json_decode($data, true);
+
+    if ($comptes === null) {
+        die("Erreur : Impossible de décoder le fichier JSON.");
+    }
+
+    // Vérifier si l'email et le mot de passe correspondent
+    foreach ($comptes as $compte) {
+        if ($compte["email"] == $mail && password_verify($mdp, $compte["mot_de_passe"])) {
+            // Stocker la session et rediriger vers la page protégée
+            $_SESSION["utilisateur"] = $mail;
+            header("Location: profil.php");
+            exit();
+        }
+    }
+
+    // Si aucun compte ne correspond
+    echo "Email ou mot de passe incorrect.";
 }
+    }
+
 
 ?>
 

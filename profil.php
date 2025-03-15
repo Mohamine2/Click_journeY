@@ -1,3 +1,20 @@
+<?php
+session_start(); // Démarrer la session
+
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION["utilisateur"])) {
+    // Rediriger vers la page de connexion si non connecté
+    header("Location: connexion.php");
+    exit();
+}
+
+if (isset($_POST["deconnexion"])) {
+  // Rediriger vers la page de connexion si non connecté
+  header("Location: deconnexion.php");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -39,7 +56,9 @@
       </div>
     </div>
     <div class="logout">
-      <button class="logout" type="submit">Déconnexion</button>
+    <form method="post">
+    <button class="logout" type="submit" name="deconnexion">Déconnexion</button>
+</form>
     </div>
   </body>
 </html>
