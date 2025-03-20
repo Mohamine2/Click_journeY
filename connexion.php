@@ -16,7 +16,7 @@ if(isset($_POST["connexion"])){
     $mdp = $_POST["mdp"];
 
     if(empty($mail)){
-        echo"Vous devez entrer une addresse mail";
+        echo"Vous devez entrer une adresse mail";
     }
     else if(empty($mdp)){
         echo"Vous devez entrer un mot de passe";
@@ -39,7 +39,11 @@ if(isset($_POST["connexion"])){
     foreach ($comptes as $compte) {
         if ($compte["email"] == $mail && password_verify($mdp, $compte["mot_de_passe"])) {
             // Stocker la session et rediriger vers la page protégée
-            $_SESSION["utilisateur"] = $mail;
+            $_SESSION["utilisateur"] = [
+                "email" => $compte["email"],
+                "nom" => $compte["nom"],
+                "prenom" => $compte["prenom"]
+            ];
             header("Location: profil.php");
             exit();
         }
@@ -49,7 +53,6 @@ if(isset($_POST["connexion"])){
     echo "Email ou mot de passe incorrect.";
 }
     }
-
 
 ?>
 

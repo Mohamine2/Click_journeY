@@ -13,6 +13,8 @@ if (isset($_POST["deconnexion"])) {
   header("Location: deconnexion.php");
   exit();
 }
+
+$utilisateur = $_SESSION["utilisateur"];
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +42,13 @@ if (isset($_POST["deconnexion"])) {
     </nav>
 
     <div class="conteneur_compte">
-      <p class="compte">Bonjour, [nom de la personne connectée] !</p>
+      <p class="compte">Bonjour, <?php echo htmlspecialchars($utilisateur["prenom"] . " " . $utilisateur["nom"]); ?> !</p>
       <div id="info">
         <p><b>Mes informations personnelles:</b></p>
-        <p>Mail:</p>
-        <p>Prénom:</p>
-        <p>Adresse mail:</p>
-        <p>Moyen de paiement:</p>
+        <p> Adresse mail: <?php echo htmlspecialchars($utilisateur["email"]); ?> </p>
+        <p> Nom: <?php echo htmlspecialchars($utilisateur["nom"]); ?> </p>
+        <p> Prénom: <?php echo htmlspecialchars($utilisateur["prenom"]); ?> </p>
+        <p>Moyen de paiement: </p>
         <button type="submit" class="edit">Modifier le profil</button>
       </div>
       <div id="achat">
