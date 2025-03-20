@@ -1,6 +1,6 @@
 <?php
 session_start();
-    require("fonctions_utilisateur");
+    require("fonctions_utilisateur.php");
     creation_utilisateur();
 ?>
 

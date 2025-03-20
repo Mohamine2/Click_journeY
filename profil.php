@@ -43,7 +43,7 @@ if (isset($_POST["deconnexion"])) {
       <p class="compte">Bonjour, [nom de la personne connectée] !</p>
       <div id="info">
         <p><b>Mes informations personnelles:</b></p>
-        <p>Nom:</p>
+        <p>Mail:</p>
         <p>Prénom:</p>
         <p>Adresse mail:</p>
         <p>Moyen de paiement:</p>
