@@ -37,6 +37,9 @@ $utilisateur = $_SESSION["utilisateur"];
         <li><a href="connexion.php"> Connectez-vous</a></li>
         <li><a href="profil.php"> Mon profil</a></li>
         <li><a href="presentation.php"> A propos de nous </a></li>
+        <?php if (isset($_SESSION["utilisateur"]) && $_SESSION["utilisateur"]["role"] === "admin"): ?>
+            <li><a href="admin.php">Espace Admin</a></li>
+        <?php endif; ?>
       </ul>
       <input type="search" placeholder="Rechercher..." />
     </nav>

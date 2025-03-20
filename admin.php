@@ -1,3 +1,9 @@
+<?php
+
+session_start(); 
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,9 +13,24 @@
     <title>Infos Admin</title>
 </head>
 <body>
-    <header class="admin">
-        Page Administrateur
+<header>
+        <a href="accueil.php"> Dunes Seekers </a>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="accueil.php"> Accueil </a></li>
+            <li><a href="recherche.php"> Recherche </a></li>
+            <li><a href="connexion.php"> Connectez-vous</a></li>
+            <li><a href="profil.php"> Mon profil</a></li>
+            <li><a href="presentation.php"> A propos de nous </a></li>
+            <?php if (isset($_SESSION["utilisateur"]) && $_SESSION["utilisateur"]["role"] === "admin"): ?>
+            <li><a href="admin.php">Espace Admin</a></li>
+        <?php endif; ?>
+        </ul>
+        <input type="search" placeholder="Rechercher...">
+    </nav>
+
       <div class="admin">
         <p class="client"> <b>Liste des utilisateurs inscrits:</b></p>
         <p class="client"> Tom Distant / Rang:VIP</p>
