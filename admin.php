@@ -1,6 +1,7 @@
 <?php
 
 session_start(); 
+$utilisateurs = json_decode(file_get_contents("utilisateurs.json"), true);
 
 ?>
 
@@ -33,14 +34,14 @@ session_start();
         <input type="search" placeholder="Rechercher...">
     </nav>
 
-      <div class="admin">
-        <p class="client"> <b>Liste des utilisateurs inscrits:</b></p>
-        <p class="client"> Tom Distant / Rang:VIP</p>
-        <p class="client"> Yuri Jahad / Rang:Banni</p>
-        <p class="client"> Jeanne D'Arc / Rang:Client Occasionnel</p>
-        <p class="client"> Satya Robot / Rang:Nouveau Client</p>
-        <p class="client"> Ismail Empereur / Rang:VIP</p>
-        <button type="submit" class="admin"> Modifier la liste </button>
-      </div>
+    <div class="admin">
+    <p class="client"><b>Liste des utilisateurs inscrits:</b></p>
+
+    <?php foreach ($utilisateurs as $user): ?>
+        <p class="client"><?= htmlspecialchars($user["nom"] . " " . $user["prenom"]) ?></p>
+    <?php endforeach; ?>
+
+    <button type="submit" class="admin">Modifier la liste</button>
+</div>
 </body>
 </html>
