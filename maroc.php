@@ -151,11 +151,7 @@
         <div class="container">
             <h2>Planifiez votre voyage</h2>
             <p>Obtenez un devis personnalisé pour votre aventure au Maroc.</p>
-<<<<<<< HEAD
             <a href="paiement.php" class="ticket-btn">Réservez un séjour</a>
-=======
-            <a href="recherche.html" class="ticket-btn">Réservez un séjour</a>
->>>>>>> e691acbdaf9b9f0e2c7f248aa8ad964e526c6d48
         </div>
     </section>
     
