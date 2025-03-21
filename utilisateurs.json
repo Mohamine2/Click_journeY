@@ -5,7 +5,7 @@
         "numero": "0767512314",
         "email": "seriesds3@gmail.com",
         "mot_de_passe": "$2y$10$7er53CJAcCrh03S5Orlilu0GFr0GX5xKw59HP5xvtpcB0f4hoOgge",
-        "role" : "utilisateur"
+        "role": "utilisateur"
     },
     {
         "nom": "MIku",
@@ -13,7 +13,7 @@
         "numero": "0989222123",
         "email": "guillaume@chikara.fr",
         "mot_de_passe": "$2y$10$C7VrV9UyJzDlKWbVswkkr.iv8A4VUtwFEdb1PLT9HXmOj7Wt\/Wl0a",
-        "role" : "utilisateur"
+        "role": "utilisateur"
     },
     {
         "nom": "RORONOA",
@@ -22,5 +22,26 @@
         "email": "zoro@shishi.fr",
         "mot_de_passe": "$2y$10$eN.YbcXx6Y1wetr7oze.4eTRdXi5zb6ANDVU\/U1luPK1DuvI4KXs6",
         "role": "admin"
+    },
+    {
+        "nom": "lachgar",
+        "prenom": "na\u00efm ",
+        "numero": "0989222123",
+        "email": "mouus@gmail.com",
+        "mot_de_passe": "$2y$10$T7.XhFQYLX2Zu.x2uEa8ZORH1rWJriOQKdUiKcmLNd8b8ah.0qbU."
+    },
+    {
+        "nom": "kaizoku",
+        "prenom": "orewa",
+        "numero": "0989222123",
+        "email": "roidespirates@gmail.com",
+        "mot_de_passe": "$2y$10$pj.d\/kwNpSe5gdFxtAbzPuMCFGej5PjFvKGdjUa5MPsANo7C0HE5W"
+    },
+    {
+        "nom": "aaa",
+        "prenom": "bb",
+        "numero": "0989222123",
+        "email": "a@gmail.com",
+        "mot_de_passe": "$2y$10$lJ7l2B8kJX45SJJjgryZ8.vILXb1xnC3elYvsahwazAJqqNBBwPgy"
     }
 ]
