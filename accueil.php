@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    
+
     // Vérifier si une recherche a été soumise
     $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
@@ -59,19 +59,19 @@
 
     <div class="lieu-contenant">
         <div class="lieu">
-            <a href="maroc.html">
+            <a href="maroc.php">
                 <img src="images/marrakech.jpg" alt="img_Marrakech" width="400px" height="300px">
                 <h2>MAROC</h2>
             </a>
         </div>
         <div class="lieu">
-            <a href="senegal.html">
+            <a href="senegal.php">
                 <img src="images/dakar.jpg" alt="img_dakar" width="400px" height="300px">
                 <h2>SENEGAL</h2>
             </a>
         </div>
         <div class="lieu">
-            <a href="oman.html">
+            <a href="oman.php">
                 <img src="images/oman.jpg" alt="img_oman" width="400px" height="300px">
                 <h2>OMAN</h2>
             </a>
