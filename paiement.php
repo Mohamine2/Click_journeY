@@ -44,26 +44,23 @@
         <form method="post" class="recherche">
             <fieldset method="get" class="recherche">
                 <legend class="recherche"> Plateforme de paiement </legend>
+                
                 <p> Titulaire de la carte: </p>
-                <select name="depart">
-                <label for="titulaire">  Nom: </label>
-                <input type="nom" name="nom" id="nom" required />
-                </select>
-                <p> Numéro de la carte: </p>
-                <select name="destination">
-                    <option value="Marrakech" selected="selected"> Marrakech </option>
-                    <option value="Oman"> Oman </option>
-                    <option value="Dakar"> Dakar </option>
-                </select>
+                <input type="nom" name="nom" id="nom" required /> 
                 <br/>
-                <label for="datedep"> Date de départ </label>
+
                 <br/>
-                <input type="date" name="datedep" required />
+                
+                <p>Numéro de carte bancaire :</p>
+                <input type="text" id="card-number" name="card-number" pattern="[0-9]{13,19}" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                
                 <br/>
-                <label for="adultes"> Adultes </label>
-                <input type="number" name="adultes" value="1" min="1" max="15" required />
-                <label for="enfants"> Enfants </label>
-                <input type="number" name="enfants" value="0" min="0" max="15" required /> <br> <br>
+
+                <p>Code de sécurité (CVV) :</p>
+                <input type="tel" id="cvv" name="cvv" pattern="[0-9]{3,4}" placeholder="123" maxlength="4" required>
+
+                <br/>
+
                 <button type="submit"> Payer </button>
             </fieldset>
         </form>
