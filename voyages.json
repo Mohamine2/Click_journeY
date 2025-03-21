@@ -1,14 +1,14 @@
 [
     {
         "depart": "Paris",
-        "destination": "Marrakech",
+        "destination": "Maroc",
         "duree": "7 jours",
         "nb_personnes": "",
         "date_depart": "01/04/2025"
     },
     {
         "depart": "Paris",
-        "destination": "Dakar",
+        "destination": "Senegal",
         "duree": "7 jours",
         "nb_personnes": "",
         "date_depart": "01/04/2025"
