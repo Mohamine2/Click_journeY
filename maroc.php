@@ -2,6 +2,31 @@
     session_start();
     // Vérifier si une recherche a été soumise
     $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
+    
+    // Charger les voyages depuis le JSON
+    $voyages = json_decode(file_get_contents("voyages.json"), true);
+    
+    // Chercher l'entrée correspondant au Maroc
+    $voyage_selectionne = null;
+    foreach ($voyages as $voyage) {
+        if ($voyage["destination"] === "Maroc") { // Rechercher l'entrée
+            $voyage_selectionne = $voyage;
+            break;
+        }
+    }
+    
+    // Si le voyage n'est pas trouvé, afficher une erreur
+    if (!$voyage_selectionne) {
+        die("Erreur : le voyage au Maroc n'existe pas dans le JSON.");
+    }
+    
+    // Stocker les infos en session pour le paiement
+    $_SESSION["destination"] = $voyage_selectionne["destination"];
+    $_SESSION["prix"] = $voyage_selectionne["prix"];
+    $_SESSION["depart"] = $voyage_selectionne["depart"];
+    $_SESSION["date_depart"] = $voyage_selectionne["date_depart"];
+    $_SESSION["duree"] = $voyage_selectionne["duree"];
+    $_SESSION["transaction"] = uniqid("CYB_", true);
 ?>
 
 <!DOCTYPE html>
