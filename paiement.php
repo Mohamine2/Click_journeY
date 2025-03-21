@@ -5,6 +5,17 @@
     // Vérifier si une recherche a été soumise
     $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
+    require('getapikey.php'); // Téléchargeable depuis CY Bank
+    
+    $transaction = "154632ABCD"; // Un ID de transaction unique
+    $montant = "100.50"; // Montant en euros
+    $vendeur = "MI-4_C"; // Ton code vendeur
+    $retour = "http://localhost/retour_paiement.php?session=s"; // URL de retour
+    
+    $api_key = getAPIKey($vendeur);
+    $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -41,34 +52,26 @@
     </nav>
 
 <div class="form_recherche">
-        <form method="post" class="recherche">
-            <fieldset method="get" class="recherche">
-                <legend class="recherche"> Plateforme de paiement </legend>
-                
-                <p> Titulaire de la carte: </p>
-                <input type="nom" name="nom" id="nom" required /> 
-                <br/>
+<form method="post" action="https://www.plateforme-smc.fr/cybank/index.php">
+    <legend class="recherche">Plateforme de paiement</legend>
+    
+    <!-- Identifiant unique de transaction -->
+    <input type="hidden" name="transaction" value="154632ABCD">
+    
+    <!-- Montant de la transaction -->
+    <input type="hidden" name="montant" value="100.50">
+    
+    <!-- Code vendeur (identifiant de ton groupe) -->
+    <input type="hidden" name="vendeur" value="MI-4_C">
+    
+    <!-- URL de retour après paiement -->
+    <input type="hidden" name="retour" value="http://localhost/retour_paiement.php?session=s">
+    
+    <!-- Valeur de contrôle sécurisée -->
+    <input type="hidden" name="control" value="<?= $control ?>">
 
-                <br/>
-                
-                <p>Numéro de carte bancaire :</p>
-                <input type="text" id="card-number" name="card-number" pattern="[0-9]{13,19}" placeholder="1234 5678 9012 3456" maxlength="19" required>
-                
-                <br/>
-
-                <p>Date d'expiration :</p>
-                <input type="text" id="expiry" name="expiry" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" placeholder="MM/AA" maxlength="5" required>
-
-                <br/>
-
-                <p>Code de sécurité (CVV) :</p>
-                <input type="tel" id="cvv" name="cvv" pattern="[0-9]{3,4}" placeholder="123" maxlength="4" required>
-
-                <br/>
-
-                <button type="submit"> Payer </button>
-            </fieldset>
-        </form>
+    <button type="submit">Payer</button>
+</form>
     </div>
 
     
