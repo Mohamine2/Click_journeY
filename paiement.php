@@ -43,14 +43,13 @@
 <div class="form_recherche">
         <form method="post" class="recherche">
             <fieldset method="get" class="recherche">
-                <legend class="recherche"> Trouvez votre excursion </legend>
-                <p> Départ: </p>
+                <legend class="recherche"> Plateforme de paiement </legend>
+                <p> Titulaire de la carte: </p>
                 <select name="depart">
-                    <option value="Paris" selected="selected"> Paris </option>
-                    <option value="Lyon"> Lyon </option>
-                    <option value="Marseille"> Marseille </option>
+                <label for="titulaire">  Nom: </label>
+                <input type="nom" name="nom" id="nom" required />
                 </select>
-                <p> Destination: </p>
+                <p> Numéro de la carte: </p>
                 <select name="destination">
                     <option value="Marrakech" selected="selected"> Marrakech </option>
                     <option value="Oman"> Oman </option>
@@ -60,23 +59,14 @@
                 <label for="datedep"> Date de départ </label>
                 <br/>
                 <input type="date" name="datedep" required />
-                <p> Durée du voyage:  </p>
-                <select name="duree">
-                    <option value="3j" selected="selected"> 3 jours </option>
-                    <option value="5j"> 5 jours </option>
-                    <option value="7j"> 7 jours </option>
-                </select>
                 <br/>
                 <label for="adultes"> Adultes </label>
                 <input type="number" name="adultes" value="1" min="1" max="15" required />
                 <label for="enfants"> Enfants </label>
                 <input type="number" name="enfants" value="0" min="0" max="15" required /> <br> <br>
-                <button type="submit"> Chercher une excursion </button>
+                <button type="submit"> Payer </button>
             </fieldset>
         </form>
     </div>
 
-    </body>
-
-
-</html>
+    
