@@ -16,7 +16,7 @@ session_start();
 <body>
 
     <header>
-        <a href="accueil.html"> Dunes Seekers </a>
+        <a href="accueil.php"> Dunes Seekers </a>
     </header>
 
     <nav>
@@ -54,7 +54,7 @@ session_start();
 
     <div class="lieu-contenant">
         <div class="lieu">
-            <a href="maroc.html">
+            <a href="maroc.php">
                 <img src="images/marrakech.jpg" alt="img_Marrakech" width="400px" height="300px">
                 <h2>MAROC</h2>
             </a>
