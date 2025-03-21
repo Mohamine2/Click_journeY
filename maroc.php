@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 <?php
     session_start();
     // Vérifier si une recherche a été soumise
     $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 ?>
 
->>>>>>> e691acbdaf9b9f0e2c7f248aa8ad964e526c6d48
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -151,7 +148,7 @@
         <div class="container">
             <h2>Planifiez votre voyage</h2>
             <p>Obtenez un devis personnalisé pour votre aventure au Maroc.</p>
-            <a href="paiement.php" class="ticket-btn">Réservez un séjour</a>
+            <a href="recapitulatif.php" class="ticket-btn">Réservez un séjour</a>
         </div>
     </section>
     
