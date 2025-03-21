@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 <?php
     session_start();
     // Vérifier si une recherche a été soumise
     $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 ?>
 
->>>>>>> e691acbdaf9b9f0e2c7f248aa8ad964e526c6d48
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Maroc - Dunes Seekers</title>
+    <title>Oman - Dunes Seekers</title>
 </head>
 
 
@@ -39,7 +36,7 @@
 
     <!-- choix-->
     <section class="titre">
-            <h1>Votre voyage à travers une exploration culturelle au Maroc </h1>
+            <h1>Votre voyage au sein du désert Sharqiya Sands</h1>
     </section>
 
     <!-- Séjour -->
@@ -49,10 +46,10 @@
             <label for="jour1">
                 <div class="tab-name">Jour 1</div>
                 <div class="tab-content">
-                    <h3>Médina</h3>
+                    <h3>Mascate</h3>
                     <p>A votre arrivée, 
                         vous serez accueillis par le guide (fancophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre
-                        à toutes vos questions. Il vous fera visiter les alentours de Médina, notamment la place Jemaa el-Fna
+                        à toutes vos questions. Il vous fera visiter les alentours, notamment la Grande Mosquée du Sultan Qaboos ou encore le souk de Muttrah
                          jusqu'au soir.</p>
                 </div>
 
@@ -62,9 +59,9 @@
             <label for="jour2">
                 <div class="tab-name">Jour 2</div>
                 <div class="tab-content">
-                    <h3>Désert d'Agafay</h3>
-                    <p>Exploration du paysage lunaire à travers la randonnée à dos de dromadaires.
-                       Vous aurez aussi la possibilité de faire du buggy dans les dunes pendant cette expérience nomade.
+                    <h3>Wahiba Sands</h3>
+                    <p>Exploration du fameux désert, l'occasion rêvée de découvrir ses canyons spectaculaires, 
+                       des merveilles naturelles et ressentir l'esprit d'un aventurier à travers cette randonée.
                     </p>
                 </div>
             </label>
@@ -73,9 +70,10 @@
             <label for="jour3">
                 <div class="tab-name">Jour 3</div>
                 <div class="tab-content">
-                    <h3>Patrimoine & Histoire</h3>
-                    <p>Découverte de nouveaux plats ou boissons comme le thé à la menthe puis enchaînez avec une visite dans des monuments
-                        emblématiques tel que le Palais de la Bahia, le Tombeaux Saadiens et Médersa Ben Youssef.                   </p>
+                    <h3>Wahiba sands</h3>
+                    <p>Deuxième jour de randonnée où vous allez pouvoir vivre comme un nomade, vous baigner dans des piscines naturelles
+                        et surtout voir les dunes qui s'étendent comme des vagues d'or sous le soleil.
+                    </p>
                 </div>
             </label>
 
@@ -83,9 +81,9 @@
             <label for="jour4">
                 <div class="tab-name">Jour 4</div>
                 <div class="tab-content">
-                    <h3>Vallée de l'Ourika</h3>
-                    <p>Voyage unique à travers une randonnée vers les cascades de Setti Fatma. Vous pourrez vous relaxer 
-                        la nature et être accueillis dans une maison où vous dégusterez un tajine traditionnel.</p>
+                    <h3>Wadi shab</h3>
+                    <p>Voyage unique à travers un safari en 4x4, une balade à dos de chameau et nuit dans un campement traditionnel 
+                        où vous pourriez vous faire l'installation et se détendre sous les étoiles.</p>
                 </div>
             </label>
 
@@ -93,9 +91,10 @@
             <label for="jour5">
                 <div class="tab-name">Jour 5</div>
                 <div class="tab-content">
-                    <h3>Aït Ben Haddou</h3>
-                    <p>A Kasbah Aït Ben Haddou, vous allez pouvoir faire la visite des studios de cinéma à Ouarzazate(ex:Game of Thrones)
-                        et aussi découvrir des villages berbères traditionnels.</p>
+                    <h3>Découverte de Nizwa</h3>
+                    <p>En route vers Nizwa pour avoir l'occasion de visiter la forteresse de Nizwa
+                        et son marché traditionnel, l'occasion de découvrir ses artisans authentiques. 
+                    </p>
                 </div>
             </label>
 
@@ -103,9 +102,9 @@
             <label for="jour6">
                 <div class="tab-name">Jour 6</div>
                 <div class="tab-content">
-                    <h3>Jardins & repos</h3>
-                    <p>Journée apaisante où vous allez pouvoir découvrir la cuisine marocaine grâce à des restaurants. Vous pourrez aussi faire la visite de plusieurs
-                         jardins tel que Majorelle et le jardin Secret Medina Marrakech.
+                    <h3>Détente près des côtes</h3>
+                    <p>Visite des plages de la côte omanaise où vous pourrez vous baigner et vous reposer,
+                        découvrir des villages de pêcheurs et manger des fruits de mer face à la mer.
                     </p>
                 </div>
             </label>
@@ -115,7 +114,7 @@
                 <div class="tab-name">Jour 7</div>
                 <div class="tab-content">
                     <h3>Boutique & départ</h3>
-                    <p>Journée relaxante pour faire ses derniers achats dans le souk de Marrakech et avoir du temps libre
+                    <p>Journée relaxante pour faire les derniers achats dans le souk de Mascate et avoir du temps libre
                         avant d'aller prendre l'avion pour revenir en France.
                     </p>
                 </div>
@@ -129,18 +128,18 @@
     
         <div class="lieu-contenant">
         <div class="lieu">
-                <img src="images/marocI1.jpg" alt="img_Marrakech" width="400px" height="300px">
-                <h2>Palais de la Bahia</h2>
+                <img src="images/OmanI1.jpg" alt="img_Marrakech" width="400px" height="300px">
+                <h2>Mosque du Sultan</h2>
             </a>
         </div>
         <div class="lieu">
-                <img src="images/marocI2.jpg" alt="img_dakar" width="400px" height="300px">
-                <h2>Buggy désert</h2>
+                <img src="images/OmanI2.jpg" alt="img_dakar" width="400px" height="300px">
+                <h2>Wadi shab</h2>
             </a>
         </div>
         <div class="lieu">
-                <img src="images/marocI3.jpg" alt="img_oman" width="400px" height="300px">
-                <h2>Jardin Marjorelle</h2>
+                <img src="images/OmanI3.jpg" alt="img_oman" width="400px" height="300px">
+                <h2>Nizwa forteresse</h2>
             </a>
         </div>
     </div>
@@ -150,12 +149,8 @@
     <section class="contact">
         <div class="container">
             <h2>Planifiez votre voyage</h2>
-            <p>Obtenez un devis personnalisé pour votre aventure au Maroc.</p>
-<<<<<<< HEAD
-            <a href="paiement.php" class="ticket-btn">Réservez un séjour</a>
-=======
+            <p>Obtenez un devis personnalisé pour votre aventure en Oman.</p>
             <a href="recherche.html" class="ticket-btn">Réservez un séjour</a>
->>>>>>> e691acbdaf9b9f0e2c7f248aa8ad964e526c6d48
         </div>
     </section>
     

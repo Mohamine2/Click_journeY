@@ -1,0 +1,23 @@
+[
+    {
+        "depart": "Paris",
+        "destination": "Marrakech",
+        "duree": "7 jours",
+        "nb_personnes": "",
+        "date_depart": "01/04/2025"
+    },
+    {
+        "depart": "Paris",
+        "destination": "Dakar",
+        "duree": "7 jours",
+        "nb_personnes": "",
+        "date_depart": "01/04/2025"
+    },
+    {
+        "depart": "Paris",
+        "destination": "Oman",
+        "duree": "7 jours",
+        "nb_personnes": "",
+        "date_depart": "01/04/2025"
+    }
+]

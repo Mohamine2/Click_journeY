@@ -1,8 +1,8 @@
 <?php
-
-session_start(); 
-
+    // Vérifier si une recherche a été soumise
+    $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -33,12 +33,14 @@ session_start();
             <li><a href="admin.php">Espace Admin</a></li>
         <?php endif; ?>
         </ul>
-        <input type="search" placeholder="Rechercher...">
+        <form method="get" action="resultats.php">
+            <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
+        </form>
     </nav>
 
     <div class="form_recherche">
         <form method="post" class="recherche">
-            <fieldset class="recherche">
+            <fieldset method="get" class="recherche">
                 <legend class="recherche"> Trouvez votre excursion </legend>
                 <p> Départ: </p>
                 <select name="depart">

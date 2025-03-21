@@ -1,6 +1,9 @@
 <?php
 
-session_start(); 
+    session_start();
+
+    // Vérifier si une recherche a été soumise
+    $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +35,9 @@ session_start();
             <li><a href="admin.php">Espace Admin</a></li>
         <?php endif; ?>
         </ul>
-        <input type="search" placeholder="Rechercher...">
+        <form method="get" action="resultats.php">
+            <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
+        </form>
     </nav>
 
     <section class="titre">
@@ -60,13 +65,13 @@ session_start();
             </a>
         </div>
         <div class="lieu">
-            <a href="senegal.html">
+            <a href="senegal.php">
                 <img src="images/dakar.jpg" alt="img_dakar" width="400px" height="300px">
                 <h2>SENEGAL</h2>
             </a>
         </div>
         <div class="lieu">
-            <a href="oman.html">
+            <a href="oman.php">
                 <img src="images/oman.jpg" alt="img_oman" width="400px" height="300px">
                 <h2>OMAN</h2>
             </a>
