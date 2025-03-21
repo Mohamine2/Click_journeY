@@ -2,6 +2,8 @@
 
 session_start(); 
 
+// Vérifier si une recherche a été soumise
+$searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Vérifier si l'utilisateur est connecté
 if (isset($_SESSION["utilisateur"])) {
@@ -87,7 +89,9 @@ if(isset($_POST["connexion"])){
             <li><a href="admin.php">Espace Admin</a></li>
         <?php endif; ?>
         </ul>
-        <input type="search" placeholder="Rechercher...">
+        <form method="get" action="resultats.php">
+            <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
+        </form>
     </nav>
 
     <div class="boite_connexion">

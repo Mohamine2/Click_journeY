@@ -1,6 +1,9 @@
 <?php
 
 session_start(); 
+    
+// Vérifier si une recherche a été soumise
+$searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Lire le fichier JSON
 $utilisateurs = json_decode(file_get_contents("utilisateurs.json"), true);
@@ -44,7 +47,9 @@ $utilisateurs_affiches = array_slice($utilisateurs, $debut, $utilisateurs_par_pa
             <li><a href="admin.php">Espace Admin</a></li>
         <?php endif; ?>
         </ul>
-        <input type="search" placeholder="Rechercher...">
+        <form method="get" action="resultats.php">
+            <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
+        </form>
     </nav>
 
     <div class="admin">
