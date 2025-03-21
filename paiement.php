@@ -56,6 +56,11 @@
                 
                 <br/>
 
+                <p>Date d'expiration :</p>
+                <input type="text" id="expiry" name="expiry" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" placeholder="MM/AA" maxlength="5" required>
+
+                <br/>
+
                 <p>Code de sécurité (CVV) :</p>
                 <input type="tel" id="cvv" name="cvv" pattern="[0-9]{3,4}" placeholder="123" maxlength="4" required>
 
