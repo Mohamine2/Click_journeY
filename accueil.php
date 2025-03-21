@@ -23,7 +23,9 @@ session_start();
         <ul>
             <li><a href="accueil.php"> Accueil </a></li>
             <li><a href="recherche.php"> Recherche </a></li>
+            <?php if(!isset($_SESSION["utilisateur"])): ?>
             <li><a href="connexion.php"> Connectez-vous</a></li>
+            <?php endif; ?>
             <li><a href="profil.php"> Mon profil</a></li>
             <li><a href="presentation.php"> A propos de nous </a></li>
             <?php if (isset($_SESSION["utilisateur"]) && $_SESSION["utilisateur"]["role"] === "admin"): ?>
