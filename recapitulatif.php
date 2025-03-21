@@ -1,12 +1,21 @@
 <?php
 
-session_start(); 
+    session_start();
 
-if(isset($_POST["paiement"])){
-    // Rediriger vers la page de paiement
-    header("Location: paiement.php");
-    exit();
-}
+    // Vérifier si une recherche a été soumise
+    $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
+
+    require('getapikey.php'); // Téléchargeable depuis CY Bank
+    
+    $transaction = "154632ABCD"; // Un ID de transaction unique
+    $montant = "100.50"; // Montant en euros
+    $vendeur = "MI-4_C"; // Ton code vendeur
+    $retour = "http://localhost/retour_paiement.php?session=s"; // URL de retour
+    
+    $api_key = getAPIKey($vendeur);
+    $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -51,12 +60,28 @@ if(isset($_POST["paiement"])){
     <p class="client">Etapes du voyage : </p>
     <p class="client">Durée : </p>
     <p class="client">Machin : </p>
-    
 
+    <form method="post" action="https://www.plateforme-smc.fr/cybank/index.php">
+    
+    <!-- Identifiant unique de transaction -->
+    <input type="hidden" name="transaction" value="154632ABCD">
+    
+    <!-- Montant de la transaction -->
+    <input type="hidden" name="montant" value="100.50">
+    
+    <!-- Code vendeur (identifiant de ton groupe) -->
+    <input type="hidden" name="vendeur" value="MI-4_C">
+    
+    <!-- URL de retour après paiement -->
+    <input type="hidden" name="retour" value="http://localhost/retour_paiement.php?session=s">
+    
+    <!-- Valeur de contrôle sécurisée -->
+    <input type="hidden" name="control" value="<?= $control ?>">
+
+    <button type="submit">Payer</button>
    
     </div>
 
-    <form method="post">
-    <button type="submit" class="admin" name="paiement">Payer</button>
-    </form>
+    
+</form>
 </div>
