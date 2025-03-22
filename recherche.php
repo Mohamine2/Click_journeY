@@ -17,7 +17,7 @@
 <body>
 
     <header>
-        <a href="accueil.html"> Dunes Seekers </a>
+        <a href="accueil.php"> Dunes Seekers </a>
     </header>
 
     <nav>
