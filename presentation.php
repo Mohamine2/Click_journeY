@@ -45,13 +45,13 @@
 
         <p> Nous sommes Dunes seekers: l'agence de voyages faite pour vous ! </p>
         <p>
-            Notre équipe s'engage à vous offrir une expérience inoubliable dans les déserts du monde. Sénégal, Maroc
-            ou encore Oman, nos excursions vont satisfaire votre désir d'aventure.
+            Notre équipe s'engage à vous offrir une expérience inoubliable dans les déserts du monde.
+            Comme le désert du Sahara, d'Arabie ou de Gobi avec des excursions qui vont satisfaire votre désir d'aventure.
         </p>
         <p>
             Chez Dunes Seekers, nous sommes passionnés par l'aventure et la découverte. Notre agence de voyage est née
-            de l'envie de partager avec vous les merveilles cachées de destinations uniques telles que le Maroc, l'Oman
-            et le Sénégal.
+            de l'envie de partager avec vous les merveilles cachées de destinations uniques telles que le Maroc, l'Egypte
+            et le Mali...
         </p>
         <p>
             Notre Mission :
@@ -64,17 +64,20 @@
             Nos Destinations :
 
             <ul>
-            <li>Maroc : Plongez dans l'effervescence de la ville rouge, avec ses souks animés, ses jardins luxuriants et
-            son patrimoine historique riche. Marrakech est une destination qui émerveille par sa diversité et son charme
+            <li>Désert du Sahara : Découvrez l'effervescence des pays tels que l'Algérie,le Maroc,la Libye, la Tunisie ou le Mali avec leurs souks animés, ses paysages luxuriants et
+            leurs patrimoine historique riche. Ces destinations sont là pour émerveiller par leurs diversités et ses charme
             intemporel.</li>
 
-            <li>Oman : Découvrez les paysages époustouflants d'Oman, entre déserts majestueux, montagnes impressionnantes et
-            plages paradisiaques. Oman est une terre de contrastes où la nature et la culture se rencontrent
+            <li>Désert d'Arabie : Plongez-vous dans les paysages époustouflants d'Arabie et ses pays comme l'Arabie Saoudite,la Jordanie,les Emirats Arabes Unis ou le Oman.Où vous allez pouvoir 
+                observer et être dans des déserts majestueux,des montagnes impressionnantes et des plages paradisiaques. L'Arabie est une terre de contrastes où la nature et la technologie se rencontrent
             harmonieusement.</li>
 
-            <li>Sénégal : Explorez la vibrante capitale du Sénégal, avec ses marchés colorés, ses plages ensoleillées et son
-            ambiance chaleureuse. Dakar est une ville dynamique qui vous accueille à bras ouverts pour une expérience
+            <li>Désert de Gobi : Explorez l'univers fascinant de la Chine ou de la Mongalie, avec son désert à la fois aride et plein de vie.Et ses formations rocheuses étrange à travers une
+            ambiance chaleureuse. Ce paysage unique vous accueille à bras ouverts pour une expérience
             authentique et enrichissante.</li>
+
+            <li>Désert de Kalahari : Partez à la découverte d'un paysage sauvage et préservé à travers la Namibie ou encore l'Afrique du Sud, où les dunes sculptées par le vent côtoient des formations rocheuses spectaculaires.
+                 Un monde de sérénité et immersif pour les amoureux de nature.</li>
             </ul>
         </p>
         <p>
