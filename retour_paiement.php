@@ -5,6 +5,40 @@
     // Vérifier si une recherche a été soumise
     $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
+require('getapikey.php'); // Fonction pour récupérer l'API Key
+
+
+if (!isset($_GET["transaction"]) || !isset($_GET["montant"]) || !isset($_GET["vendeur"]) || !isset($_GET["status"]) || !isset($_GET["control"])) {
+    die("Erreur : paramètres manquants.");
+}
+
+// Récupérer et nettoyer les valeurs reçues //Chatgpt
+$transaction = trim($_GET["transaction"]); 
+$montant = number_format(floatval($_GET["montant"]), 2, ".", ""); // Assurer le bon format
+$vendeur = trim($_GET["vendeur"]);
+$status = trim($_GET["status"]);
+$control_recu = trim($_GET["control"]);
+
+// Récupérer l'API Key du vendeur
+$api_key = getAPIKey($vendeur);
+
+// Générer la valeur de contrôle attendue
+$control_attendu = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $status . "#");
+
+// Vérifier si la valeur de contrôle reçue est correcte
+if ($control_recu !== $control_attendu) {
+    $message_paiement = "❌ Erreur : les données reçues ne sont pas valides.";
+} 
+
+else {
+    if ($status === "accepted") {
+        $message_paiement = "Paiement validé ! Votre réservation est confirmée.";
+    } else {
+        $message_paiement = "Paiement refusé. Merci de réessayer.";
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,3 +73,22 @@
             <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
         </form>
     </nav>
+
+    <div class="admin">
+    <h1>Confirmation de Paiement</h1>
+    <p><?= htmlspecialchars($message_paiement) ?></p>
+    <p><strong>Numéro de transaction :</strong> <?= htmlspecialchars($transaction) ?></p>
+    <p><strong>Montant :</strong> <?= number_format($montant, 2, ",", " ") ?> €</p>
+    <p><strong>Statut :</strong> <?php 
+        if ($statut === "accepted") { 
+            echo "Accepté, votre paiement a été validé avec succès.";
+        } elseif ($statut === "declined") { 
+            echo "Refusé. Votre paiement a été refusé. Veuillez réessayer.";
+        } ?>   </p>
+
+    <a href="accueil.php">Retour à l'accueil</a>
+            </div>
+
+</body>
+</html>
+
