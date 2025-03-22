@@ -5,12 +5,22 @@
     // Vérifier si une recherche a été soumise
     $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
-    require('getapikey.php'); // Téléchargeable depuis CY Bank
+    require('getapikey.php'); 
+
+    if (!isset($_SESSION["destination"]) || !isset($_SESSION["prix"]) || !isset($_SESSION["depart"]) || !isset($_SESSION["date_depart"]) || !isset($_SESSION["duree"]) || !isset($_SESSION["transaction"])) {
+        die("Erreur : informations du voyage manquantes.");
+    }
+
+    $destination = $_SESSION["destination"];
+    $montant = number_format((float)$_SESSION["prix"], 2, ".", "");
+    $depart = $_SESSION["depart"];
+    $date_depart = $_SESSION["date_depart"];
+    $duree = $_SESSION["duree"];
+
     
-    $transaction = "154632ABCD"; // Un ID de transaction unique
-    $montant = "100.50"; // Montant en euros
+    $transaction = $_SESSION["transaction"];// Un ID de transaction unique
     $vendeur = "MI-4_C"; // Ton code vendeur
-    $retour = "http://localhost/retour_paiement.php?session=s"; // URL de retour
+    $retour = "http://localhost/Click_journeY/retour_paiement.php?session=s"; // URL de retour
     
     $api_key = getAPIKey($vendeur);
     $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
@@ -25,7 +35,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <title>Accueil - Dunes Seekers</title>
+    <title>Récapitulatif - Dunes Seekers</title>
 </head>
 
 <body>
@@ -50,38 +60,35 @@
         <input type="search" placeholder="Rechercher...">
     </nav>
 
-
-
-
     <div class="admin">
-    <p class="client"><b>Récapitulatif du voyage :</b></p>
-    <p class="client">Destination : </p>
-    <p class="client">Nombre de voyageurs : </p>
-    <p class="client">Etapes du voyage : </p>
-    <p class="client">Durée : </p>
-    <p class="client">Machin : </p>
+    <h1>Récapitulatif du voyage</h1>
+    <p><strong>Destination :</strong> <?= htmlspecialchars($destination) ?></p>
+    <p><strong>Départ :</strong> <?= htmlspecialchars($depart) ?></p>
+    <p><strong>Date de départ :</strong> <?= htmlspecialchars($date_depart) ?></p>
+    <p><strong>Durée :</strong> <?= htmlspecialchars($duree) ?></p>
+    <p><strong>Prix :</strong> <?= number_format($montant, 2, ",", " ") ?> €</p>
+
 
     <form method="post" action="https://www.plateforme-smc.fr/cybank/index.php">
     
     <!-- Identifiant unique de transaction -->
-    <input type="hidden" name="transaction" value="154632ABCD">
+    <input type="hidden" name="transaction" value="<?= htmlspecialchars($transaction) ?>">
     
     <!-- Montant de la transaction -->
-    <input type="hidden" name="montant" value="100.50">
+    <input type="hidden" name="montant" value="<?= htmlspecialchars($montant) ?>">
     
-    <!-- Code vendeur (identifiant de ton groupe) -->
+    <!-- Code vendeur  -->
     <input type="hidden" name="vendeur" value="MI-4_C">
     
     <!-- URL de retour après paiement -->
-    <input type="hidden" name="retour" value="http://localhost/retour_paiement.php?session=s">
+    <input type="hidden" name="retour" value="http://localhost/Click_journeY/retour_paiement.php?session=s">
     
     <!-- Valeur de contrôle sécurisée -->
     <input type="hidden" name="control" value="<?= $control ?>">
 
     <button type="submit">Payer</button>
    
+    </form>
     </div>
-
     
-</form>
 </div>

@@ -2,7 +2,7 @@
     session_start();
     // Vérifier si une recherche a été soumise
     $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
-    
+     
     // Charger les voyages depuis le JSON
     $voyages = json_decode(file_get_contents("voyages.json"), true);
     
@@ -26,7 +26,7 @@
     $_SESSION["depart"] = $voyage_selectionne["depart"];
     $_SESSION["date_depart"] = $voyage_selectionne["date_depart"];
     $_SESSION["duree"] = $voyage_selectionne["duree"];
-    $_SESSION["transaction"] = uniqid("CYB_", true);
+    $_SESSION["transaction"] = bin2hex(random_bytes(10));
 ?>
 
 <!DOCTYPE html>
