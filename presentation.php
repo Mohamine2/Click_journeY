@@ -50,8 +50,7 @@
         </p>
         <p>
             Chez Dunes Seekers, nous sommes passionnés par l'aventure et la découverte. Notre agence de voyage est née
-            de l'envie de partager avec vous les merveilles cachées de destinations uniques telles que le Maroc, l'Egypte
-            et le Mali...
+            de l'envie de partager avec vous les merveilles cachées du désert aves des destinations uniques comme le Sahara et l'Arabie.
         </p>
         <p>
             Notre Mission :
@@ -67,14 +66,17 @@
             <li>Désert du Sahara : Découvrez l'effervescence des pays tels que l'Algérie,le Maroc,la Libye, la Tunisie ou le Mali avec leurs souks animés, ses paysages luxuriants et
             leurs patrimoine historique riche. Ces destinations sont là pour émerveiller par leurs diversités et ses charme
             intemporel.</li>
+            </br>
 
             <li>Désert d'Arabie : Plongez-vous dans les paysages époustouflants d'Arabie et ses pays comme l'Arabie Saoudite,la Jordanie,les Emirats Arabes Unis ou le Oman.Où vous allez pouvoir 
                 observer et être dans des déserts majestueux,des montagnes impressionnantes et des plages paradisiaques. L'Arabie est une terre de contrastes où la nature et la technologie se rencontrent
             harmonieusement.</li>
+            </br>
 
             <li>Désert de Gobi : Explorez l'univers fascinant de la Chine ou de la Mongalie, avec son désert à la fois aride et plein de vie.Et ses formations rocheuses étrange à travers une
             ambiance chaleureuse. Ce paysage unique vous accueille à bras ouverts pour une expérience
             authentique et enrichissante.</li>
+            </br>
 
             <li>Désert de Kalahari : Partez à la découverte d'un paysage sauvage et préservé à travers la Namibie ou encore l'Afrique du Sud, où les dunes sculptées par le vent côtoient des formations rocheuses spectaculaires.
                  Un monde de sérénité et immersif pour les amoureux de nature.</li>
