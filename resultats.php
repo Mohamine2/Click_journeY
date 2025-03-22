@@ -49,7 +49,7 @@ $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
         <ul>
             <?php foreach ($data as $voyage): ?>
                 <li>
-                    <a href="<?= urlencode($voyage['destination']) ?>.php" class="voyage-link">
+                    <a href="voyages.php?dest=<?=$voyage['destination'] ?>" class="voyage-link">
                     <?= htmlspecialchars($voyage['depart']) ?></strong> - 
                     <?= htmlspecialchars($voyage['destination']) ?> | 
                     <?= htmlspecialchars($voyage['duree']) ?>

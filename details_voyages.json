@@ -1,0 +1,767 @@
+{
+    "Maroc": {
+        "destination": "Maroc",
+        "intro": "Votre voyage à travers une exploration culturelle au Maroc",
+        "jours": [
+            {
+                "titre": "Médina",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (fancophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Médina, notamment la place Jemaa el-Fna jusqu'au soir."
+            },
+            {
+                "titre": "Désert d'Agafay",
+                "desc": "Exploration du paysage lunaire à travers la randonnée à dos de dromadaires. Vous aurez aussi la possibilité de faire du buggy dans les dunes pendant cette expérience nomade."
+            },
+            {
+                "titre": "Patrimoine & Histoire",
+                "desc": "Découverte de nouveaux plats ou boissons comme le thé à la menthe puis enchaînez avec une visite dans des monuments emblématiques tel que le Palais de la Bahia, le Tombeaux Saadiens et Médersa Ben Youssef."
+            },
+            {
+                "titre": "Vallée de l'Ourika",
+                "desc": "Voyage unique à travers une randonnée vers les cascades de Setti Fatma. Vous pourrez vous relaxer la nature et être accueillis dans une maison où vous dégusterez un tajine traditionnel."
+            },
+            {
+                "titre": "Aït Ben Haddou",
+                "desc": "A Kasbah Aït Ben Haddou, vous allez pouvoir faire la visite des studios de cinéma à Ouarzazate(ex:Game of Thrones) et aussi découvrir des villages berbères traditionnels."
+            },
+            {
+                "titre": "Jardins & repos",
+                "desc": "Journée apaisante où vous allez pouvoir découvrir la cuisine marocaine grâce à des restaurants. Vous pourrez aussi faire la visite de plusieurs jardins tel que Majorelle et le jardin Secret Medina Marrakech."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Journée relaxante pour faire ses derniers achats dans le souk de Marrakech et avoir du temps libre avant d'aller prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/marocI1.jpg",
+                "alt": "Palais de la Bahia",
+                "titre": "Palais de la Bahia"
+            },
+            {
+                "src": "images/marocI2.jpg",
+                "alt": "Buggy désert",
+                "titre": "Buggy désert"
+            },
+            {
+                "src": "images/marocI3.jpg",
+                "alt": "Jardin Majorelle",
+                "titre": "Jardin Majorelle"
+            }
+        ]
+    },
+    "Sénégal": {
+        "destination": "Sénégal",
+        "intro": "Votre voyage immersif au sein d'un pays authentique comme le Sénégal",
+        "jours": [
+            {
+                "titre": "Dakar",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (fancophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Dakar, notamment la place de l’Indépendance, et ce jusqu'au soir."
+            },
+            {
+                "titre": "Safari",
+                "desc": "Exploration du paysage au coeur du parc National de Bandia où vous pouvez observez des animaux qui se trouvent principalement en Afrique (crocodiles,rhinocéros & éléphants)."
+            },
+            {
+                "titre": "Ile de Gorée",
+                "desc": "Trajet en ferry vers l'île de Gorée, une visite chargée d'histoire avec la visite des monuments aux esclaves et du musée historique."
+            },
+            {
+                "titre": "Désert de Lompoul",
+                "desc": "Voyage unique à travers une randonnée et la possibilité d'avoir une balade à dos de dromadaire .Vous aurez l'occasion de ne faire qu'un avec la nature et être accueillis dans un campement traditionnel où il y aura de la nourriture et des animations traditionnels."
+            },
+            {
+                "titre": "Lac Rose",
+                "desc": "A la découverte du fameux Lac Rose à travers une excursion en pirogue sur le lac. Vous allez pouvoir explorer tout le paysage sableux qui l'entoure et aussi avoir la possibilité de faire du quad."
+            },
+            {
+                "titre": "Détente",
+                "desc": "Profiter d'un paysages contrastant avec les zones les plus arides du nords, caractérisé par du sable blanc et fin, bordé par des cocotiers."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Journée relaxante pour faire ses derniers achats dans le souk de Dakar et avoir du temps libre avant d'aller prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/senegalI1.jpg",
+                "alt": "Safari",
+                "titre": "Safari"
+            },
+            {
+                "src": "images/senegalI2.jpg",
+                "alt": "Fleuve du Sénégal",
+                "titre": "Fleuve du Sénégal"
+            },
+            {
+                "src": "images/senegalI3.jpg",
+                "alt": "Quad",
+                "titre": "Quad"
+            }
+        ]
+    },
+    "Oman": {
+        "destination": "Oman",
+        "intro": "Votre voyage au sein du désert Sharqiya Sands",
+        "jours": [
+            {
+                "titre": "Mascate",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (fancophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours, notamment la Grande Mosquée du Sultan Qaboos et le souk de Muttrah jusqu'au soir."
+            },
+            {
+                "titre": "Wahiba Sands",
+                "desc": "Exploration du fameux désert, l'occasion rêvée de découvrir ses canyons spectaculaires, des merveilles naturelles et ressentir l'esprit d'un aventurier à travers cette randonnée."
+            },
+            {
+                "titre": "Wahiba Sands",
+                "desc": "Deuxième jour de randonnée où vous allez pouvoir vivre comme un nomade, vous baigner dans des piscines naturelles et surtout voir les dunes qui s'étendent comme des vagues d'or sous le soleil."
+            },
+            {
+                "titre": "Wadi Shab",
+                "desc": "Voyage unique à travers un safari en 4x4, une balade à dos de chameau et une nuit dans un campement traditionnel où vous pourrez vous installer et vous détendre sous les étoiles."
+            },
+            {
+                "titre": "Découverte de Nizwa",
+                "desc": "En route vers Nizwa pour avoir l'occasion de visiter la forteresse de Nizwa et son marché traditionnel, l'occasion de découvrir ses artisans authentiques."
+            },
+            {
+                "titre": "Détente près des côtes",
+                "desc": "Visite des plages de la côte omanaise où vous pourrez vous baigner et vous reposer, découvrir des villages de pêcheurs et déguster des fruits de mer face à la mer."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Journée relaxante pour faire les derniers achats dans le souk de Mascate et avoir du temps libre avant d'aller prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/OmanI1.jpg",
+                "alt": "Mosque du Sultan",
+                "titre": "Mosque du Sultan"
+            },
+            {
+                "src": "images/OmanI2.jpg",
+                "alt": "Wadi Shab",
+                "titre": "Wadi Shab"
+            },
+            {
+                "src": "images/OmanI3.jpg",
+                "alt": "Nizwa forteresse",
+                "titre": "Nizwa forteresse"
+            }
+        ]
+    },
+    "Algerie": {
+        "destination": "Algérie",
+        "intro": "Un voyage dynamique à travers une exploration en Algérie",
+        "jours": [
+            {
+                "titre": "Alger",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (fancophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours d'Alger, notamment le monument Monument Martyr et le jardin d'Essai jusqu'au soir."
+            },
+            {
+                "titre": "Timimoun",
+                "desc": "Balade dans la palmeraie Tolga où vous pourrez vous immerger dans la nature. Découverte des foggaras, anciens systèmes d'irrigation souterrains."
+            },
+            {
+                "titre": "Villages Sahariens",
+                "desc": "Découverte de nouveaux plats et boissons comme le tajine, suivie d'une visite avec des artisans locaux pour voir des tapis, de la poterie ou des bijoux. Soirée musicale autour d'un feu de camp."
+            },
+            {
+                "titre": "Excursion dans les Dunes",
+                "desc": "Voyage inoubliable à dos de dromadaire à travers les dunes dorées du Grand Erg Occidental, pique-nique traditionnel et nuit en bivouac."
+            },
+            {
+                "titre": "La Vallée du M’Zab",
+                "desc": "En route en 4x4 pour Ghardaïa, ville classée à l'UNESCO, pour découvrir la fameuse vallée du M'zab et ses villages millénaires."
+            },
+            {
+                "titre": "Djanet & Tassili n'Ajjer",
+                "desc": "Vol pour Djanet et excursion en 4x4 dans le Tassili n'Ajjer, émerveillement devant le décor lunaire naturel, avec des roches sculptées par le vent et des peintures rupestres millénaires."
+            },
+            {
+                "titre": "Retour et départ",
+                "desc": "Retour à Alger pour une journée relaxante pour faire ses derniers achats et déguster votre dernier thé à la menthe avant de partir pour la France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/algerie1.jpg",
+                "alt": "Tassili N'Ajjer",
+                "titre": "Tassili N'Ajjer"
+            },
+            {
+                "src": "images/algerie3.jpg",
+                "alt": "Jardin d'essai du Hamma",
+                "titre": "Jardin d'essai du Hamma"
+            },
+            {
+                "src": "images/algerie2.jpg",
+                "alt": "Monument Martyr",
+                "titre": "Monument Martyr"
+            }
+        ]
+    },
+    "Mali": {
+        "destination": "Mali",
+        "intro": "En route pour un voyage inoubliable à travers le pays le plus chaud au monde.",
+        "jours": [
+            {
+                "titre": "Bamako",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (fancophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Bamako, notamment le musée national et le marché rose jusqu'au soir."
+            },
+            {
+                "titre": "La perle du Sahel",
+                "desc": "En route en 4x4 vers Djenné, vous allez pouvoir observer et découvrir les villages en banco et les paysages sahéliens. Vous visiterez aussi la Mosquée de Djenné, un chef-d'oeuvre classé à l'UNESCO."
+            },
+            {
+                "titre": "Traversée & Tombouctou",
+                "desc": "Exploration à travers une traversée du fleuve Niger en pirogue vers Tombouctou, avec vue sur les pêcheurs et riverains. Ensuite, visite de la Mosquée de Djingareyber et des bibliothèques de manuscrits anciens."
+            },
+            {
+                "titre": "Touarègue",
+                "desc": "Départ en caravane de dromadaires pour explorer les dunes proches de Tombouctou. Vous observerez le coucher du soleil sur les dunes et passerez une nuit sous tente nomade."
+            },
+            {
+                "titre": "Montagne et Histoire",
+                "desc": "Départ pour Hombori, où vous ferez l'ascension du Mont Hombori, suivie de la visite des habitations troglodytiques. Ensuite, rencontre avec les habitants et découverte des traditions locales."
+            },
+            {
+                "titre": "Pays Dogon",
+                "desc": "Visite du village de Sangha, perché sur la falaise de Bandiagara. Vous explorerez également des greniers troglodytiques et, si vous êtes chanceux, assisterez au spectacle de danses des masques Dogons."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Retour à Bamako pour une journée relaxante, faire ses derniers achats et avoir du temps libre avant de prendre l'avion pour la France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/mali1.jpg",
+                "alt": "Mosquée de Djenée",
+                "titre": "Mosquée de Djenée"
+            },
+            {
+                "src": "images/mali2.jpg",
+                "alt": "Falaise de Bandiagara",
+                "titre": "Falaise de Bandiagara"
+            },
+            {
+                "src": "images/mali3.jpg",
+                "alt": "Monts Hombori",
+                "titre": "Monts Hombori"
+            }
+        ]
+    },
+    "Egypte": {
+        "destination": "Egypte",
+        "intro": "A travers des pyramides aux merveilles du désert, l'Egypte.",
+        "jours": [
+            {
+                "titre": "Le Caire",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours du Caire, notamment les Pyramides de Gizeh et le Sphinx jusqu'au soir."
+            },
+            {
+                "titre": "L'Oasis de Dakhla",
+                "desc": "Une journée détendue et culturelle où vous pourrez vous baigner dans une source chaude et découvrir des ruines médiévales et pharaoniques."
+            },
+            {
+                "titre": "Désert Blanc",
+                "desc": "En route en 4x4 pour le Désert Blanc, vous explorerez les formations rocheuses impressionnantes et passerez une nuit sous les étoiles."
+            },
+            {
+                "titre": "Abou Simbel",
+                "desc": "Départ pour Abou Simbel, où vous visiterez le Grand Temple de Ramsès II et le Temple de Néfertari."
+            },
+            {
+                "titre": "Louxor",
+                "desc": "En chemin pour Louxor, vous visiterez la Vallée des Rois et le Temple de Karnak."
+            },
+            {
+                "titre": "Djanet & Tassili n'Ajjer",
+                "desc": "Retour au Caire pour découvrir de nouveaux plats et boissons traditionnels, puis visitez le bazar Khan el-Khalili et le Musée Égyptien."
+            },
+            {
+                "titre": "Détente et départ",
+                "desc": "Pour votre dernière journée, faites vos derniers achats et visitez la Citadelle de Saladin avant de prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/egypte1.jpg",
+                "alt": "Grand temple d'Abou Simbel",
+                "titre": "Grand temple d'Abou Simbel"
+            },
+            {
+                "src": "images/egypte2.jpg",
+                "alt": "Citadelle de Saladin",
+                "titre": "Citadelle de Saladin"
+            },
+            {
+                "src": "images/egypte3.jpg",
+                "alt": "Musée Egyptien",
+                "titre": "Musée Egyptien"
+            }
+        ]
+    },
+    "Tunisie": {
+        "destination": "Tunisie",
+        "intro": "Votre voyage à travers le Sahara et le patrimoine de Tunisie",
+        "jours": [
+            {
+                "titre": "Tunis",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Tunis, notamment le site archéologique de Carthage et une promenade dans la médina et les souks."
+            },
+            {
+                "titre": "Kairouan, ville sainte",
+                "desc": "Découverte de Kairouan, ville sacrée avec sa Grande Mosquée, le bassin des Aghlabides et les ateliers de tapis traditionnels. Dégustation du célèbre makroud."
+            },
+            {
+                "titre": "Tozeur et les oasis",
+                "desc": "En route vers Tozeur, ville oasis aux portes du désert. Balade dans la palmeraie et découverte des décors de Star Wars à Ong Jemel."
+            },
+            {
+                "titre": "Douz",
+                "desc": "Départ vers Douz, la porte du Sahara. Expérience inoubliable avec une randonnée à dos de dromadaire dans les dunes, suivi d'un dîner et d'une nuit sous tente berbère."
+            },
+            {
+                "titre": "Tataouine et les ksour",
+                "desc": "Découverte des ksour berbères autour de Tataouine, notamment Ksar Ouled Soltane et Chenini, villages fortifiés offrant une vue spectaculaire sur le désert."
+            },
+            {
+                "titre": "Matmata et ses troglodytes",
+                "desc": "Exploration de Matmata, célèbre pour ses maisons troglodytes. Visite du site de tournage de Star Wars (hôtel Sidi Driss), puis retour à Tunis avec un arrêt au colisée d'El Jem."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Journée relaxante pour faire ses derniers achats dans le souk de Tunis et avoir du temps libre dans la médina avant d'aller prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/tunisie1.jpg",
+                "alt": "Kairouan",
+                "titre": "Kairouan"
+            },
+            {
+                "src": "images/tunisie2.jpg",
+                "alt": "Matmama (Star Wars)",
+                "titre": "Matmama (Star Wars)"
+            },
+            {
+                "src": "images/tunisie3.jpg",
+                "alt": "El Jem Amphitheatre",
+                "titre": "El Jem Amphitheatre"
+            }
+        ]
+    },
+    "Libye": {
+        "destination": "Libye",
+        "intro": "Votre voyage à travers une exploration fascinante de la Libye",
+        "jours": [
+            {
+                "titre": "Tripoli",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Tripoli, notamment le musée national et une promenade dans la médina."
+            },
+            {
+                "titre": "Leptis Magna",
+                "desc": "Excursion à Leptis Magna, l'un des sites romains les mieux préservés au monde. Et découverte du théâtre, du marché, des thermes et du grand amphithéâtre."
+            },
+            {
+                "titre": "Ghadamès, une perle du désert",
+                "desc": "Départ pour Ghadamès, une ville oasis classée au patrimoine mondial de l'UNESCO. Où vous allez faire l'exploration de la vieille ville aux ruelles couvertes et découverte de l'architecture saharienne."
+            },
+            {
+                "titre": "Sahara",
+                "desc": "Excursion en 4x4 à travers les dunes et les paysages lunaires du désert libyen. La soirée sera sous une tente bédouine avec dîner traditionnel."
+            },
+            {
+                "titre": "Akakus",
+                "desc": "Découverte des montagnes de l'Akakus et des peintures rupestres millénaires illustrant la vie dans le Sahara préhistorique."
+            },
+            {
+                "titre": "Sebha et les oasis du Fezzan",
+                "desc": "Exploration de la région du Fezzan et de ses oasis, notamment Waw an Namus, un volcan spectaculaire entouré de lacs colorés."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Retour à Tripoli pour profiter d'une journée relaxante pour faire ses derniers achats dans le souk et avoir du temps libre avant d'aller prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/libye1.jpg",
+                "alt": "Amphithéâtre de Leptis Magna",
+                "titre": "Amphithéâtre de Leptis Magna"
+            },
+            {
+                "src": "images/libye2.jpg",
+                "alt": "Akakus",
+                "titre": "Akakus"
+            },
+            {
+                "src": "images/libye3.jpg",
+                "alt": "Cratère Waw an Namus",
+                "titre": "Cratère Waw an Namus"
+            }
+        ]
+    },
+    "Arabie_Saoudite": {
+        "destination": "Arabie Saoudite",
+        "intro": "Votre voyage désertique au sein de l'Arabie Saoudite et de son patrimoine historique.",
+        "jours": [
+            {
+                "titre": "Arrivée à Riyad",
+                "desc": "A votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Riyad, notamment le centre historique et une promenade dans le souk."
+            },
+            {
+                "titre": "Désert de Riyad",
+                "desc": "Excursion dans le désert pour admirer le célèbre Edge of the World. Suivis d'une expérience en 4x4 et observation du coucher de soleil sur les falaises majestueuses."
+            },
+            {
+                "titre": "Al-Ula",
+                "desc": "Visite d'Al-Ula et de son incroyable site archéologique Hegra (Madâin Sâlih), classé au patrimoine mondial de l'UNESCO."
+            },
+            {
+                "titre": "Jabal Ikmah",
+                "desc": "Exploration de Jabal Ikmah, une vallée rocheuse célèbre pour ses inscriptions anciennes, considérée comme une immense bibliothèque à ciel ouvert."
+            },
+            {
+                "titre": "Diriyah",
+                "desc": "Visite de Diriyah, le berceau historique de l'Arabie Saoudite, avec ses bâtiments en briques d'argile et ses musées retraçant l'histoire du pays."
+            },
+            {
+                "titre": "Musée & culture",
+                "desc": "Faites la visite du Musée Abdul Raoul Khalil retraçant l'histoire de l'Arabie Saoudite avec des artefacts anciens. Et ensuite explorer des spécialités locales dans les restaurants traditionnels."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Journée relaxante pour faire ses derniers achats en Arabie Saoudite et avoir du temps libre avant d'aller prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/arabie_saoudite1.jpg",
+                "alt": "Edge of the World",
+                "titre": "Edge of the World"
+            },
+            {
+                "src": "images/arabie_saoudite2.jpg",
+                "alt": "Al-Ula",
+                "titre": "Al-Ula"
+            },
+            {
+                "src": "images/arabie_saoudite3.jpg",
+                "alt": "Dariyah",
+                "titre": "Dariyah"
+            }
+        ]
+    },
+    "Emirats_Arabes_Unis": {
+        "destination": "Émirats Arabes Unis",
+        "intro": "Votre voyage de rêve au sein des merveilles des Emirats Arabes Unis, l'Arabie Saoudite et leur désert.",
+        "jours": [
+            {
+                "titre": "Arrivé à Dubaï",
+                "desc": "À votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Dubaï et découvrir la ville du soir."
+            },
+            {
+                "titre": "Visite des souks et de Palm Jumeirah",
+                "desc": "Exploration des souks traditionnels de Dubaï : le souk de l'or et le souk des épices. Et ensuite, départ pour Palm Jumeirah, une île artificielle en forme de palmier."
+            },
+            {
+                "titre": "Désert de Dubaï",
+                "desc": "Excursion dans le désert pour une expérience de dune bashing en 4x4. Vous ferez également une balade à dos de chameau. Et la possibilité de manger sous les étoiles dans un camp bédouin."
+            },
+            {
+                "titre": "Abou Dabi et la Grande Mosquée Sheikh Zayed",
+                "desc": "En route pour Abou Dabi pour visiter la magnifique mosquée Sheikh Zayed, l’une des plus grandes mosquées du monde. Ensuite, explorez le musée du Louvre d’Abou Dabi et le quartier culturel de Saadiyat Island."
+            },
+            {
+                "titre": "Le désert de Liwa",
+                "desc": "Découverte du désert de Liwa, situé dans le Rub al-Khali. Vous pourrez profiter de safaris en 4x4 et expérimenter le sandboarding sur les dunes de sable doré."
+            },
+            {
+                "titre": "Fujairah et les plages",
+                "desc": "Départ pour Fujairah sur la côte est. Profitez des plages immaculées de l’océan Indien, où vous pourrez vous détendre et nager. Visite également du fort de Fujairah et de son musée local."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Journée relaxante pour faire ses derniers achats à Dubaï et avoir du temps libre avant d'aller prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/emirats_arabes_unis1.jpg",
+                "alt": "Désert de Dubaï",
+                "titre": "Désert de Dubaï"
+            },
+            {
+                "src": "images/emirats_arabes_unis2.jpg",
+                "alt": "Louvre Abu Dhabi",
+                "titre": "Louvre Abu Dhabi"
+            },
+            {
+                "src": "images/emirats_arabes_unis3.jpg",
+                "alt": "Désert de Liwa",
+                "titre": "Désert de Liwa"
+            }
+        ]
+    },
+    "Jordanie": {
+        "destination": "Jordanie",
+        "intro": "Votre voyage à travers un désert et l'histoire oubliée de la Jordanie.",
+        "jours": [
+            {
+                "titre": "Arrivée à Amman",
+                "desc": "À votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours d'Amman, notamment la citadelle d'Amman."
+            },
+            {
+                "titre": "Ville de Jérash",
+                "desc": "Excursion à Jérash, une des villes romaines les mieux conservées au monde. Explorez les ruines impressionnantes de temples, théâtres, et arches."
+            },
+            {
+                "titre": "Le désert de Wadi Rum",
+                "desc": "Départ pour le désert de Wadi Rum, classé au patrimoine mondial de l'UNESCO. Safari en 4x4 à travers les majestueuses formations rocheuses et les vastes dunes de sable. Nuit dans un camp bédouin traditionnel, sous les étoiles."
+            },
+            {
+                "titre": "Petra, la rose rouge",
+                "desc": "Visite du site emblématique de Petra, l'ancienne cité nabatéenne sculptée dans la roche. Promenade à travers le Siq jusqu'au Trésor (Al-Khazneh), puis exploration de l’ancienne ville, avec ses temples, tombes et théâtres."
+            },
+            {
+                "titre": "La mer Morte",
+                "desc": "En route pour la mer Morte où vous pourrez vous baigner et avoir une vue sur le désert au bord de la mer Morte."
+            },
+            {
+                "titre": "Château & vallée",
+                "desc": "Exploration du château de Kerak, une forteresse médiévale située sur une colline offrant une vue panoramique. Ensuite, exploration de la vallée du Jourdain et de ses paysages magnifiques."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Journée relaxante pour faire ses derniers achats et avoir du temps libre avant de prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/jordanie1.jpg",
+                "alt": "Jérash",
+                "titre": "Jérash"
+            },
+            {
+                "src": "images/jordanie2.jpg",
+                "alt": "Pétra",
+                "titre": "Pétra"
+            },
+            {
+                "src": "images/jordanie3.jpg",
+                "alt": "Château de Kerak",
+                "titre": "Château de Kerak"
+            }
+        ]
+    },
+    "Chine": {
+        "destination": "Chine",
+        "intro": "Un voyage à la découverte du désert de la Chine et ses traditions millénaires.",
+        "jours": [
+            {
+                "titre": "Arrivée à Pékin",
+                "desc": "À votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Vous allez ensuite prendre un vol vers le désert de Badain Jaran."
+            },
+            {
+                "titre": "Désert de Badain Jaran",
+                "desc": "Excursion en 4x4 à travers les dunes du désert de Badain Jaran. Observation des formations géologiques uniques et découverte des oasis isolées. Possibilité de faire une promenade à dos de chameau ou de participer à une expérience de conduite sur les dunes."
+            },
+            {
+                "titre": "Désert de Taklamakan",
+                "desc": "Départ pour le désert de Taklamakan, situé au cœur du Xinjiang. Exploration des mystérieuses ruines anciennes enfouies sous le sable, témoignant de civilisations disparues. Nuit dans un campement au pied des dunes."
+            },
+            {
+                "titre": "Dunhuang et des grottes de Mogao",
+                "desc": "Visite de Dunhuang, point de passage historique de la route de la soie. Découverte des célèbres grottes de Mogao, classées au patrimoine mondial de l'UNESCO, avec leurs sculptures et fresques bouddhistes. Promenade dans la vallée du Yardan, aussi appelée 'le désert des sculptures naturelles'."
+            },
+            {
+                "titre": "Désert de Gobi",
+                "desc": "Vol vers le désert de Gobi, situé dans le nord de la Chine. Exploration des vastes plaines et des dunes d'une beauté saisissante. Randonnée dans les canyons, visites des formations rocheuses uniques et observation de la faune locale, notamment les chameaux sauvages et les gazelles."
+            },
+            {
+                "titre": "Culture nomade du désert",
+                "desc": "En route vers les villages nomades traditionnels, où vous découvrirez la vie quotidienne des habitants des déserts chinois. Dégustation de plats typiques et découverte de leurs méthodes d'élevage."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Retour à Pékin pour une journée relaxante, faire ses derniers achats et avoir du temps libre avant de prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/chine1.jpg",
+                "alt": "Désert de Badain Jaran",
+                "titre": "Désert de Badain Jaran"
+            },
+            {
+                "src": "images/chine2.jpg",
+                "alt": "Grottes de Mogao",
+                "titre": "Grottes de Mogao"
+            },
+            {
+                "src": "images/chine3.jpg",
+                "alt": "Désert de Taklamakan",
+                "titre": "Désert de Taklamakan"
+            }
+        ]
+    },
+    "Mongolie": {
+        "destination": "Mongolie",
+        "intro": "À travers les paysages sauvages et naturels de la Mongolie.",
+        "jours": [
+            {
+                "titre": "Arrivée à Oulan-Bator",
+                "desc": "À votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours d'Oulan-Bator, notamment le musée national."
+            },
+            {
+                "titre": "Désert de Gobi",
+                "desc": "Départ vers le désert de Gobi, un des déserts les plus fascinants du monde. Vous allez découvrir des paysages variés : dunes de sable, montagnes, canyons..."
+            },
+            {
+                "titre": "Bayanzag et ses rochers",
+                "desc": "Visite des formations rocheuses de Bayanzag, connues sous le nom de 'Falaises des dinosaures', où des fossiles de dinosaures ont été découverts. Balade à travers les paysages arides pour observer la faune locale et les célèbres 'falaises enflammées' au coucher du soleil."
+            },
+            {
+                "titre": "Oasis de Yolyn Am",
+                "desc": "Excursion dans la vallée de Yolyn Am, un canyon spectaculaire dans le parc national de Gobi Gurvan Saikhan. Promenade à pied dans le canyon et observation des animaux sauvages tels que les gazelles et les aigles."
+            },
+            {
+                "titre": "Montagnes de l'Altaï",
+                "desc": "Exploration dans les montagnes de l'Altaï, à l'ouest de la Mongolie, pour explorer les paysages désertiques et montagneux. Vous allez observer des paysages grandioses et des vestiges historiques laissés par les anciennes civilisations."
+            },
+            {
+                "titre": "Culture nomade du désert",
+                "desc": "En route vers les villages nomades traditionnels, où vous découvrirez la vie quotidienne des Mongols. Dégustation de plats typiques et découverte de leurs méthodes d'élevage."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Retour à Oulan-Bator pour une journée relaxante, faire ses derniers achats et avoir du temps libre avant de prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/mongolie1.jpg",
+                "alt": "Désert de Gobi",
+                "titre": "Désert de Gobi"
+            },
+            {
+                "src": "images/mongolie2.jpg",
+                "alt": "Falaise de Byanzag",
+                "titre": "Falaise de Bayanzag"
+            },
+            {
+                "src": "images/mongolie3.jpg",
+                "alt": "Nomade du désert",
+                "titre": "Nomade du désert"
+            }
+        ]
+    },
+    "Namibie": {
+        "destination": "Namibie",
+        "intro": "Voyage à travers la Namibie et ses déserts de dunes, de faune sauvage et de paysages spectaculaires.",
+        "jours": [
+            {
+                "titre": "Arrivée à Windhoek",
+                "desc": "À votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Windhoek, notamment des marchés locaux."
+            },
+            {
+                "titre": "Désert du Namib",
+                "desc": "En route pour le désert du Namib et la découverte de Sesriem, porte d’entrée de Sossusvlei. Balade au coucher du soleil dans le canyon de Sesriem."
+            },
+            {
+                "titre": "Sossusvlei et Deadvlei",
+                "desc": "Départ vers Swakopmund, une ville côtière entre océan et désert. Découverte de la côte des Squelettes, connue pour ses épaves de bateaux échoués."
+            },
+            {
+                "titre": "Désert du Kalahari",
+                "desc": "Découverte du désert du Kalahari, un autre joyau de la Namibie. Rencontre avec la faune locale et visite d'un village bushman pour en apprendre davantage sur leur mode de vie ancestral."
+            },
+            {
+                "titre": "Safari dans le parc d'Etosha 1/2",
+                "desc": "Journée consacrée à un safari dans le parc national d'Etosha, célèbre pour ses vastes plaines arides et ses nombreux animaux sauvages."
+            },
+            {
+                "titre": "Safari dans le parc d'Etosha 2/2",
+                "desc": "Deuxième journée consacrée à un safari dans le parc national d'Etosha."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Retour à Windhoek pour une journée relaxante, faire ses derniers achats et avoir du temps libre avant de prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/namibie1.jpg",
+                "alt": "Désert du Namib",
+                "titre": "Désert du Namib"
+            },
+            {
+                "src": "images/namibie2.jpg",
+                "alt": "Deadvlei",
+                "titre": "Deadvlei"
+            },
+            {
+                "src": "images/namibie3.jpg",
+                "alt": "Parc national d'Etosha",
+                "titre": "Parc national d'Etosha"
+            }
+        ]
+    },
+    "Afrique_du_Sud": {
+        "destination": "Afrique du Sud",
+        "intro": "Voyage de découverte au sein des déserts d'Afrique du Sud, entre Karoo et Kalahari.",
+        "jours": [
+            {
+                "titre": "Arrivée à Johannesburg",
+                "desc": "À votre arrivée, vous serez accueillis par le guide (francophone/anglophone) qui sera votre compagnon de voyage pour le reste du séjour. Il vous donnera les meilleurs renseignements et pourra répondre à toutes vos questions. Il vous fera visiter les alentours de Johannesburg, notamment le quartier historique de Soweto et le musée de l'Apartheid."
+            },
+            {
+                "titre": "Désert du Karoo",
+                "desc": "Départ pour le désert du Karoo, une vaste étendue semi-aride aux paysages fascinants. Découverte des formations rocheuses et des grands espaces sauvages."
+            },
+            {
+                "titre": "Exploration du désert du Karoo",
+                "desc": "Randonnée dans le parc national du Karoo, observation de la faune locale et découverte des peintures rupestres des peuples San."
+            },
+            {
+                "titre": "Culture sud-africaine",
+                "desc": "Excursion dans les vignobles du Karoo, dégustation de vins sud-africains et découverte des fermes locales intégrées dans cet environnement aride."
+            },
+            {
+                "titre": "Safari dans le désert du Kalahari",
+                "desc": "Journée de safari dans le parc transfrontalier du Kgalagadi, où vous pourrez observer lions, oryx et autres animaux adaptés aux conditions désertiques."
+            },
+            {
+                "titre": "Dunes rouges",
+                "desc": "Découverte des célèbres dunes rouges du Kalahari et rencontre avec les communautés locales, initiation aux techniques de survie dans le désert."
+            },
+            {
+                "titre": "Boutique & départ",
+                "desc": "Retour à Johannesburg pour une journée relaxante, faire ses derniers achats et avoir du temps libre avant de prendre l'avion pour revenir en France."
+            }
+        ],
+        "images": [
+            {
+                "src": "images/afrique_du_sud1.jpg",
+                "alt": "Désert du Karoo",
+                "titre": "Désert du Karoo"
+            },
+            {
+                "src": "images/afrique_du_sud2.jpg",
+                "alt": "Safari Kalahari",
+                "titre": "Safari Kalahari"
+            },
+            {
+                "src": "images/afrique_du_sud3.jpg",
+                "alt": "Dune rouge",
+                "titre": "Dune rouge"
+            }
+        ]
+    }
+}
