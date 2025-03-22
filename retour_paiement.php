@@ -27,7 +27,7 @@ $control_attendu = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $v
 
 // Vérifier si la valeur de contrôle reçue est correcte
 if ($control_recu !== $control_attendu) {
-    $message_paiement = "❌ Erreur : les données reçues ne sont pas valides.";
+    $message_paiement = "Erreur : les données reçues ne sont pas valides.";
 } 
 
 else {
