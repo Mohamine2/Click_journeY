@@ -65,19 +65,8 @@
             </a>
         </div>
 
-        <div class="lieu">
-            <a href="senegal.php">
-                <img src="images/dakar.jpg" alt="img_dakar" width="400px" height="300px">
-                <h2>SENEGAL</h2>
-            </a>
-        </div>
+       
 
-        <div class="lieu">
-            <a href="oman.php">
-                <img src="images/oman.jpg" alt="img_oman" width="400px" height="300px">
-                <h2>OMAN</h2>
-            </a>
-        </div>
 
         <div class="lieu">
             <a href="algerie.php">
@@ -86,12 +75,7 @@
             </a>
         </div>
 
-        <div class="lieu">
-            <a href="mali.php">
-                <img src="images/mali.jpg" alt="img_mali" width="400px" height="300px">
-                <h2>MALI</h2>
-            </a>
-        </div>
+
 
         <div class="lieu">
             <a href="egypte.php">
@@ -99,19 +83,8 @@
                 <h2>EGYPTE</h2>
             </a>
         </div>
-        <div class="lieu">
-            <a href="tunisie.php">
-                <img src="images/tunisie.jpg" alt="img_tunisie" width="400px" height="300px">
-                <h2>TUNISIE</h2>
-            </a>
-        </div>
 
-        <div class="lieu">
-            <a href="libye.php">
-                <img src="images/libye.jpg" alt="img_libye" width="400px" height="300px">
-                <h2>LIBYE</h2>
-            </a>
-        </div>
+
 
         <div class="lieu">
             <a href="arabie_saoudite.php">
@@ -120,19 +93,9 @@
             </a>
         </div>
 
-        <div class="lieu">
-            <a href="emirats_arabes_unis.php">
-                <img src="images/emirats_arabes_unis.jpg" alt="img_emirats_arabes_unis" width="400px" height="300px">
-                <h2>EMIRATS ARABES UNIS</h2>
-            </a>
-        </div>
 
-        <div class="lieu">
-            <a href="jordanie.php">
-                <img src="images/jordanie.jpg" alt="img_jordanie" width="400px" height="300px">
-                <h2>JORDANIE</h2>
-            </a>
-        </div>
+
+ 
 
         <div class="lieu">
             <a href="chine.php">
@@ -141,26 +104,11 @@
             </a>
         </div>
 
-        <div class="lieu">
-            <a href="mongolie.php">
-                <img src="images/mongolie.jpg" alt="img_mongolie" width="400px" height="300px">
-                <h2>MONGOLIE</h2>
-            </a>
-        </div>
 
-        <div class="lieu">
-            <a href="namibie.php">
-                <img src="images/namibie.jpg" alt="img_namibie" width="400px" height="300px">
-                <h2>NAMIBIE</h2>
-            </a>
-        </div>
 
-        <div class="lieu">
-            <a href="afrique_du_sud.php">
-                <img src="images/afrique_du_sud.jpg" alt="img_afrique_du_sud" width="400px" height="300px">
-                <h2>AFRIQUE DU SUD</h2>
-            </a>
-        </div>
+  
+
+
 
     
     </div>
