@@ -1,5 +1,8 @@
 <?php
 
+    // Vérifier si une recherche a été soumise
+    $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
+
     session_start();
 
     // Vérifier si l'utilisateur est connecté
@@ -79,7 +82,9 @@
             <li><a href="admin.php">Espace Admin</a></li>
         <?php endif; ?>
         </ul>
-        <input type="search" placeholder="Rechercher...">
+        <form method="get" action="resultats.php">
+            <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
+        </form>
     </nav>
 
     <div class="admin">
