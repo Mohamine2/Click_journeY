@@ -58,6 +58,7 @@ $voyage = $voyages[$destination];
         </div>
     </section>
 
+
     <div class="lieu-contenant">
         <?php foreach ($voyage["images"] as $image): ?>
             <div class="lieu">
@@ -71,7 +72,60 @@ $voyage = $voyages[$destination];
         <div class="container">
             <h2>Planifiez votre voyage</h2>
             <p>Obtenez un devis personnalisé pour votre aventure.</p>
-            <a href="recapitulatif.php" class="ticket-btn">Réservez un séjour</a>
+
+      <form action="recapitulatif.php" method="post">
+            <div class="personnalisation">
+                <p><b>Personnalisez le séjour:</b></p>
+
+                <p>Choisissez votre type d'hébergement:</p>
+                <select name="hebergement">
+                    <option value="Hotel" selected="selected">Hôtel</option>
+                    <option value="Maison d'hotes">Maison d'hôtes</option>
+                    <option value="Appartement">Appartement</option>
+                </select>
+
+                <p>Choix de l'aéroport de départ:</p>
+                <select name="aeroport_depart">
+                    <option value="Paris" selected="selected">Paris</option>
+                    <option value="Marseille">Marseille</option>
+                    <option value="Lyon">Lyon</option>
+                </select>
+
+                <?php for ($i = 1; $i <= 7; $i++) { ?>
+                    <p><u>Jour <?= $i ?> : </u></p>
+
+                    <p>Participation aux activités ?</p>
+                    <select name="activite[<?= $i ?>]">
+                        <option value="Oui" selected="selected">Oui</option>
+                        <option value="Non">Non</option>
+                    </select>
+
+                    <p>Choisissez votre moyen de transport:</p>
+                    <select name="transports[<?= $i ?>]">
+                        <option value="Autonome">Autonome</option>
+                        <option value="navette" selected="selected">Navette collective</option>
+                        <option value="taxindiv">Taxis individuels</option>
+                    </select>
+
+                    <p>Choisissez votre formule restauration:</p>
+                    <select name="restauration[<?= $i ?>]">
+                        <option value="Aucune">Aucune</option>
+                        <option value="Demi-pension">Demi-pension</option>
+                        <option value="Pension complète" selected="selected">Pension complète</option>
+                    </select>
+                <?php } ?>
+
+                <p>Choix de l'aéroport de retour:</p>
+                <select name="aeroport_retour">
+                    <option value="Paris" selected="selected">Paris</option>
+                    <option value="Marseille">Marseille</option>
+                    <option value="Lyon">Lyon</option>
+                </select>
+                <br><br>
+
+                <button type="submit" class="ticket-btn">Réservez un séjour</button>
+            </div>
+        </form>
         </div>
     </section>
 </body>
