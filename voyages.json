@@ -1,5 +1,6 @@
 [
     {
+        "image" : "images/marrakechF.jpg",
         "depart": "Paris",
         "destination": "Maroc",
         "duree": "7 jours",
@@ -8,6 +9,7 @@
         "prix": 850.00
     },
     {
+        "image" : "images/senegalI1.jpg",
         "depart": "Paris",
         "destination": "Sénégal",
         "duree": "7 jours",
@@ -16,6 +18,7 @@
         "prix": 950.00
     },
     {
+        "image" : "images/OmanI1.jpg",
         "depart": "Paris",
         "destination": "Oman",
         "duree": "7 jours",
@@ -24,6 +27,7 @@
         "prix": 1200.50
     },
     {
+        "image" : "images/algerie.jpg",
         "depart": "Paris",
         "destination": "Algérie",
         "duree": "7 jours",
@@ -32,6 +36,7 @@
         "prix": 950.00
     },
     {
+        "image" : "images/mali.jpg",
         "depart": "Paris",
         "destination": "Mali",
         "duree": "7 jours",
@@ -40,6 +45,7 @@
         "prix": 1200.50
     },
     {
+        "image" : "images/egypte.jpg",
         "depart": "Paris",
         "destination": "Egypte",
         "duree": "7 jours",
@@ -48,6 +54,7 @@
         "prix": 950.00
     },
     {
+        "image" : "images/tunisie.jpg",
         "depart": "Paris",
         "destination": "Tunisie",
         "duree": "7 jours",
@@ -56,6 +63,7 @@
         "prix": 1200.50
     },
     {
+        "image" : "images/libye.jpg",
         "depart": "Paris",
         "destination": "Libye",
         "duree": "7 jours",
@@ -64,6 +72,7 @@
         "prix": 950.00
     },
     {
+        "image" : "images/arabie_saoudite.jpg",
         "depart": "Paris",
         "destination": "Arabie_Saoudite",
         "duree": "7 jours",
@@ -72,6 +81,7 @@
         "prix": 1200.50
     },
     {
+        "image" : "images/emirats_arabes_unis.jpg",
         "depart": "Paris",
         "destination": "Emirats_Arabes_Unis",
         "duree": "7 jours",
@@ -80,6 +90,7 @@
         "prix": 950.00
     },
     {
+        "image" : "images/jordanie.jpg",
         "depart": "Paris",
         "destination": "Jordanie",
         "duree": "7 jours",
@@ -88,6 +99,7 @@
         "prix": 1200.50
     },
     {
+        "image" : "images/chine.jpg",
         "depart": "Paris",
         "destination": "Chine",
         "duree": "7 jours",
@@ -96,6 +108,7 @@
         "prix": 950.00
     },
     {
+        "image" : "images/mongolie.jpg",
         "depart": "Paris",
         "destination": "Mongolie",
         "duree": "7 jours",
@@ -104,6 +117,7 @@
         "prix": 1200.50
     },
     {
+        "image" : "images/namibie.jpg",
         "depart": "Paris",
         "destination": "Namibie",
         "duree": "7 jours",
@@ -112,6 +126,7 @@
         "prix": 950.00
     },
     {
+        "image" : "images/afrique_du_sud.jpg",
         "depart": "Paris",
         "destination": "Afrique_du_Sud",
         "duree": "7 jours",

@@ -37,25 +37,37 @@ $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
             <li><a href="admin.php">Espace Admin</a></li>
             <?php endif; ?>
         </ul>
+        
         <form method="get" action="resultats.php">
             <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
         </form>
     </nav>
 
-    <!-- Affichage des résultats -->
-    <?php if ($searchQuery): ?>
-        <h2>Résultats de la recherche pour "<?= htmlspecialchars($searchQuery) ?>"</h2>
 
-        <ul>
-            <?php foreach ($data as $voyage): ?>
-                <li>
-                    <a href="voyages.php?dest=<?=$voyage['destination'] ?>" class="voyage-link">
-                    <?= htmlspecialchars($voyage['depart']) ?></strong> - 
-                    <?= htmlspecialchars($voyage['destination']) ?> | 
-                    <?= htmlspecialchars($voyage['duree']) ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
+
+    <!-- Affichage des résultats -->
+<?php if ($searchQuery): ?>
+    <h2>Résultats de la recherche pour "<?= htmlspecialchars($searchQuery) ?>"</h2>
+
+    <div class="voyage-container">
+        <?php foreach ($data as $voyage): ?>
+            
+                <div class="voyage-icone">
+                    <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
+                    <div class="voyage-info">
+                        <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
+                        <p><strong>Départ :</strong> <?= htmlspecialchars($voyage['depart']) ?></p>
+                        <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?></p>
+                        <p><strong>Prix :</strong> <?= htmlspecialchars($voyage['prix']) ?> €</p>
+                        <a href="voyages.php?dest=<?= urlencode($voyage['destination']) ?>" class="voyage-link">Voir plus</a>
+                    </div>
+                </div>
+            
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+
+
+    
 </body>
 </html>
