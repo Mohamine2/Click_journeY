@@ -33,6 +33,34 @@ if ($control_recu !== $control_attendu) {
 else {
     if ($status === "accepted") {
         $message_paiement = "Paiement validé ! Votre réservation est confirmée.";
+
+        $date_du_jour = date("d/m/Y");
+
+                // Fichier JSON où les commandes sont stockées
+                $fichier = "commandes.json";
+            
+                // Récupérer les données existantes
+                $commandes = [];
+                if (file_exists($fichier)) {
+                    $json_data = file_get_contents($fichier);
+                    $commandes = json_decode($json_data, true) ?? []; // Décoder en tableau associatif
+                }
+            
+                // Nouvelle commande
+                $nouvelle_commande = [
+                    "nom" => $_SESSION["utilisateur"]["nom"],
+                    "prenom" => $_SESSION["utilisateur"]["prenom"],
+                    "email" => $_SESSION["utilisateur"]["email"],
+                    "numero_transaction" => $transaction,
+                    "date_commande" => $date_du_jour,
+                ];
+            
+                // Ajouter le nouvel utilisateur
+                $commandes[] = $nouvelle_commande;
+            
+                // Sauvegarder dans le fichier JSON
+                file_put_contents($fichier, json_encode($commandes, JSON_PRETTY_PRINT));
+
     } else {
         $message_paiement = "Paiement refusé. Merci de réessayer.";
     }
