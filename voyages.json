@@ -27,9 +27,9 @@
         "prix": 1200.50
     },
     {
-        "image" : "images/algerie.jpg",
+        "image" : "images/algerie4.jpg",
         "depart": "Paris",
-        "destination": "Algérie",
+        "destination": "Algerie",
         "duree": "7 jours",
         "nb_personnes": "",
         "date_depart": "01/04/2025",

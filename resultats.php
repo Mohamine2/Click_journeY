@@ -53,13 +53,13 @@ $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
         <?php foreach ($data as $voyage): ?>
             
                 <div class="voyage-icone">
-                    <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
                     <div class="voyage-info">
                         <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
                         <p><strong>Départ :</strong> <?= htmlspecialchars($voyage['depart']) ?></p>
                         <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?></p>
                         <p><strong>Prix :</strong> <?= htmlspecialchars($voyage['prix']) ?> €</p>
                         <a href="voyages.php?dest=<?= urlencode($voyage['destination']) ?>" class="voyage-link">Voir plus</a>
+                        <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
                     </div>
                 </div>
             
