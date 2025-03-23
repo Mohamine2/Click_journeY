@@ -1,5 +1,6 @@
 <?php
 // Charger le contenu du fichier JSON
+session_start();
 $json = file_get_contents('details_voyages.json');
 $voyages = json_decode($json, true);
 
@@ -8,6 +9,9 @@ $destination = $_GET['dest'];
 
 // Récupérer les données du voyage
 $voyage = $voyages[$destination];
+if (!isset($_SESSION["transaction"])) {
+    $_SESSION["transaction"] = bin2hex(random_bytes(12));
+}
 ?>
 
 <!DOCTYPE html>
