@@ -9,6 +9,8 @@ function creation_utilisateur(){
         $nom = $_POST["nom"];
         $prenom = $_POST["prenom"];
         $num = $_POST["telephone"];
+        $role= "utilisateur";
+
 
         $messages = [];
 
@@ -62,7 +64,8 @@ function creation_utilisateur(){
                 "prenom" => $prenom,
                 "numero" => $num,
                 "email" => $mail,
-                "mot_de_passe" => password_hash($mdp, PASSWORD_DEFAULT) // Hash du mot de passe
+                "mot_de_passe" => password_hash($mdp, PASSWORD_DEFAULT), // Hash du mot de passe
+                "role" => $role
             ];
         
             // Ajouter le nouvel utilisateur

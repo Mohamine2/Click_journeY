@@ -56,7 +56,7 @@ $utilisateurs_affiches = array_slice($utilisateurs, $debut, $utilisateurs_par_pa
     <p class="client"><b>Liste des utilisateurs inscrits:</b></p>
 
     <?php foreach ($utilisateurs_affiches as $user): ?>
-        <p class="client"><?= htmlspecialchars($user["nom"] . " " . $user["prenom"]) ?></p>
+        <p class="client"><?= htmlspecialchars($user["nom"] . " " . $user["prenom"])?> <em><?=htmlspecialchars($user["role"])?></em></p>
     <?php endforeach; ?>
 
     <!-- Pagination -->
@@ -69,8 +69,6 @@ $utilisateurs_affiches = array_slice($utilisateurs, $debut, $utilisateurs_par_pa
             <a href="?page=<?= $page + 1 ?>" class="pages">Page suivante</a>
         <?php endif; ?>
     </div>
-
-    <button type="submit" class="admin">Modifier la liste</button>
 </div>
 </div>
 </body>

@@ -28,20 +28,31 @@
         "prenom": "na\u00efm ",
         "numero": "0989222123",
         "email": "mouus@gmail.com",
-        "mot_de_passe": "$2y$10$T7.XhFQYLX2Zu.x2uEa8ZORH1rWJriOQKdUiKcmLNd8b8ah.0qbU."
+        "mot_de_passe": "$2y$10$T7.XhFQYLX2Zu.x2uEa8ZORH1rWJriOQKdUiKcmLNd8b8ah.0qbU.",
+        "role": "utilisateur"
     },
     {
         "nom": "kaizoku",
         "prenom": "orewa",
         "numero": "0989222123",
         "email": "roidespirates@gmail.com",
-        "mot_de_passe": "$2y$10$pj.d\/kwNpSe5gdFxtAbzPuMCFGej5PjFvKGdjUa5MPsANo7C0HE5W"
+        "mot_de_passe": "$2y$10$pj.d\/kwNpSe5gdFxtAbzPuMCFGej5PjFvKGdjUa5MPsANo7C0HE5W",
+        "role": "utilisateur"
     },
     {
         "nom": "aaa",
         "prenom": "bb",
         "numero": "0989222123",
         "email": "a@gmail.com",
-        "mot_de_passe": "$2y$10$lJ7l2B8kJX45SJJjgryZ8.vILXb1xnC3elYvsahwazAJqqNBBwPgy"
+        "mot_de_passe": "$2y$10$lJ7l2B8kJX45SJJjgryZ8.vILXb1xnC3elYvsahwazAJqqNBBwPgy",
+        "role": "utilisateur"
+    },
+    {
+        "nom": "LOFTUS",
+        "prenom": "Elizabeth",
+        "numero": "0767513215",
+        "email": "oc@yahoo.fr",
+        "mot_de_passe": "$2y$10$ziyFRTYjfCfWs6LKs8crruhWWw\/qAjBfOuglSyG1Pu5vjn4d7svpy",
+        "role": "utilisateur"
     }
 ]
