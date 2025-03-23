@@ -82,6 +82,7 @@
     </nav>
 
     <div class="admin">
+    <a href="voyages.php?dest=<?=$destination?>"> Retour à la personnalisation</a>
     <h1>Récapitulatif du voyage</h1>
     <p><strong>Destination :</strong> <?= htmlspecialchars($destination) ?></p>
     <p><strong>Aéroport de départ :</strong> <?= htmlspecialchars($aeroport_depart) ?></p>
