@@ -68,12 +68,13 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
             
                 <div class="voyage-icone">
                     <div class="voyage-info">
+                    <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
                         <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
                         <p><strong>Départ :</strong> <?= htmlspecialchars($voyage['depart']) ?></p>
                         <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?></p>
                         <p><strong>Prix :</strong> <?= htmlspecialchars($voyage['prix']) ?> €</p>
                         <a href="voyages.php?dest=<?= urlencode($voyage['destination']) ?>" class="voyage-link">Voir plus</a>
-                        <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
+
                     </div>
                 </div>
             
