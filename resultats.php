@@ -88,7 +88,7 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     <?php endif; ?>
 
     <?php if ($debut + $voyages_par_page < $total_voyages): ?>
-        <a href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page + 1 ?>" class="pages">Page suivante</a>
+        <a class="pages" href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page + 1 ?>" >Page suivante</a>
     <?php endif; ?>
 </div>
 

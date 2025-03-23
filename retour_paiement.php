@@ -53,9 +53,10 @@ else {
                     "email" => $_SESSION["utilisateur"]["email"],
                     "numero_transaction" => $transaction,
                     "date_commande" => $date_du_jour,
+                    "prix" => $montant
                 ];
             
-                // Ajouter le nouvel utilisateur
+                // Ajouter la nouvelle commande
                 $commandes[] = $nouvelle_commande;
             
                 // Sauvegarder dans le fichier JSON
@@ -114,7 +115,10 @@ else {
             echo "Refusé. Votre paiement a été refusé. Veuillez réessayer.";
         } ?>   </p>
 
-    <a href="accueil.php">Retour à l'accueil</a>
+    <div class="kk">
+    <a class="bouton" href="accueil.php">Retour à l'accueil</a>
+    </div>
+    
             </div>
 
 </body>

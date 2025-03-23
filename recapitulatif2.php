@@ -88,7 +88,6 @@
     </nav>
 
     <div class="admin">
-    <a href="voyages.php?dest=<?=$destination?>"> Retour à la personnalisation</a>
     <h1>Récapitulatif du voyage</h1>
     <p><strong>Destination :</strong> <?= htmlspecialchars($destination) ?></p>
     <p><strong>Aéroport de départ :</strong> <?= htmlspecialchars($aeroport_depart) ?></p>
@@ -104,7 +103,10 @@
     <?php } ?>
     <p><strong>Prix :</strong> <?= number_format($montant, 2, ",", " ") ?> €</p>
 
-
+    <div class="kk">
+    <a class="bouton" href="voyages.php?dest=<?=$destination?>"> Retour à la personnalisation</a>
+    </div>
+    
     <form method="post" action="https://www.plateforme-smc.fr/cybank/index.php">
     
     <!-- Identifiant unique de transaction -->
