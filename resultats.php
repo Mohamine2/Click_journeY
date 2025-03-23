@@ -2,10 +2,23 @@
 session_start();
 
 // Charger les données des voyages
-$data = json_decode(file_get_contents('voyages.json'), true);
+$voyages = json_decode(file_get_contents('voyages.json'), true);
+
+$total_voyages = count($voyages);
 
 // Récupérer la valeur de la recherche
 $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
+
+// Définir combien d'utilisateurs afficher par page
+$voyages_par_page = 8;
+
+// Déterminer la page actuelle
+$page = isset($_GET["page"]) ? (int)$_GET["page"] : 1;
+$page = max(1, $page); // Évite qu'une page négative soit sélectionnée
+
+// Calculer l'index de départ et de fin
+$debut = ($page - 1) * $voyages_par_page;
+$voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
 ?>
 
 <!DOCTYPE html>
@@ -49,8 +62,9 @@ $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 <?php if ($searchQuery): ?>
     <h2>Résultats de la recherche pour "<?= htmlspecialchars($searchQuery) ?>"</h2>
 
+
     <div class="voyage-container">
-        <?php foreach ($data as $voyage): ?>
+        <?php foreach ($voyages_affiches as $voyage): ?>
             
                 <div class="voyage-icone">
                     <div class="voyage-info">
@@ -67,6 +81,15 @@ $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
     </div>
 <?php endif; ?>
 
+<div class="pagination">
+    <?php if ($page > 1): ?>
+        <a href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page - 1 ?>" class="pages">Page précédente</a>
+    <?php endif; ?>
+
+    <?php if ($debut + $voyages_par_page < $total_voyages): ?>
+        <a href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page + 1 ?>" class="pages">Page suivante</a>
+    <?php endif; ?>
+</div>
 
     
 </body>
