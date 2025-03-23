@@ -73,7 +73,7 @@ $voyage = $voyages[$destination];
             <h2>Planifiez votre voyage</h2>
             <p>Obtenez un devis personnalisé pour votre aventure.</p>
 
-      <form action="recapitulatif.php" method="post">
+      <form action="recapitulatif2.php?dest=<?=$destination?>" method="post">
             <div class="personnalisation">
                 <p><b>Personnalisez le séjour:</b></p>
 
@@ -95,7 +95,7 @@ $voyage = $voyages[$destination];
                     <p><u>Jour <?= $i ?> : </u></p>
 
                     <p>Participation aux activités ?</p>
-                    <select name="activite[<?= $i ?>]">
+                    <select name="activites[<?= $i ?>]">
                         <option value="Oui" selected="selected">Oui</option>
                         <option value="Non">Non</option>
                     </select>
