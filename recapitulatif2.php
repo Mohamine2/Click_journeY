@@ -37,10 +37,11 @@
     }
 
     $montant = calculPrix($hebergement,$aeroport_depart,$aeroport_retour,$activites,$transports,$restauration);
+    $montant = number_format((float)$montant, 2, ".", "");
 
     
     $transaction = $_SESSION["transaction"];// Un ID de transaction unique
-    $vendeur = "MI-4_C"; // Ton code vendeur
+    $vendeur = "MI-4_C";
     $retour = "http://localhost/Click_journeY/retour_paiement.php?session=s"; // URL de retour
     
     $api_key = getAPIKey($vendeur);

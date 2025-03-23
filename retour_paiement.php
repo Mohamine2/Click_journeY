@@ -80,7 +80,7 @@ else {
     <p><strong>Numéro de transaction :</strong> <?= htmlspecialchars($transaction) ?></p>
     <p><strong>Montant :</strong> <?= number_format($montant, 2, ",", " ") ?> €</p>
     <p><strong>Statut :</strong> <?php 
-        if ($statut === "accepted") { 
+        if ($status === "accepted") { 
             echo "Accepté, votre paiement a été validé avec succès.";
         } elseif ($statut === "declined") { 
             echo "Refusé. Votre paiement a été refusé. Veuillez réessayer.";
