@@ -621,6 +621,8 @@ header.admin{
 }
 
 div.admin{
+    padding-left: 15px;
+    padding-bottom:15px;
     border: white 2px;
     background-color: white;
     margin: 40px;
