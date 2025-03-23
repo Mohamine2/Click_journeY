@@ -1,11 +1,11 @@
 <?php
 
-function calculPrix($hebergement, $aeroport_depart, $aeroport_retour, $activites, $transports, $restauration) {
+function calculPrix($hebergement, $aeroport_depart, $aeroport_retour, $activites, $transports, $restauration,$prix_base) {
 
      // Tarifs hébergement par nuit
      $tarifs_hebergement = [
         "Hotel" => 100,
-        "Maison d'hotes" => 50,
+        "Maison d'hotes" => 0,
         "Appartement" => 70
     ];
 
@@ -29,18 +29,8 @@ function calculPrix($hebergement, $aeroport_depart, $aeroport_retour, $activites
         "Non" => 0
     ];
 
-    // Tarifs aéroport
-    $tarifs_aeroport = [
-        "Paris" => 200,
-        "Marseille" => 150,
-        "Lyon" => 180
-    ];
-
     // Calcul du prix de l'hébergement (7 nuits)
-    $prix_total = $tarifs_hebergement[$hebergement] * 7;
-
-    // Ajout des frais d’aéroport (aller-retour)
-    $prix_total += $tarifs_aeroport[$aeroport_depart] + $tarifs_aeroport[$aeroport_retour];
+    $prix_total = $prix_base+($tarifs_hebergement[$hebergement] * 7);
 
     // Calcul des frais journaliers (transport, restauration, activités)
     for ($i = 1; $i <= 7; $i++) {

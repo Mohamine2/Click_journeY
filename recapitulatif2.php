@@ -24,6 +24,7 @@
         if ($voyage["destination"] == $destination) {
             $date_depart=$voyage['date_depart'];
             $duree=$voyage['duree'];
+            $prix_base=$voyage['prix'];
         }
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -36,7 +37,7 @@
         $restauration = $_POST['restauration'];
     }
 
-    $montant = calculPrix($hebergement,$aeroport_depart,$aeroport_retour,$activites,$transports,$restauration);
+    $montant = calculPrix($hebergement,$aeroport_depart,$aeroport_retour,$activites,$transports,$restauration,$prix_base);
     $montant = number_format((float)$montant, 2, ".", "");
 
     
