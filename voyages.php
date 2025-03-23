@@ -83,8 +83,8 @@ if (!isset($_SESSION["transaction"])) {
 
                 <p>Choisissez votre type d'hébergement:</p>
                 <select name="hebergement">
-                    <option value="Hotel" selected="selected">Hôtel</option>
-                    <option value="Maison d'hotes">Maison d'hôtes</option>
+                    <option value="Hotel">Hôtel</option>
+                    <option value="Maison d'hotes" selected="selected">Maison d'hôtes</option>
                     <option value="Appartement">Appartement</option>
                 </select>
 
@@ -100,22 +100,22 @@ if (!isset($_SESSION["transaction"])) {
 
                     <p>Participation aux activités ?</p>
                     <select name="activites[<?= $i ?>]">
-                        <option value="Oui" selected="selected">Oui</option>
-                        <option value="Non">Non</option>
+                        <option value="Oui" >Oui</option>
+                        <option value="Non" selected="selected">Non</option>
                     </select>
 
                     <p>Choisissez votre moyen de transport:</p>
                     <select name="transports[<?= $i ?>]">
-                        <option value="Autonome">Autonome</option>
-                        <option value="navette" selected="selected">Navette collective</option>
+                        <option value="Autonome" selected="selected">Autonome</option>
+                        <option value="navette">Navette collective</option>
                         <option value="taxindiv">Taxis individuels</option>
                     </select>
 
                     <p>Choisissez votre formule restauration:</p>
                     <select name="restauration[<?= $i ?>]">
-                        <option value="Aucune">Aucune</option>
+                        <option value="Aucune" selected="selected" >Aucune</option>
                         <option value="Demi-pension">Demi-pension</option>
-                        <option value="Pension complète" selected="selected">Pension complète</option>
+                        <option value="Pension complète">Pension complète</option>
                     </select>
                 <?php } ?>
 
