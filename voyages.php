@@ -1,4 +1,8 @@
 <?php
+
+// Vérifier si une recherche a été soumise
+$searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
+
 // Charger le contenu du fichier JSON
 session_start();
 $json = file_get_contents('details_voyages.json');
@@ -40,7 +44,9 @@ if (!isset($_SESSION["transaction"])) {
             <li><a href="admin.php">Espace Admin</a></li>
         <?php endif; ?>
         </ul>
-        <input type="search" placeholder="Rechercher...">
+        <form method="get" action="resultats.php">
+            <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
+        </form>
     </nav>
 
     <section class="titre">
