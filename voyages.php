@@ -5,6 +5,10 @@ $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Charger le contenu du fichier JSON
 session_start();
+
+// Vérifier si une recherche a été soumise
+$searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
+
 $json = file_get_contents('details_voyages.json');
 $voyages = json_decode($json, true);
 
