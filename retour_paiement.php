@@ -37,7 +37,7 @@ else {
         $date_du_jour = date("d/m/Y");
 
                 // Fichier JSON où les commandes sont stockées
-                $fichier = "commandes.json";
+                $fichier = "donnees/commandes.json";
             
                 // Récupérer les données existantes
                 $commandes = [];

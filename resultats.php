@@ -2,7 +2,7 @@
 session_start();
 
 // Charger les données des voyages
-$voyages = json_decode(file_get_contents('voyages.json'), true);
+$voyages = json_decode(file_get_contents('donnees/voyages.json'), true);
 
 $total_voyages = count($voyages);
 

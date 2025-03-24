@@ -6,7 +6,7 @@ session_start();
 $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Lire le fichier JSON
-$utilisateurs = json_decode(file_get_contents("utilisateurs.json"), true);
+$utilisateurs = json_decode(file_get_contents("donnees/utilisateurs.json"), true);
 
 // Définir combien d'utilisateurs afficher par page
 $utilisateurs_par_page = 5;

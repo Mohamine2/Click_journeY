@@ -24,7 +24,7 @@ if(isset($_POST["connexion"])){
         echo"Vous devez entrer un mot de passe";
     }
     else{
-        $fichier = 'utilisateurs.json';
+        $fichier = 'donnees/utilisateurs.json';
 
     if (!file_exists($fichier)) {
         die("Erreur : Le fichier JSON n'existe pas.");
