@@ -9,6 +9,9 @@ Fichier pour permettre au chargé de TD de tester les connexions puisque les mot
 "email": "zoro@shishi.fr"
 "mot_de_passe": "SONSON"
 
+"email": "roidespirates@gmail.com"
+"mot_de_passe": "LUFFY"
+
 
 
 "email": "oc@yahoo.fr",

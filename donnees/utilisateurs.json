@@ -15,7 +15,7 @@
         "numero": "0989222123",
         "email": "guillaume@chikara.fr",
         "mot_de_passe": "$2y$10$C7VrV9UyJzDlKWbVswkkr.iv8A4VUtwFEdb1PLT9HXmOj7Wt\/Wl0a",
-        "role": "utilisateur",
+        "role": "admin",
         "date_inscription": "12-03-2025 14:27:11",
         "date_connexion": "24-03-2025 10:30:55"
     },
@@ -47,7 +47,7 @@
         "mot_de_passe": "$2y$10$pj.d\/kwNpSe5gdFxtAbzPuMCFGej5PjFvKGdjUa5MPsANo7C0HE5W",
         "role": "utilisateur",
         "date_inscription": "18-03-2025 12:35:21",
-        "date_connexion": "24-03-2025 16:18:03"
+        "date_connexion": "24-03-2025 18:53:58"
     },
     {
         "nom": "aaa",
