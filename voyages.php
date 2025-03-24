@@ -87,7 +87,7 @@ if (!isset($_SESSION["transaction"])) {
             <h2>Planifiez votre voyage</h2>
             <p>Obtenez un devis personnalisé pour votre aventure.</p>
 
-      <form action="recapitulatif2.php?dest=<?=$destination?>" method="post">
+        <form action="recapitulatif.php?dest=<?= urlencode($destination) ?>" method="post">
             <div class="personnalisation">
                 <p><b>Personnalisez le séjour:</b></p>
 

@@ -18,6 +18,9 @@ if (isset($_POST["deconnexion"])) {
 }
 
 $utilisateur = $_SESSION["utilisateur"];
+
+$json = file_get_contents('donnees/commandes.json');
+$voyages = json_decode($json, true);
 ?>
 
 <!DOCTYPE html>
@@ -66,6 +69,23 @@ $utilisateur = $_SESSION["utilisateur"];
         <p>Favoris:</p>
         <p>Panier:</p>
       </div>
+      <div id="achat">
+        <p><b>MES COMMANDES:</b></p>
+        </div>
+        <?php foreach ($voyages as $voyage): ?>
+    <?php if ($voyage['nom'] == $utilisateur["nom"]): ?>
+        <div class="voyage-container">
+            <div class="voyage-icone">
+                <div class="voyage-info">
+                    <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
+                    <p><strong>Prix :</strong> <?= htmlspecialchars($voyage['prix']) ?> €</p>
+                    <p><strong>Date de commande :</strong> <?= htmlspecialchars($voyage['date_commande']) ?></p>
+                    <a href="voyages.php?dest=<?= urlencode($voyage['destination']) ?>" class="voyage-link">Voir plus</a>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+<?php endforeach; ?>
     </div>
     <div class="logout">
     <form method="post">

@@ -46,7 +46,7 @@
     
     $transaction = $_SESSION["transaction"];// Un ID de transaction unique
     $vendeur = "MI-4_C";
-    $retour = "http://localhost/Click_journeY/retour_paiement.php?session=s"; // URL de retour
+    $retour = "http://localhost/Click_journeY/retour_paiement.php?session=s&dest=$destination"; //URL de retour
     
     $api_key = getAPIKey($vendeur);
     $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
@@ -119,7 +119,7 @@
     <input type="hidden" name="vendeur" value="MI-4_C">
     
     <!-- URL de retour après paiement -->
-    <input type="hidden" name="retour" value="http://localhost/Click_journeY/retour_paiement.php?session=s">
+    <input type="hidden" name="retour" value="http://localhost/Click_journeY/retour_paiement.php?session=s&dest=<?=$destination?>">
     
     <!-- Valeur de contrôle sécurisée -->
     <input type="hidden" name="control" value="<?= $control ?>">

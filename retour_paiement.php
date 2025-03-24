@@ -12,12 +12,13 @@ if (!isset($_GET["transaction"]) || !isset($_GET["montant"]) || !isset($_GET["ve
     die("Erreur : paramètres manquants.");
 }
 
-// Récupérer et nettoyer les valeurs reçues //Chatgpt
+// Récupérer et nettoyer les valeurs reçues
 $transaction = trim($_GET["transaction"]); 
 $montant = number_format(floatval($_GET["montant"]), 2, ".", ""); // Assurer le bon format
 $vendeur = trim($_GET["vendeur"]);
 $status = trim($_GET["status"]);
 $control_recu = trim($_GET["control"]);
+$destination = trim($_GET['dest']);
 
 // Récupérer l'API Key du vendeur
 $api_key = getAPIKey($vendeur);
@@ -53,7 +54,8 @@ else {
                     "email" => $_SESSION["utilisateur"]["email"],
                     "numero_transaction" => $transaction,
                     "date_commande" => $date_du_jour,
-                    "prix" => $montant
+                    "prix" => $montant,
+                    "destination" => $destination
                 ];
             
                 // Ajouter la nouvelle commande
@@ -111,7 +113,7 @@ else {
     <p><strong>Statut :</strong> <?php 
         if ($status === "accepted") { 
             echo "Accepté, votre paiement a été validé avec succès.";
-        } elseif ($statut === "declined") { 
+        } elseif ($status === "declined") { 
             echo "Refusé. Votre paiement a été refusé. Veuillez réessayer.";
         } ?>   </p>
 

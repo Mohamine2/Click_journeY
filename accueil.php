@@ -68,7 +68,7 @@
         </div>
 
         <div class="lieu">
-            <a href="voyages.php?dest=Sénégal">
+            <a href="voyages.php?dest=Senegal">
                 <img src="images/dakar.jpg" alt="img_dakar" width="400px" height="300px">
                 <h2>SENEGAL</h2>
             </a>
