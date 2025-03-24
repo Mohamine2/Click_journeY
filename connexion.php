@@ -38,14 +38,22 @@ if(isset($_POST["connexion"])){
     }
 
     // Vérifier si l'email et le mot de passe correspondent
-    foreach ($comptes as $compte) {
+    foreach ($comptes as $key => $compte) {
         if ($compte["email"] == $mail && password_verify($mdp, $compte["mot_de_passe"])) {
+
+            // Mettre à jour la date de connexion
+            $date_connexion = date("d-m-Y H:i:s");
+            $comptes[$key]["date_connexion"] = $date_connexion;
+            // Sauvegarder la mise à jour dans le fichier JSON
+            file_put_contents($fichier, json_encode($comptes, JSON_PRETTY_PRINT));
+
             // Stocker la session et rediriger vers la page protégée
             $_SESSION["utilisateur"] = [
                 "email" => $compte["email"],
                 "nom" => $compte["nom"],
                 "prenom" => $compte["prenom"],
-                "role" => $compte["role"]
+                "role" => $compte["role"],
+                "date_connexion" => $date_connexion
             ];
             header("Location: profil.php");
             exit();

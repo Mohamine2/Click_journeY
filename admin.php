@@ -56,7 +56,11 @@ $utilisateurs_affiches = array_slice($utilisateurs, $debut, $utilisateurs_par_pa
     <p class="client"><b>Liste des utilisateurs inscrits:</b></p>
 
     <?php foreach ($utilisateurs_affiches as $user): ?>
-        <p class="client"><?= htmlspecialchars($user["nom"] . " " . $user["prenom"])?> <em><?=htmlspecialchars($user["role"])?></em></p>
+        <p class="client"><?= htmlspecialchars($user["nom"] . " " . $user["prenom"])?> </br>
+        Inscription: <?=htmlspecialchars($user["date_inscription"])?> </br>
+        Dernière connexion: <?=htmlspecialchars($user["date_connexion"])?> </br>
+        <em><?=htmlspecialchars($user["role"])?></em></p>
+
     <?php endforeach; ?>
 
     <!-- Pagination -->

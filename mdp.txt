@@ -1,0 +1,18 @@
+Fichier pour permettre au chargé de TD de tester les connexions puisque les mots de passes sont hashés dans les fichiers json:
+
+"email": "seriesds3@gmail.com"
+"mot_de_passe": "FLOP"
+
+"email": "guillaume@chikara.fr"
+"mot_de_passe": "FINITO"
+
+"email": "zoro@shishi.fr"
+"mot_de_passe": "SONSON"
+
+
+
+"email": "oc@yahoo.fr",
+"mot_de_passe": "memoire"
+
+"email": "test@connexion.fr",
+"mot_de_passe": "date"

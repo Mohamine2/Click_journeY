@@ -5,7 +5,9 @@
         "numero": "0767512314",
         "email": "seriesds3@gmail.com",
         "mot_de_passe": "$2y$10$7er53CJAcCrh03S5Orlilu0GFr0GX5xKw59HP5xvtpcB0f4hoOgge",
-        "role": "utilisateur"
+        "role": "admin",
+        "date_inscription": "10-03-2025 09:15:42",
+        "date_connexion": "24-03-2025 12:24:11"
     },
     {
         "nom": "MIku",
@@ -13,7 +15,9 @@
         "numero": "0989222123",
         "email": "guillaume@chikara.fr",
         "mot_de_passe": "$2y$10$C7VrV9UyJzDlKWbVswkkr.iv8A4VUtwFEdb1PLT9HXmOj7Wt\/Wl0a",
-        "role": "utilisateur"
+        "role": "utilisateur",
+        "date_inscription": "12-03-2025 14:27:11",
+        "date_connexion": "24-03-2025 10:30:55"
     },
     {
         "nom": "RORONOA",
@@ -21,7 +25,9 @@
         "numero": "0976545678",
         "email": "zoro@shishi.fr",
         "mot_de_passe": "$2y$10$eN.YbcXx6Y1wetr7oze.4eTRdXi5zb6ANDVU\/U1luPK1DuvI4KXs6",
-        "role": "admin"
+        "role": "admin",
+        "date_inscription": "14-03-2025 08:42:36",
+        "date_connexion": "24-03-2025 12:20:57"
     },
     {
         "nom": "lachgar",
@@ -29,7 +35,9 @@
         "numero": "0989222123",
         "email": "mouus@gmail.com",
         "mot_de_passe": "$2y$10$T7.XhFQYLX2Zu.x2uEa8ZORH1rWJriOQKdUiKcmLNd8b8ah.0qbU.",
-        "role": "utilisateur"
+        "role": "utilisateur",
+        "date_inscription": "16-03-2025 19:10:05",
+        "date_connexion": "24-03-2025 09:55:47"
     },
     {
         "nom": "kaizoku",
@@ -37,7 +45,9 @@
         "numero": "0989222123",
         "email": "roidespirates@gmail.com",
         "mot_de_passe": "$2y$10$pj.d\/kwNpSe5gdFxtAbzPuMCFGej5PjFvKGdjUa5MPsANo7C0HE5W",
-        "role": "utilisateur"
+        "role": "utilisateur",
+        "date_inscription": "18-03-2025 12:35:21",
+        "date_connexion": "24-03-2025 16:18:03"
     },
     {
         "nom": "aaa",
@@ -45,7 +55,9 @@
         "numero": "0989222123",
         "email": "a@gmail.com",
         "mot_de_passe": "$2y$10$lJ7l2B8kJX45SJJjgryZ8.vILXb1xnC3elYvsahwazAJqqNBBwPgy",
-        "role": "utilisateur"
+        "role": "utilisateur",
+        "date_inscription": "20-03-2025 07:55:58",
+        "date_connexion": "24-03-2025 14:07:39"
     },
     {
         "nom": "LOFTUS",
@@ -53,6 +65,18 @@
         "numero": "0767513215",
         "email": "oc@yahoo.fr",
         "mot_de_passe": "$2y$10$ziyFRTYjfCfWs6LKs8crruhWWw\/qAjBfOuglSyG1Pu5vjn4d7svpy",
-        "role": "utilisateur"
+        "role": "utilisateur",
+        "date_inscription": "22-03-2025 16:48:30",
+        "date_connexion": "24-03-2025 18:23:50"
+    },
+    {
+        "nom": "CONNEXION",
+        "prenom": "Test",
+        "numero": "0767513215",
+        "email": "test@connexion.fr",
+        "mot_de_passe": "$2y$10$\/gVD0W7VB6YaSq5lSSibsu7He0CttXTTf\/UOO\/Bj4PQvxXP.UQsYi",
+        "role": "utilisateur",
+        "date_inscription": "24-03-2025 12:16:11",
+        "date_connexion": "24-03-2025 12:16:23"
     }
 ]
