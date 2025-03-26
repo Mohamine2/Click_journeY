@@ -45,7 +45,7 @@
     </section>
 
     <section class="accueil">
-        <h1> Dunes Seekers</h1>
+        <h1> Dunes Seekers</h1>  
         <p>Le monde attise la curiosité, les merveilles submergent nos sens et la découverte nous fascine.<br>
             Marre du froid? Des grandes villes? D'une même routine? Envie de voyager?<br>
             Nous sommes ici pour vous guider de la meilleure manière possible pour profiter de ces régions exceptionnelles.<br>
