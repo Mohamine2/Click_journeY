@@ -12,58 +12,63 @@ if (isset($_SESSION["utilisateur"])) {
     exit();
 }
 
+$mail = ""; //garder le mail
+$mdp = ""; // garde le mdp
+$erreurConnexion = ""; //garder le msg affiché
+
 if(isset($_POST["connexion"])){
 
     $mail = $_POST["mail"];
     $mdp = $_POST["mdp"];
 
     if(empty($mail)){
-        echo"Vous devez entrer une adresse mail";
+        $erreurConnexion = "Vous devez entrer une adresse mail";
     }
     else if(empty($mdp)){
-        echo"Vous devez entrer un mot de passe";
+        $erreurConnexion = "Vous devez entrer un mot de passe";
     }
+    
     else{
         $fichier = 'donnees/utilisateurs.json';
 
-    if (!file_exists($fichier)) {
-        die("Erreur : Le fichier JSON n'existe pas.");
-    }
-
-    $data = file_get_contents($fichier);
-    $comptes = json_decode($data, true);
-
-    if ($comptes === null) {
-        die("Erreur : Impossible de décoder le fichier JSON.");
-    }
-
-    // Vérifier si l'email et le mot de passe correspondent
-    foreach ($comptes as $key => $compte) {
-        if ($compte["email"] == $mail && password_verify($mdp, $compte["mot_de_passe"])) {
-
-            // Mettre à jour la date de connexion
-            $date_connexion = date("d-m-Y H:i:s");
-            $comptes[$key]["date_connexion"] = $date_connexion;
-            // Sauvegarder la mise à jour dans le fichier JSON
-            file_put_contents($fichier, json_encode($comptes, JSON_PRETTY_PRINT));
-
-            // Stocker la session et rediriger vers la page protégée
-            $_SESSION["utilisateur"] = [
-                "email" => $compte["email"],
-                "nom" => $compte["nom"],
-                "prenom" => $compte["prenom"],
-                "role" => $compte["role"],
-                "date_connexion" => $date_connexion
-            ];
-            header("Location: profil.php");
-            exit();
+        if (!file_exists($fichier)) {
+            die("Erreur : Le fichier JSON n'existe pas.");
         }
-    }
 
-    // Si aucun compte ne correspond
-    echo "Email ou mot de passe incorrect.";
-}
+        $data = file_get_contents($fichier);
+        $comptes = json_decode($data, true);
+
+        if ($comptes === null) {
+            die("Erreur : Impossible de décoder le fichier JSON.");
+        }
+
+        // Vérifier si l'email et le mot de passe correspondent
+        foreach ($comptes as $key => $compte) {
+            if ($compte["email"] == $mail && password_verify($mdp, $compte["mot_de_passe"])) {
+
+                // Mettre à jour la date de connexion
+                $date_connexion = date("d-m-Y H:i:s");
+                $comptes[$key]["date_connexion"] = $date_connexion;
+                // Sauvegarder la mise à jour dans le fichier JSON
+                file_put_contents($fichier, json_encode($comptes, JSON_PRETTY_PRINT));
+
+                // Stocker la session et rediriger vers la page protégée
+                $_SESSION["utilisateur"] = [
+                    "email" => $compte["email"],
+                    "nom" => $compte["nom"],
+                    "prenom" => $compte["prenom"],
+                    "role" => $compte["role"],
+                    "date_connexion" => $date_connexion
+                ];
+                header("Location: profil.php");
+                exit();
+            }
+        }
+
+        // Si aucun compte ne correspond
+        $erreurConnexion = "Email ou mot de passe incorrect.";
     }
+}
 
 ?>
 
@@ -71,12 +76,12 @@ if(isset($_POST["connexion"])){
 <html lang="fr">
 
 <head>
+    <script src="formulaire.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Connexion à Dunes Seekers</title>
 </head>
-
 
 <body>
 
@@ -105,11 +110,16 @@ if(isset($_POST["connexion"])){
     <div class="boite_connexion">
         <div class="connexion">
             <h3> Connexion </h3>
+            <?php if (!empty($erreurConnexion)): ?>
+                <div class="message-erreur" style="color: red; margin-bottom: 10px;">
+                    <?= htmlspecialchars($erreurConnexion) ?>
+                </div>
+            <?php endif; ?>
             <form class="form_connexion" method="post" action="connexion.php">
                 <label for="mail"> Adresse Mail: </label>
-                <input type="email" name="mail" id="mail" required />
+                <input type="email" name="mail" id="mail" required value="<?= htmlspecialchars($mail) ?>" />
                 <label for="mdp"> Mot de passe: </label>
-                <input type="password" name="mdp" id="mdp" required />
+                <input type="password" name="mdp" id="mdp" required value="<?= htmlspecialchars($mdp) ?>" />
                 <button type="submit" name="connexion"> Confirmer </button>
             </form>
 
@@ -118,7 +128,6 @@ if(isset($_POST["connexion"])){
         </div>
     </div>
 
- 
 </body>
 
-</html> 
+</html>

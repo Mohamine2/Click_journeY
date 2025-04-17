@@ -16,6 +16,8 @@
     <title>Inscription à Dunes Seekers</title>
 </head>
 
+<script src="formulaire.js"></script>
+
 <body>
 
     <header>

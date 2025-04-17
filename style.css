@@ -1,11 +1,18 @@
 /*code utile à toutes les pages*/
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+header {
+    background-color: #c2821c;
+    border: none;
+    font-size: 50px;
+    padding-left: 2cm;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+header > a{
+    text-decoration: none;
+    color: white;
 }
 
 body {
@@ -18,33 +25,6 @@ body {
     padding: 0;
 }
 
-main {
-    flex: 1; /* prend toute la hauteur restante entre header et footer */
-}
-
-header {
-    background-color: #c2821c;
-    border: none;
-    font-size: 50px;
-    padding-left: 2cm;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-header > a{
-    text-decoration: none;
-    color: white;
-}
-
-footer{
-    background-color: black;
-    margin-top: auto;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-    box-shadow: 0 -2px 10px black;
-    border: 2px solid red;
-}
 
 
 nav {
@@ -633,6 +613,21 @@ input:checked + label .tab-content {
 }
 /*//////////////////////////////////////*/
 
+/* lien */
+.voyage-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #a07415;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.voyage-link:hover {
+    background-color: #2b2a01;
+}
 
 /*code utile à la page admin*/
 
@@ -662,10 +657,7 @@ button.admin{
     margin-bottom: 1cm;
 }
 
-/*code utile à la page résultat*/
-
 .pagination a {
-    display: inline-block;
     background-color: #c2821c;
     padding-left: 40px;
     padding-right: 40px;
@@ -680,7 +672,14 @@ button.admin{
     text-decoration: none;
 }
 
+
+/*code utile à la page résultat*/
+
 .pagination a:hover{
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     transform: scale(1.1);
     box-shadow: 0px 4px 12px #B87D4B80;
     background: linear-gradient(120deg, #b87d4b, #8f5a2a);
@@ -694,29 +693,28 @@ button.admin{
     padding-bottom: 50px;
 }
 
-.kk{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.kk a {
-    display: inline-block;
-    background-color: #c2821c;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: none;
-    color: white;
-    border-radius: 5px;
-    font-size: 20px;
-    margin-top: 40px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
-    text-decoration: none;
+
+/*/////////////////// formulaire.js  //////////////////////*/
+
+.input-valide {
+    border: 2px solid green;
 }
 
-.kk a:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 4px 12px #B87D4B80;
-    background: linear-gradient(120deg, #b87d4b, #8f5a2a);
-    cursor: pointer;
+.input-invalide {
+    border: 2px solid red;
 }
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+}
+
