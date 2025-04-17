@@ -39,7 +39,7 @@
             <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
         </form>
     </nav>
-
+    <main>
     <section class="titre">
         <h1>Allez à travers vos frontières, vivez l'aventure du désert ! </h1>
     </section>
@@ -81,6 +81,11 @@
             </a>
         </div>
     </div>   
+
+            </main>
+    <footer>
+    <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
+    </footer>
 </body>
 
 
