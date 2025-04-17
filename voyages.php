@@ -10,13 +10,25 @@ session_start();
 $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
 $json = file_get_contents('donnees/details_voyages.json');
-$voyages = json_decode($json, true);
+$details_voyages = json_decode($json, true);
 
 // Vérifier si une destination est spécifiée dans l'URL
 $destination = $_GET['dest'];
 
 // Récupérer les données du voyage
-$voyage = $voyages[$destination];
+$voyage = $details_voyages[$destination];
+
+$json2 = file_get_contents('donnees/voyages.json');
+$info_voyage = json_decode($json2, true);
+
+// Récupérer les données du voyage
+foreach($info_voyage as $info){
+    if($info['destination'] == $destination){
+        $voyage2 = $info['prix'];
+        break;
+    }
+}
+
 if (!isset($_SESSION["transaction"])) {
     $_SESSION["transaction"] = bin2hex(random_bytes(12));
 }
@@ -137,10 +149,15 @@ if (!isset($_SESSION["transaction"])) {
                 </select>
                 <br><br>
 
+                <p id="prix-affichage" >Prix: <?= htmlspecialchars($voyage2) ?> € </p>
+                <input type="hidden" id="prix-base" value="<?= htmlspecialchars($voyage2) ?>">
+                <br><br>
+
                 <button type="submit" class="ticket-btn">Réservez un séjour</button>
             </div>
         </form>
         </div>
     </section>
+    <script src="prix.js"></script>
 </body>
 </html>
