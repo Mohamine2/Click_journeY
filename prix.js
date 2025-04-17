@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     prixBase = document.getElementById("prix-base");
     prixAffichage = document.getElementById("prix-affichage");
 
-    // Appel de recalculerPrix si les inputs changent
+    // Appel de recalculerPrix si les selects changent
     let selects = document.querySelectorAll("select");
     for (let i = 0; i < selects.length; i++) {
         selects[i].addEventListener("change", recalculerPrix);
