@@ -718,3 +718,33 @@ button.admin{
     font-size: 18px;
 }
 
+/*///////////// profile ////////////////////*/
+
+/*inspiré de .voyage */
+
+.modifier,
+.valider,
+.annuler {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modifier {
+  background-color: #a07415;
+}
+
+.valider {
+  background-color: #a07415;
+}
+
+.annuler {
+  background-color: #a07415;
+}

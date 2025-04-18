@@ -26,6 +26,7 @@ $voyages = json_decode($json, true);
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+  <script src="profil.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -58,11 +59,39 @@ $voyages = json_decode($json, true);
       <p class="compte">Bonjour, <?php echo htmlspecialchars($utilisateur["prenom"] . " " . $utilisateur["nom"]); ?> !</p>
       <div id="info">
         <p><b>Mes informations personnelles:</b></p>
-        <p> Adresse mail: <?php echo htmlspecialchars($utilisateur["email"]); ?> </p>
-        <p> Nom: <?php echo htmlspecialchars($utilisateur["nom"]); ?> </p>
-        <p> Prénom: <?php echo htmlspecialchars($utilisateur["prenom"]); ?> </p>
+
+        
+        <form method="POST" action="modifier_profil.php" id="form-profil">
+  <div class="modifiable">
+    <label>Email:</label>
+    <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" disabled>
+    <button type="button" class="modifier">Modifier</button>
+    <button type="button" class="valider" style="display:none;">Valider</button>
+    <button type="button" class="annuler" style="display:none;">Annuler</button>
+  </div>
+
+  <div class="champ-editable">
+    <label>Nom:</label>
+    <input type="text" name="nom" value="<?= htmlspecialchars($utilisateur["nom"]) ?>" disabled>
+    <button type="button" class="modifier">Modifier</button>
+    <button type="button" class="valider" style="display:none;">Valider</button>
+    <button type="button" class="annuler" style="display:none;">Annuler</button>
+  </div>
+
+  <div class="champ-editable">
+    <label>Prénom:</label>
+    <input type="text" name="prenom" value="<?= htmlspecialchars($utilisateur["prenom"]) ?>" disabled>
+    <button type="button" class="modifier">Modifier</button>
+    <button type="button" class="valider" style="display:none;">Valider</button>
+    <button type="button" class="annuler" style="display:none;">Annuler</button>
+  </div>
+
+  <button type="submit" id="Soumettre" style="display:none;">Soumettre les modifications</button>
+
+
+</form>
         <p>Moyen de paiement: </p>
-        <button type="submit" class="edit">Modifier le profil</button>
+
       </div>
       <div id="achat">
         <p><b>Mes envies:</b></p>
