@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
             validerChamp("mail", mailOui);
             if (!mailOui) erreurs.push("Adresse mail invalide.");
         
-            const mdpOui = mdp.length >= 6; // condition pour validation du mdp
+            const mdpOui = mdp.length >= 4; // condition pour validation du mdp
             validerChamp("mdp", mdpOui);
-            if (!mdpOui) erreurs.push("Les mots de passe doivent contenir au moins 6 caractères.");
+            if (!mdpOui) erreurs.push("Les mots de passe doivent contenir au moins 4 caractères.");
         
-            const mdp2Oui = mdp === mdp2 && mdp2.length >= 6; // verification 2e mdp
+            const mdp2Oui = mdp === mdp2 && mdp2.length >= 4; // verification 2e mdp
             validerChamp("mdp2", mdp2Oui);
             if (!mdp2Oui) erreurs.push("Les mots de passe ne correspondent pas.");
         
@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
         champs.mail.addEventListener("input", () => {
             validerChamp("mail", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(champs.mail.value.trim()));
         });
-        champs.mdp.addEventListener("input", () => validerChamp("mdp", champs.mdp.value.trim().length >= 6));
+        champs.mdp.addEventListener("input", () => validerChamp("mdp", champs.mdp.value.trim().length >= 4));
         champs.mdp2.addEventListener("input", () => {
-            validerChamp("mdp2", champs.mdp2.value.trim() === champs.mdp.value.trim() && champs.mdp2.value.trim().length >= 6);
+            validerChamp("mdp2", champs.mdp2.value.trim() === champs.mdp.value.trim() && champs.mdp2.value.trim().length >= 4);
         });
     }
 
@@ -108,13 +108,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const mdp = mdpField.value.trim();
 
             const mailOui = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
-            const mdpOui = mdp.length >= 6;
+            const mdpOui = mdp.length >= 4;
 
             validerChamp("mail", mailOui);
             if (!mailOui) erreurs.push("Adresse mail invalide.");
 
             validerChamp("mdp", mdpOui);
-            if (!mdpOui) erreurs.push("Mot de passe trop court (6 caractères minimum).");
+            if (!mdpOui) erreurs.push("Les mots de passe doivent contenir au moins 4 caractères.");
 
             if (!afficherErreurs(erreurs)) e.preventDefault(); 
         });
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         mdpField.addEventListener("input", () => {
-            validerChamp("mdp", mdpField.value.trim().length >= 6);
+            validerChamp("mdp", mdpField.value.trim().length >= 4);
         });
     }
 
