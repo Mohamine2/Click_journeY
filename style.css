@@ -28,6 +28,49 @@ footer {
     padding: 50px 0;
 }
 
+
+ /* mode sombre */
+ .dark-mode body {
+    background-image: none;
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode nav {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode nav a {
+    color: white;
+}
+
+.dark-mode .lieu,
+.dark-mode section.titre {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode input[type="search"] {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+#theme-toggle {
+    background: transparent;
+    color: inherit;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
 /*code utile à toutes les pages*/
 
 header {
