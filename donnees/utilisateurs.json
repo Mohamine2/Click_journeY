@@ -167,7 +167,7 @@
         "mot_de_passe": "$2y$10$2iDHRqlAEJHXeYcpHB80Fuodbcc1Dq05zF7jpGD7\/pxwB9ymHRcZS",
         "role": "utilisateur",
         "date_inscription": "17-04-2025 17:17:58",
-        "date_connexion": "17-04-2025 22:51:09"
+        "date_connexion": "18-04-2025 19:32:53"
     },
     {
         "nom": "joi",
@@ -227,6 +227,16 @@
         "mot_de_passe": "$2y$10$X0Hr8PL59F0kPu7.rMgW2uISm1iNFB2CxpgHuUS.zLUTdIPJZAmSK",
         "role": "utilisateur",
         "date_inscription": "18-04-2025 14:29:06",
+        "date_connexion": " "
+    },
+    {
+        "nom": "123",
+        "prenom": "123",
+        "numero": "0123123123",
+        "email": "Test1@gmail.com",
+        "mot_de_passe": "$2y$10$SbnDX2kLFk7W\/qgXLLQSeuzVQnkxDoQZtFLuhfzyGvsrOc3rH7UrG",
+        "role": "utilisateur",
+        "date_inscription": "18-04-2025 16:16:19",
         "date_connexion": " "
     }
 ]

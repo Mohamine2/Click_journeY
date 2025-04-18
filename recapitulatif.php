@@ -57,6 +57,7 @@
 <html lang="fr">
 
 <head>
+    <script src="panier.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css"/>
@@ -104,6 +105,14 @@
     <p><strong>Prix :</strong> <?= number_format($montant, 2, ",", " ") ?> €</p>
 
     <div class="kk">
+    <!-- /////////  pour panier   ////// -->
+    <button class="panier"
+    data-destination="<?= htmlspecialchars($destination) ?>"
+    data-montant="<?= htmlspecialchars($montant) ?>">
+    Ajouter au panier
+    </button>
+    
+    <!-- ////// pour le récapitulatif //// -->
     <a class="bouton" href="voyages.php?dest=<?=$destination?>"> Retour à la personnalisation</a>
     </div>
     
