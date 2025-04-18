@@ -128,6 +128,10 @@ if(isset($_POST["connexion"])){
         </div>
     </div>
 
+    <footer>
+    <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
+    </footer>
+
 </body>
 
 </html>

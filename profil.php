@@ -121,5 +121,9 @@ $voyages = json_decode($json, true);
     <button class="logout" type="submit" name="deconnexion">Déconnexion</button>
 </form>
     </div>
+
+    <footer>
+    <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
+    </footer>
   </body>
 </html>

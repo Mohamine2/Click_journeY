@@ -1,3 +1,33 @@
+/* structure de base pour que le footer fonctionne */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-image: url('images/desert2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Assure que le fond couvre toute la fenêtre */;
+}
+
+main {
+    flex: 1;
+}
+
+
+footer {
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
 /*code utile à toutes les pages*/
 
 header {
@@ -14,17 +44,6 @@ header > a{
     text-decoration: none;
     color: white;
 }
-
-body {
-    background-image: url('images/desert2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Assure que le fond couvre toute la fenêtre */
-    margin: 0; /* Supprime les marges du body */
-    padding: 0;
-}
-
 
 
 nav {

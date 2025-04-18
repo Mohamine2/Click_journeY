@@ -91,7 +91,9 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
         <a class="pages" href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page + 1 ?>" >Page suivante</a>
     <?php endif; ?>
 </div>
-
+<footer>
+    <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
+    </footer>
     
 </body>
 </html>

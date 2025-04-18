@@ -122,7 +122,9 @@ else {
     </div>
     
             </div>
-
+            <footer>
+    <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
 

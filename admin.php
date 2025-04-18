@@ -75,5 +75,9 @@ $utilisateurs_affiches = array_slice($utilisateurs, $debut, $utilisateurs_par_pa
     </div>
 </div>
 </div>
+
+<footer>
+    <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
