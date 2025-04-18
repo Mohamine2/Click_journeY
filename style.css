@@ -22,28 +22,28 @@ main {
 
 footer {
     margin-top: auto;
-    background-color: black;
+    background-color: #c2821c;
     color: white;
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 
  /* mode sombre */
  .dark-mode body {
     background-image: none;
-    background-color: #121212;
+    background-color: #333;
     color: white;
 }
 
 .dark-mode header,
 .dark-mode footer {
-    background-color: #333;
+    background-color: #2c2c2c;
     color: white;
 }
 
 .dark-mode nav {
-    background-color: #121212;
+    background-color: #2c2c2c;
     border-color: #333;
 }
 
@@ -81,6 +81,14 @@ footer {
     background-color: #555;
 }
 
+.dark-mode button[type="submit"]:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px #e0a14a;
+    background: linear-gradient(120deg, #e0a14a, #ffbf6b);
+    cursor: pointer;
+}
+
+
 .dark-mode .apropos, 
 .dark-mode .form_recherche,
 .dark-mode .voyage-icone{
@@ -93,7 +101,14 @@ footer {
     
 }
 
-#theme-toggle {
+.dark-mode #bouton-mode:hover{
+    background: white;
+    color: #333;
+    border: 1px solid white;
+
+}
+
+#bouton-mode {
     background: transparent;
     color: inherit;
     border: 1px solid white;
@@ -104,7 +119,12 @@ footer {
     margin-top: 10px;
 }
 
+#bouton-mode:hover{
+    background: white;
+    color: #c2821c;
+    border: 1px solid white;
 
+}
 /*code utile à toutes les pages*/
 
 header {
