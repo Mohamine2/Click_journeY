@@ -37,26 +37,56 @@ footer {
 }
 
 .dark-mode header,
-.dark-mode footer,
-.dark-mode nav {
+.dark-mode footer {
     background-color: #333;
     color: white;
+}
+
+.dark-mode nav {
+    background-color: #121212;
+    border-color: #333;
 }
 
 .dark-mode nav a {
     color: white;
 }
 
-.dark-mode .lieu,
 .dark-mode section.titre {
     background: #1e1e1e;
     color: white;
 }
 
+.dark-mode .lieu{
+    background: #1e1e1e;
+    border-color: #333;
+}
+
+.dark-mode .lieu h2{
+    color: white;
+}
+
+.dark-mode .boite_inscription,
+.dark-mode .connexion{
+    background-color: #333;
+} 
+
 .dark-mode input[type="search"] {
     background-color: #333;
     color: white;
     border: 1px solid #555;
+}
+
+.dark-mode button[type="submit"]{
+
+    background-color: #555;
+}
+
+.dark-mode .apropos{
+    background-color: #333;
+}
+
+.dark-mode .form_recherche{
+    background-color: #333;
 }
 
 #theme-toggle {
