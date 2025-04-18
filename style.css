@@ -95,10 +95,32 @@ footer {
     background-color: #2c2c2c;
 }
 
+.dark-mode .voyage-icone:hover{
+    box-shadow: 0px 4px 12px #e0a14a;
+    background: linear-gradient(120deg, #e0a14a, #ffbf6b);
+}
+
+.dark-mode .voyage-link {
+    background-color: #c2821c;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .voyage-link:hover {
+    background-color: white;
+    color: #ffbf6b;
+    border-color: white;
+}
+
 .dark-mode .voyage-info p,
 .dark-mode .voyage-info h3{
     color: white;
-    
+}
+
+.dark-mode .pagination a:hover{
+    box-shadow: 0px 4px 12px #e0a14a;
+    background: linear-gradient(120deg, #e0a14a, #ffbf6b);
+    cursor: pointer;
 }
 
 .dark-mode #bouton-mode:hover{
