@@ -55,12 +55,20 @@ $utilisateurs_affiches = array_slice($utilisateurs, $debut, $utilisateurs_par_pa
     <div class="admin">
     <p class="client"><b>Liste des utilisateurs inscrits:</b></p>
 
-    <?php foreach ($utilisateurs_affiches as $user): ?>
-        <p class="client"><?= htmlspecialchars($user["nom"] . " " . $user["prenom"])?> </br>
-        Inscription: <?=htmlspecialchars($user["date_inscription"])?> </br>
-        Dernière connexion: <?=htmlspecialchars($user["date_connexion"])?> </br>
-        <em><?=htmlspecialchars($user["role"])?></em></p>
+    <?php foreach ($utilisateurs_affiches as $index => $user): ?>
+        <div class="client">
+        <div class="infos">
+    <p><b><?= htmlspecialchars($user["nom"] . " " . $user["prenom"]) ?></b><br>
+    Inscription: <?= htmlspecialchars($user["date_inscription"]) ?><br>
+    Dernière connexion: <?= htmlspecialchars($user["date_connexion"]) ?><br>
+    <em><?= htmlspecialchars($user["role"]) ?></em></p>
+  </div>
 
+  <form method="get" action="modifier_utilisateur.php">
+    <input type="hidden" name="id" value="<?= $debut + $index ?>">
+    <button type="submit">Modifier</button>
+  </form>
+    </div>
     <?php endforeach; ?>
 
     <!-- Pagination -->

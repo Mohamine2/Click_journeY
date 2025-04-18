@@ -139,7 +139,23 @@ footer {
     background-color: #2c2c2c;
 }
 
+.client {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
+.client .infos {
+    flex-grow: 1;
+}
+
+.client form {
+    margin-right: 50px;
+}
 #bouton-mode {
     background: transparent;
     color: inherit;
