@@ -81,12 +81,16 @@ footer {
     background-color: #555;
 }
 
-.dark-mode .apropos{
+.dark-mode .apropos, 
+.dark-mode .form_recherche,
+.dark-mode .voyage-icone{
     background-color: #333;
 }
 
-.dark-mode .form_recherche{
-    background-color: #333;
+.dark-mode .voyage-info p,
+.dark-mode .voyage-info h3{
+    color: white;
+    
 }
 
 #theme-toggle {
