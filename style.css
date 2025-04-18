@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Assure que le fond couvre toute la fenêtre */;
+    min-height: 100vh; /* Assure que le fond couvre toute la fenêtre */;
 }
 
 main {
