@@ -139,6 +139,23 @@ footer {
     background-color: #2c2c2c;
 }
 
+
+.dark-mode .panier,
+.dark-mode .bouton{
+    background-color: #555;
+}
+
+.dark-mode .modifier,
+.dark-mode .valider,
+.dark-mode .annuler{
+    background-color: #555;
+}
+
+.dark-mode .creer_compte{
+    background-color: #555;
+    color : white;
+}
+
 .client {
     display: flex;
     justify-content: space-between;
@@ -939,4 +956,19 @@ button.admin{
     box-shadow: 0px 4px 12px #B87D4B80;
     background: linear-gradient(120deg, #bd8c62, #96673b);
     cursor: pointer;
+}
+
+.creer_compte{
+    text-decoration: none;
+    background-color: rgb(119, 114, 114);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+
+        
 }
