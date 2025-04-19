@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -61,12 +62,28 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     <!-- Affichage des résultats -->
 <?php if ($searchQuery): ?>
     <h2>Résultats de la recherche pour "<?= htmlspecialchars($searchQuery) ?>"</h2>
+    <input type="hidden" id="mot_cle" value="<?= htmlspecialchars($searchQuery) ?>">
+
+    <label for="prixMin">Prix minimum (€) :</label>
+    <input type="number" id="prixMin" placeholder="Aucune limite" min="0">
+
+    <label for="prixMax">Prix maximum (€) :</label>
+    <input type="number" id="prixMax" placeholder="Aucune limite" min="0">
 
 
-    <div class="voyage-container">
+    <label for="triSelect">Trier par prix :</label>
+    <select id="triSelect">
+        <option value="">Aucun tri</option>
+        <option value="croissant">Prix croissant</option>
+        <option value="decroissant">Prix décroissant</option>
+    </select>
+
+  </div>
+
+    <div class="voyage-container" id="voyageContainer">
         <?php foreach ($voyages_affiches as $voyage): ?>
             
-                <div class="voyage-icone">
+            <div class="voyage-icone" data-destination="<?= htmlspecialchars($voyage['destination']) ?>" data-prix="<?= htmlspecialchars($voyage['prix']) ?>">
                     <div class="voyage-info">
                     <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
                         <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
@@ -93,10 +110,9 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
 </div>
 <footer>
         <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
-        <button id="bouton-mode">Mode sombre</button>
+        <button id="theme-toggle">Mode sombre</button>
     </footer>
 
-    <script src="mode_sombre.js"></script>
-    
+    <script src="recherche.js"></script>
 </body>
 </html>
