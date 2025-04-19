@@ -72,7 +72,7 @@ $user = $utilisateurs[$id];
             <option value="admin" <?= $user['role'] === 'admin' ? 'selected' : '' ?>>Admin</option>
         </select>
 
-        <button type="submit">Enregistrer</button>
+        <button id="enregistrement" type="submit">Enregistrer</button>
     </form>
         
         </div>
@@ -84,6 +84,7 @@ $user = $utilisateurs[$id];
         <button id="bouton-mode">Mode sombre</button>
     </footer>
 <script src="mode_sombre.js"></script>
+<script src="modifications.js"></script>
 
 </body>
 </html>
