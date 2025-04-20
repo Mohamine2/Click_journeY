@@ -110,9 +110,10 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
 </div>
 <footer>
         <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
-        <button id="theme-toggle">Mode sombre</button>
+        <button id="bouton-mode">Mode sombre</button>
     </footer>
 
     <script src="recherche.js"></script>
+    <script src="mode_sombre.js"></script>
 </body>
 </html>
