@@ -156,6 +156,14 @@ footer {
     color : white;
 }
 
+.dark-mode .contact{
+    background-color: #333;
+}
+
+.dark-mode .container h2 , .dark-mode .container p{
+    color: white;
+}
+
 .client {
     display: flex;
     justify-content: space-between;

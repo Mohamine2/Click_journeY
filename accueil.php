@@ -83,7 +83,7 @@
     </div>   
 
             </main>
-            <footer>
+     <footer>
         <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
         <button id="bouton-mode">Mode sombre</button>
     </footer>
