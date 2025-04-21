@@ -1,8 +1,26 @@
-<?php
-    // Vérifier si une recherche a été soumise
-    $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
-?>
 
+<?php
+session_start();
+
+// Charger les données des voyages
+$voyages = json_decode(file_get_contents('donnees/voyages.json'), true);
+
+$total_voyages = count($voyages);
+
+// Récupérer la valeur de la recherche
+$searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
+
+// Définir combien d'utilisateurs afficher par page
+$voyages_par_page = 8;
+
+// Déterminer la page actuelle
+$page = isset($_GET["page"]) ? (int)$_GET["page"] : 1;
+$page = max(1, $page); // Évite qu'une page négative soit sélectionnée
+
+// Calculer l'index de départ et de fin
+$debut = ($page - 1) * $voyages_par_page;
+$voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,7 +29,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Recherche</title>
+    <title>Résultats de Recherche</title>
 </head>
 
 <body>
@@ -31,55 +49,75 @@
             <li><a href="presentation.php"> A propos de nous </a></li>
             <?php if (isset($_SESSION["utilisateur"]) && $_SESSION["utilisateur"]["role"] === "admin"): ?>
             <li><a href="admin.php">Espace Admin</a></li>
-        <?php endif; ?>
+            <?php endif; ?>
         </ul>
+        
         <form method="get" action="resultats.php">
             <input type="search" name="q" placeholder="Rechercher..." value="<?= htmlspecialchars($searchQuery) ?>" />
         </form>
     </nav>
 
-    <div class="form_recherche">
-        <form method="post" class="recherche">
-            <fieldset method="get" class="recherche">
-                <legend class="recherche"> Trouvez votre excursion </legend>
-                <p> Départ: </p>
-                <select name="depart">
-                    <option value="Paris" selected="selected"> Paris </option>
-                    <option value="Lyon"> Lyon </option>
-                    <option value="Marseille"> Marseille </option>
-                </select>
-                <p> Destination: </p>
-                <select name="destination">
-                    <option value="Marrakech" selected="selected"> Marrakech </option>
-                    <option value="Oman"> Oman </option>
-                    <option value="Dakar"> Dakar </option>
-                </select>
-                <br/>
-                <label for="datedep"> Date de départ </label>
-                <br/>
-                <input type="date" name="datedep" required />
-                <p> Durée du voyage:  </p>
-                <select name="duree">
-                    <option value="3j" selected="selected"> 3 jours </option>
-                    <option value="5j"> 5 jours </option>
-                    <option value="7j"> 7 jours </option>
-                </select>
-                <br/>
-                <label for="adultes"> Adultes </label>
-                <input type="number" name="adultes" value="1" min="1" max="15" required />
-                <label for="enfants"> Enfants </label>
-                <input type="number" name="enfants" value="0" min="0" max="15" required /> <br> <br>
-                <button type="submit"> Chercher une excursion </button>
-            </fieldset>
-        </form>
+
+
+    <!-- Affichage des résultats -->
+<?php ?>
+
+    <h2>NOS VOYAGES</h2>
+
+    <div id="filtres">
+
+    <label for="prixMin">Prix minimum (€) :</label>
+    <input type="number" id="prixMin" placeholder="Aucune limite" min="0">
+
+    <label for="prixMax">Prix maximum (€) :</label>
+    <input type="number" id="prixMax" placeholder="Aucune limite">
+
+
+    <label for="triSelect">Trier par prix :</label>
+    <select id="triSelect">
+        <option value="">Aucun tri</option>
+        <option value="croissant">Prix croissant</option>
+        <option value="decroissant">Prix décroissant</option>
+    </select>
+
+    <button id="bouton-filtre" type="submit">Appliquer les filtres</button>
+
     </div>
 
-    <footer>
+    <div class="voyage-container" id="voyageContainer">
+        <?php foreach ($voyages_affiches as $voyage): ?>
+            
+            <div class="voyage-icone" data-destination="<?= htmlspecialchars($voyage['destination']) ?>" data-prix="<?= htmlspecialchars(number_format($voyage['prix'], 2, '.', '')) ?>">
+                    <div class="voyage-info">
+                    <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
+                        <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
+                        <p><strong>Départ :</strong> <?= htmlspecialchars($voyage['depart']) ?></p>
+                        <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?></p>
+                        <p><strong>Prix :</strong> <?= htmlspecialchars($voyage['prix']) ?> €</p>
+                        <a href="voyages.php?dest=<?= urlencode($voyage['destination']) ?>" class="voyage-link">Voir plus</a>
+
+                    </div>
+                </div>
+            
+        <?php endforeach; ?>
+    </div>
+<?php?>
+
+<div class="pagination">
+    <?php if ($page > 1): ?>
+        <a class="pages" href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page - 1 ?>">Page précédente</a>
+    <?php endif; ?>
+
+    <?php if ($debut + $voyages_par_page < $total_voyages): ?>
+        <a class="pages" href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page + 1 ?>" >Page suivante</a>
+    <?php endif; ?>
+</div>
+<footer>
         <p>&copy; 2025 Dunes Seekers. Tous droits réservés.</p>
         <button id="bouton-mode">Mode sombre</button>
     </footer>
-
+    
+    <script src="recherche.js"></script>
     <script src="mode_sombre.js"></script>
 </body>
-
 </html>
