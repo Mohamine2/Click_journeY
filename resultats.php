@@ -83,7 +83,7 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     <div class="voyage-container" id="voyageContainer">
         <?php foreach ($voyages_affiches as $voyage): ?>
             
-            <div class="voyage-icone" data-destination="<?= htmlspecialchars($voyage['destination']) ?>" data-prix="<?= htmlspecialchars($voyage['prix']) ?>">
+            <div class="voyage-icone" data-destination="<?= htmlspecialchars($voyage['destination']) ?>" data-prix="<?= htmlspecialchars(number_format($voyage['prix'], 2, '.', '')) ?>">
                     <div class="voyage-info">
                     <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
                         <h3><?= htmlspecialchars($voyage['destination']) ?></h3>

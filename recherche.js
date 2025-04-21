@@ -1,8 +1,13 @@
 
-function filtrerVoyages(recherche) {
+function filtrerVoyages() {
     const recherche = document.getElementById("mot_cle").value.trim().toLowerCase();
-    const prixMin = parseFloat(document.getElementById("prixMin").value);
-    const prixMax = parseFloat(document.getElementById("prixMax").value);
+
+    // Récupérer les prix minimum et maximum
+    const prixMinValue = document.getElementById("prixMin").value;
+    const prixMaxValue = document.getElementById("prixMax").value;
+
+    const prixMin = prixMinValue ? parseFloat(prixMinValue) : 0; // Si vide, mettre à 0
+    const prixMax = prixMaxValue ? parseFloat(prixMaxValue) : Infinity; // Si vide, mettre à infini
 
     const container = document.getElementById("voyageContainer");
     const voyages = Array.from(container.getElementsByClassName("voyage-icone"));
@@ -10,10 +15,11 @@ function filtrerVoyages(recherche) {
     const filtres = voyages.filter(voyage => {
         const dest = (voyage.dataset.destination || "").toLowerCase();
         const prix = parseFloat(voyage.dataset.prix);
+        console.log(voyage.dataset.prix);
 
         const matchDestination = !recherche || dest.includes(recherche);
-        const matchPrixMin = isNaN(prixMin) || prix >= prixMin;
-        const matchPrixMax = isNaN(prixMax) || prix <= prixMax;
+        const matchPrixMin = prix >= prixMin;
+        const matchPrixMax = prix <= prixMax;
 
         return matchDestination && matchPrixMin && matchPrixMax;
     });
@@ -39,8 +45,16 @@ function filtrerVoyages(recherche) {
     } else {
         filtres.forEach(voyage => container.appendChild(voyage));
     }
+    console.log("Recherche:", recherche);
+console.log("PrixMin:", prixMin, "PrixMax:", prixMax);
+console.log("Voyages trouvés:", voyages.length);
+console.log("Voyages filtrés:", filtres.length);
 }
+
 document.getElementById("prixMin").addEventListener("change", filtrerVoyages);
+document.getElementById("prixMin").addEventListener("input", filtrerVoyages);
 document.getElementById("triSelect").addEventListener("change", filtrerVoyages);
+document.getElementById("triSelect").addEventListener("input", filtrerVoyages);
 document.getElementById("prixMax").addEventListener("change", filtrerVoyages);
+document.getElementById("prixMax").addEventListener("input", filtrerVoyages);
 window.addEventListener("DOMContentLoaded", filtrerVoyages);
