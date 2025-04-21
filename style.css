@@ -15,6 +15,11 @@ body {
     min-height: 100vh; /* Assure que le fond couvre toute la fenêtre */;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
 main {
     flex: 1;
 }
