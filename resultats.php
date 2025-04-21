@@ -120,5 +120,8 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
 
     <script src="recherche.js"></script>
     <script src="mode_sombre.js"></script>
+    <script>
+    const TOUS_LES_VOYAGES = <?= json_encode($voyages); ?>;
+</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 function filtrerVoyages() {
-    const recherche = document.getElementById("mot_cle").value.trim().toLowerCase();
+    const recherche = document.getElementById("mot_cle")?.value.trim().toLowerCase() || "";
 
     // Récupérer les prix minimum et maximum
     const prixMinValue = document.getElementById("prixMin").value;
@@ -17,7 +17,7 @@ function filtrerVoyages() {
         const prix = parseFloat(voyage.dataset.prix);
         console.log(voyage.dataset.prix);
 
-        const matchDestination = !recherche || dest.includes(recherche);
+        const matchDestination = recherche === "" || dest.includes(recherche);
         const matchPrixMin = prix >= prixMin;
         const matchPrixMax = prix <= prixMax;
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bouton = document.getElementById("bouton-filtre");
 
     filtrerVoyages();
-    
+
     if (bouton) {
         bouton.addEventListener("click", filtrerVoyages);
     }
