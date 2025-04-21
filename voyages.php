@@ -118,7 +118,7 @@ if (!isset($_SESSION["transaction"])) {
                 </select>
 
                 <?php for ($i = 1; $i <= 7; $i++) { ?>
-                    <p><u>Jour <?= $i ?> : </u></p>
+                    <p><h3>Jour <?= $i ?> : </h3></p>
 
                     <p>Participation aux activités ?</p>
                     <select name="activites[<?= $i ?>]">
@@ -149,7 +149,7 @@ if (!isset($_SESSION["transaction"])) {
                 </select>
                 <br><br>
 
-                <p id="prix-affichage" >Prix: <?= htmlspecialchars($voyage2) ?> € </p>
+                <h1 id="prix-affichage" >Prix: <?= htmlspecialchars($voyage2) ?> € </h1>
                 <input type="hidden" id="prix-base" value="<?= htmlspecialchars($voyage2) ?>">
                 <br><br>
 
