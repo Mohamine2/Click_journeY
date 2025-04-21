@@ -45,16 +45,19 @@ function filtrerVoyages() {
     } else {
         filtres.forEach(voyage => container.appendChild(voyage));
     }
-    console.log("Recherche:", recherche);
+
+console.log("Recherche:", recherche);
 console.log("PrixMin:", prixMin, "PrixMax:", prixMax);
 console.log("Voyages trouvés:", voyages.length);
 console.log("Voyages filtrés:", filtres.length);
 }
 
-document.getElementById("prixMin").addEventListener("change", filtrerVoyages);
-document.getElementById("prixMin").addEventListener("input", filtrerVoyages);
-document.getElementById("triSelect").addEventListener("change", filtrerVoyages);
-document.getElementById("triSelect").addEventListener("input", filtrerVoyages);
-document.getElementById("prixMax").addEventListener("change", filtrerVoyages);
-document.getElementById("prixMax").addEventListener("input", filtrerVoyages);
-window.addEventListener("DOMContentLoaded", filtrerVoyages);
+document.addEventListener("DOMContentLoaded", () => {
+    const bouton = document.getElementById("bouton-filtre");
+
+    filtrerVoyages();
+    
+    if (bouton) {
+        bouton.addEventListener("click", filtrerVoyages);
+    }
+});

@@ -61,14 +61,17 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
 
     <!-- Affichage des résultats -->
 <?php if ($searchQuery): ?>
+
     <h2>Résultats de la recherche pour "<?= htmlspecialchars($searchQuery) ?>"</h2>
     <input type="hidden" id="mot_cle" value="<?= htmlspecialchars($searchQuery) ?>">
+
+    <div id="filtres">
 
     <label for="prixMin">Prix minimum (€) :</label>
     <input type="number" id="prixMin" placeholder="Aucune limite" min="0">
 
     <label for="prixMax">Prix maximum (€) :</label>
-    <input type="number" id="prixMax" placeholder="Aucune limite" min="0">
+    <input type="number" id="prixMax" placeholder="Aucune limite">
 
 
     <label for="triSelect">Trier par prix :</label>
@@ -78,7 +81,9 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
         <option value="decroissant">Prix décroissant</option>
     </select>
 
-  </div>
+    <button id="bouton-filtre" type="submit">Appliquer les filtres</button>
+
+    </div>
 
     <div class="voyage-container" id="voyageContainer">
         <?php foreach ($voyages_affiches as $voyage): ?>
