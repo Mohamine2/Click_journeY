@@ -19,12 +19,13 @@ $destination = $_GET['dest'];
 $voyage = $details_voyages[$destination];
 
 $json2 = file_get_contents('donnees/voyages.json');
-$info_voyage = json_decode($json2, true);
+$info_voyages = json_decode($json2, true);
 
 // Récupérer les données du voyage
-foreach($info_voyage as $info){
+foreach($info_voyages as $info){
     if($info['destination'] == $destination){
         $voyage2 = $info['prix'];
+        $jours = $info['duree'];
         break;
     }
 }
@@ -117,7 +118,7 @@ if (!isset($_SESSION["transaction"])) {
                     <option value="Lyon">Lyon</option>
                 </select>
 
-                <?php for ($i = 1; $i <= 7; $i++) { ?>
+                <?php for ($i = 1; $i <= $jours; $i++) { ?>
                     <p><h3>Jour <?= $i ?> : </h3></p>
 
                     <p>Participation aux activités ?</p>

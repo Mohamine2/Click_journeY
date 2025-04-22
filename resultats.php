@@ -89,13 +89,12 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
         <option value="12">Décembre</option>
     </select>
 
-    <!-- Pour l'instant il y a que des voyages de 7 jours mais on laisse quand même le filtre pour avoir la fonctionnalité -->
     Durée:
     <select id="duree_value">
         <option value=""> Tout </option>
         <option value="7"> 7 jours </option> 
+        <option value="6"> 6 jours </option>
         <option value="5"> 5 jours </option>
-        <option value="3"> 3 jours </option>
     </select>
 
     </br>
