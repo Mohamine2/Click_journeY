@@ -25,10 +25,11 @@ let hebergement, transportInputs, restoInputs, activiteInputs, prixBase, prixAff
 
 function recalculerPrix() {
     let total = parseFloat(prixBase.value); // on récupère le prix de base en nombre
+    let $jours =parseInt(document.getElementById("duree").value);
 
     total += tarifs.hebergement[hebergement.value] * 7;
 
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < $jours; i++) {
         const t = transportInputs[i].value;
         const r = restoInputs[i].value;
         const a = activiteInputs[i].value;

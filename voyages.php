@@ -73,6 +73,7 @@ if (!isset($_SESSION["transaction"])) {
     <section class="onglets">
         <div class="tab-container">
             <?php foreach ($voyage["jours"] as $index => $jour): ?>
+                <input type="hidden" id="duree" value="<?=htmlspecialchars($jours)?>"> 
                 <input type="radio" name="option" id="jour<?= $index + 1 ?>" class="destination" <?= $index === 0 ? 'checked' : '' ?> />
                 <label for="jour<?= $index + 1 ?>">
                     <div class="tab-name">Jour <?= $index + 1 ?></div>
