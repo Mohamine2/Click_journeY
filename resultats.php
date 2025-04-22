@@ -73,6 +73,21 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     <label for="prixMax">Prix maximum (€) :</label>
     <input type="number" id="prixMax" placeholder="Aucune limite">
 
+    <select id="moisSelect">
+        <option value="">Tous les mois</option>
+        <option value="01">Janvier</option>
+        <option value="02">Février</option>
+        <option value="03">Mars</option>
+        <option value="04">Avril</option>
+        <option value="05">Mai</option>
+        <option value="06">Juin</option>
+        <option value="07">Juillet</option>
+        <option value="08">Août</option>
+        <option value="09">Septembre</option>
+        <option value="10">Octobre</option>
+        <option value="11">Novembre</option>
+        <option value="12">Décembre</option>
+    </select>
 
     <label for="triSelect">Trier par prix :</label>
     <select id="triSelect">
@@ -88,13 +103,14 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     <div class="voyage-container" id="voyageContainer">
         <?php foreach ($voyages_affiches as $voyage): ?>
             
-            <div class="voyage-icone" data-destination="<?= htmlspecialchars($voyage['destination']) ?>" data-prix="<?= htmlspecialchars(number_format($voyage['prix'], 2, '.', '')) ?>">
+            <div class="voyage-icone" data-destination="<?= htmlspecialchars($voyage['destination']) ?>" data-prix="<?= htmlspecialchars(number_format($voyage['prix'], 2, '.', '')) ?>" data-date_depart="<?= htmlspecialchars($voyage['date_depart']) ?>">
                     <div class="voyage-info">
                     <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
                         <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
                         <p><strong>Départ :</strong> <?= htmlspecialchars($voyage['depart']) ?></p>
                         <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?></p>
                         <p><strong>Prix :</strong> <?= htmlspecialchars($voyage['prix']) ?> €</p>
+                        <p><strong>Date :</strong> <?= htmlspecialchars($voyage['date_depart']) ?> </p>
                         <a href="voyages.php?dest=<?= urlencode($voyage['destination']) ?>" class="voyage-link">Voir plus</a>
 
                     </div>
