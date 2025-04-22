@@ -6,6 +6,9 @@ function filtrerVoyages() {
     const prixMaxValue = document.getElementById("prixMax").value;
     const prixMin = prixMinValue ? parseFloat(prixMinValue) : 0;
     const prixMax = prixMaxValue ? parseFloat(prixMaxValue) : Infinity;
+    const duree_selectionne = parseInt(document.getElementById("duree_value")?.value);
+    console.log("Duree select", duree_selectionne);
+
 
     // Mois sélectionné
     const moisSelectionne = document.getElementById("moisSelect")?.value || ""; // "01" à "12" ou ""
@@ -16,17 +19,21 @@ function filtrerVoyages() {
     const filtres = voyages.filter(voyage => {
         const dest = (voyage.dataset.destination || "").toLowerCase();
         const prix = parseFloat(voyage.dataset.prix);
-        const dateDepart = voyage.dataset.date_depart || ""; // Exemple : "12/05/2025"
+        const dateDepart = voyage.dataset.date_depart || "";
+        const duree = parseInt(voyage.dataset.duree) || "";
 
         // Extraire le mois
-        const mois = dateDepart.split("/")[1]; // "05" par exemple
+        const mois = dateDepart?.split("/")?.[1] || "";
 
         const matchDestination = recherche === "" || dest.includes(recherche);
         const matchPrixMin = prix >= prixMin;
         const matchPrixMax = prix <= prixMax;
         const matchMois = moisSelectionne === "" || mois === moisSelectionne;
+        const matchDuree = isNaN(duree_selectionne) || duree === duree_selectionne;
+        console.log("data-duree brut :", voyage.dataset.duree);
+        console.log(matchDuree);
 
-        return matchDestination && matchPrixMin && matchPrixMax && matchMois;
+        return matchDestination && matchPrixMin && matchPrixMax && matchMois && matchDuree;
     });
 
     // Tri

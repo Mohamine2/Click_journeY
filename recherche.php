@@ -71,7 +71,8 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
 
     <label for="prixMax">Prix maximum (€) :</label>
     <input type="number" id="prixMax" placeholder="Aucune limite">
-
+    
+    Mois du départ:
     <select id="moisSelect">
         <option value="">Tous les mois</option>
         <option value="01">Janvier</option>
@@ -88,7 +89,16 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
         <option value="12">Décembre</option>
     </select>
 
+    <!-- Pour l'instant il y a que des voyages de 7 jours mais on laisse quand même le filtre pour avoir la fonctionnalité -->
+     Durée:
+    <select id="duree_value">
+        <option value=""> Tout </option>
+        <option value="7"> 7 jours </option> 
+        <option value="5"> 5 jours </option>
+        <option value="3"> 3 jours </option>
+    </select>
 
+    </br>
     <label for="triSelect">Trier par prix :</label>
     <select id="triSelect">
         <option value="">Aucun tri</option>
@@ -96,6 +106,7 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
         <option value="decroissant">Prix décroissant</option>
     </select>
 
+    </br>
     <button id="bouton-filtre" type="submit">Appliquer les filtres</button>
 
     </div>
@@ -103,7 +114,11 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     <div class="voyage-container" id="voyageContainer">
         <?php foreach ($voyages_affiches as $voyage): ?>
             
-            <div class="voyage-icone" data-destination="<?= htmlspecialchars($voyage['destination']) ?>" data-prix="<?= htmlspecialchars(number_format($voyage['prix'], 2, '.', '')) ?>" data-date_depart="<?= htmlspecialchars($voyage['date_depart']) ?>">
+            <div class="voyage-icone" 
+            data-destination="<?= htmlspecialchars($voyage['destination']) ?>" 
+            data-prix="<?= htmlspecialchars(number_format($voyage['prix'], 2, '.', '')) ?>" 
+            data-date_depart="<?= htmlspecialchars($voyage['date_depart']) ?>" 
+            data-duree="<?= htmlspecialchars($voyage['duree']) ?>">
                     <div class="voyage-info">
                     <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
                         <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
@@ -111,6 +126,7 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
                         <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?></p>
                         <p><strong>Prix :</strong> <?= htmlspecialchars($voyage['prix']) ?> €</p>
                         <p><strong>Date :</strong> <?= htmlspecialchars($voyage['date_depart']) ?> </p>
+                        <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?> </p>
                         <a href="voyages.php?dest=<?= urlencode($voyage['destination']) ?>" class="voyage-link">Voir plus</a>
 
                     </div>
