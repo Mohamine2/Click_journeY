@@ -1,8 +1,8 @@
 const json_voyages = document.getElementById("json_voyages")?.value || "";
 
 function recreerPageJS() {
-    
-    //gestion du fichier json
+
+    // gestion du fichier json
     let voyages = [];
 
     try {
@@ -18,7 +18,6 @@ function recreerPageJS() {
 
     const paginationContainer = document.getElementById("pagination");
     paginationContainer.innerHTML = '';
-
 
     const recherche = document.getElementById("mot_cle")?.value.trim().toLowerCase() || "";
     const prixMinValue = document.getElementById("prixMin").value;
@@ -36,7 +35,8 @@ function recreerPageJS() {
         voyages.sort((a, b) => parseFloat(b.prix) - parseFloat(a.prix));
     }
 
-    let voyages_affiches = 0;
+    // Appliquer les filtres avant la pagination
+    let voyagesFiltres = [];
 
     for (let voyage of voyages) {
 
@@ -54,7 +54,23 @@ function recreerPageJS() {
         const matchMois = moisSelectionne === "" || mois === moisSelectionne;
         const matchDuree = isNaN(duree_selectionne) || duree === duree_selectionne;
 
-        if(matchDestination && matchPrixMin && matchPrixMax && matchMois && matchDuree){
+        if (matchDestination && matchPrixMin && matchPrixMax && matchMois && matchDuree) {
+            voyagesFiltres.push(voyage);
+        }
+    }
+
+    // Gestion de la pagination
+    const voyagesParPage = 6; // nombre de voyages par page
+    const pageCouranteInput = document.getElementById("pageCourante");
+    let page = parseInt(pageCouranteInput?.value) || 1;
+    const totalVoyages = voyagesFiltres.length;
+    const debut = (page - 1) * voyagesParPage;
+    const fin = debut + voyagesParPage;
+    const voyagesAPaginer = voyagesFiltres.slice(debut, fin);
+
+    let voyages_affiches = 0;
+
+    for (let voyage of voyagesAPaginer) {
 
         const voyageElement = document.createElement('div');
         voyageElement.classList.add('voyage-icone');
@@ -77,7 +93,6 @@ function recreerPageJS() {
 
         container.appendChild(voyageElement);
         voyages_affiches++;
-        }
     }
 
     if (voyages_affiches === 0) {
@@ -85,7 +100,35 @@ function recreerPageJS() {
         msg.textContent = "Aucun voyage ne correspond à votre recherche.";
         container.appendChild(msg);
     }
+
+    // Création de la pagination
+    if (page > 1) {
+        const prevLink = document.createElement('a');
+        prevLink.href = "#";
+        prevLink.className = "pages";
+        prevLink.textContent = "Page précédente";
+        prevLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            pageCouranteInput.value = page - 1;
+            recreerPageJS();
+        });
+        paginationContainer.appendChild(prevLink);
+    }
+
+    if (debut + voyagesParPage < totalVoyages) {
+        const nextLink = document.createElement('a');
+        nextLink.href = "#";
+        nextLink.className = "pages";
+        nextLink.textContent = "Page suivante";
+        nextLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            pageCouranteInput.value = page + 1;
+            recreerPageJS();
+        });
+        paginationContainer.appendChild(nextLink);
+    }
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const bouton = document.getElementById("bouton-filtre");
