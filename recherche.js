@@ -1,26 +1,49 @@
-function filtrerVoyages() {
-    const recherche = document.getElementById("mot_cle")?.value.trim().toLowerCase() || "";
+const json_voyages = document.getElementById("json_voyages")?.value || "";
 
-    // Prix min et max
+function recreerPageJS() {
+    
+    //gestion du fichier json
+    let voyages = [];
+
+    try {
+        voyages = JSON.parse(json_voyages);
+    } catch (e) {
+        console.error("Erreur de parsing JSON :", e);
+        return;
+    }
+
+    // Réinitialiser
+    const container = document.getElementById("voyageContainer");
+    container.innerHTML = '';
+
+    const paginationContainer = document.getElementById("pagination");
+    paginationContainer.innerHTML = '';
+
+
+    const recherche = document.getElementById("mot_cle")?.value.trim().toLowerCase() || "";
     const prixMinValue = document.getElementById("prixMin").value;
     const prixMaxValue = document.getElementById("prixMax").value;
     const prixMin = prixMinValue ? parseFloat(prixMinValue) : 0;
     const prixMax = prixMaxValue ? parseFloat(prixMaxValue) : Infinity;
     const duree_selectionne = parseInt(document.getElementById("duree_value")?.value);
-    console.log("Duree select", duree_selectionne);
+    const moisSelectionne = document.getElementById("moisSelect")?.value || "";
 
+    // Tri
+    const tri = document.getElementById("triSelect")?.value;
+    if (tri === "croissant") {
+        voyages.sort((a, b) => parseFloat(a.prix) - parseFloat(b.prix));
+    } else if (tri === "decroissant") {
+        voyages.sort((a, b) => parseFloat(b.prix) - parseFloat(a.prix));
+    }
 
-    // Mois sélectionné
-    const moisSelectionne = document.getElementById("moisSelect")?.value || ""; // "01" à "12" ou ""
+    let voyages_affiches = 0;
 
-    const container = document.getElementById("voyageContainer");
-    const voyages = Array.from(container.getElementsByClassName("voyage-icone"));
+    for (let voyage of voyages) {
 
-    const filtres = voyages.filter(voyage => {
-        const dest = (voyage.dataset.destination || "").toLowerCase();
-        const prix = parseFloat(voyage.dataset.prix);
-        const dateDepart = voyage.dataset.date_depart || "";
-        const duree = parseInt(voyage.dataset.duree) || "";
+        const dest = (voyage.destination || "").toLowerCase();
+        const prix = parseFloat(voyage.prix);
+        const dateDepart = voyage.date_depart || "";
+        const duree = parseInt(voyage.duree) || "";
 
         // Extraire le mois
         const mois = dateDepart?.split("/")?.[1] || "";
@@ -30,43 +53,44 @@ function filtrerVoyages() {
         const matchPrixMax = prix <= prixMax;
         const matchMois = moisSelectionne === "" || mois === moisSelectionne;
         const matchDuree = isNaN(duree_selectionne) || duree === duree_selectionne;
-        console.log("data-duree brut :", voyage.dataset.duree);
-        console.log(matchDuree);
 
-        return matchDestination && matchPrixMin && matchPrixMax && matchMois && matchDuree;
-    });
+        if(matchDestination && matchPrixMin && matchPrixMax && matchMois && matchDuree){
 
-    // Tri
-    const tri = document.getElementById("triSelect")?.value;
-    if (tri === "croissant") {
-        filtres.sort((a, b) => parseFloat(a.dataset.prix) - parseFloat(b.dataset.prix));
-    } else if (tri === "decroissant") {
-        filtres.sort((a, b) => parseFloat(b.dataset.prix) - parseFloat(a.dataset.prix));
+        const voyageElement = document.createElement('div');
+        voyageElement.classList.add('voyage-icone');
+        voyageElement.setAttribute('data-destination', voyage.destination);
+        voyageElement.setAttribute('data-prix', voyage.prix);
+        voyageElement.setAttribute('data-date_depart', voyage.date_depart);
+        voyageElement.setAttribute('data-duree', voyage.duree);
+
+        voyageElement.innerHTML = `
+            <div class="voyage-info">
+                <img src="${voyage.image}" alt="${voyage.destination}" class="voyage-image">
+                <h3>${voyage.destination}</h3>
+                <p><strong>Départ :</strong> ${voyage.depart}</p>
+                <p><strong>Prix :</strong> ${voyage.prix} €</p>
+                <p><strong>Date :</strong> ${voyage.date_depart}</p>
+                <p><strong>Durée :</strong> ${voyage.duree}</p>
+                <a href="voyages.php?dest=${encodeURIComponent(voyage.destination)}" class="voyage-link">Voir plus</a>
+            </div>
+        `;
+
+        container.appendChild(voyageElement);
+        voyages_affiches++;
+        }
     }
 
-    // Réinitialiser et afficher
-    container.innerHTML = '';
-    if (filtres.length === 0) {
+    if (voyages_affiches === 0) {
         const msg = document.createElement("p");
         msg.textContent = "Aucun voyage ne correspond à votre recherche.";
         container.appendChild(msg);
-    } else {
-        filtres.forEach(voyage => container.appendChild(voyage));
     }
-
-    // Logs pour debug
-    console.log("Recherche:", recherche);
-    console.log("PrixMin:", prixMin, "PrixMax:", prixMax);
-    console.log("Mois sélectionné:", moisSelectionne);
-    console.log("Voyages trouvés:", voyages.length);
-    console.log("Voyages filtrés:", filtres.length);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const bouton = document.getElementById("bouton-filtre");
-    filtrerVoyages();
 
     if (bouton) {
-        bouton.addEventListener("click", filtrerVoyages);
+        bouton.addEventListener("click", recreerPageJS);
     }
 });

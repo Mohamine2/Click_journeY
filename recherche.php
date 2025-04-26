@@ -110,6 +110,9 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
 
     </div>
 
+    <input type="hidden" id="json_voyages" value="<?= htmlspecialchars(json_encode($voyages)) ?>">
+    <input type="hidden" id="pageCourante" value="1">
+
     <div class="voyage-container" id="voyageContainer">
         <?php foreach ($voyages_affiches as $voyage): ?>
             
@@ -135,7 +138,7 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     </div>
 <?php?>
 
-<div class="pagination">
+<div id="pagination" class="pagination">
     <?php if ($page > 1): ?>
         <a class="pages" href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page - 1 ?>">Page précédente</a>
     <?php endif; ?>
