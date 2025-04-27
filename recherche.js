@@ -108,7 +108,7 @@ function recreerPageFiltreeJS() {
         prevLink.addEventListener("click", (e) => {
             e.preventDefault();
             pageCouranteInput.value = page - 1;
-            recreerPageJS();
+            recreerPageFiltreeJS();
         });
         paginationContainer.appendChild(prevLink);
     }
@@ -121,7 +121,7 @@ function recreerPageFiltreeJS() {
         nextLink.addEventListener("click", (e) => {
             e.preventDefault();
             pageCouranteInput.value = page + 1;
-            recreerPageJS();
+            recreerPageFiltreeJS();
         });
         paginationContainer.appendChild(nextLink);
     }
