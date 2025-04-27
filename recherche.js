@@ -1,6 +1,6 @@
 const json_voyages = document.getElementById("json_voyages")?.value || "";
 
-function recreerPageJS() {
+function recreerPageFiltreeJS() {
 
     // gestion du fichier json
     let voyages = [];
@@ -74,10 +74,6 @@ function recreerPageJS() {
 
         const voyageElement = document.createElement('div');
         voyageElement.classList.add('voyage-icone');
-        voyageElement.setAttribute('data-destination', voyage.destination);
-        voyageElement.setAttribute('data-prix', voyage.prix);
-        voyageElement.setAttribute('data-date_depart', voyage.date_depart);
-        voyageElement.setAttribute('data-duree', voyage.duree);
 
         voyageElement.innerHTML = `
             <div class="voyage-info">
@@ -100,6 +96,8 @@ function recreerPageJS() {
         msg.textContent = "Aucun voyage ne correspond à votre recherche.";
         container.appendChild(msg);
     }
+
+    console.log(recherche);
 
     // Création de la pagination
     if (page > 1) {
@@ -134,6 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const bouton = document.getElementById("bouton-filtre");
 
     if (bouton) {
-        bouton.addEventListener("click", recreerPageJS);
+        bouton.addEventListener("click", recreerPageFiltreeJS);
     }
 });
