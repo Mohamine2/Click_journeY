@@ -124,7 +124,7 @@ if(isset($_POST["connexion"])){
             </form>
 
             <p>Pas de compte ? </p>
-            <a href="inscription.php" class="creer_compte">Créer un compte</a>
+            <a href="inscription.php" >Créer un compte</a>
 
         </div>
     </div>

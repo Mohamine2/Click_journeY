@@ -118,6 +118,7 @@ function recreerPageFiltreeJS() {
         nextLink.href = "#";
         nextLink.className = "pages";
         nextLink.textContent = "Page suivante";
+        nextLink.classList.add("paginationJS");
         nextLink.addEventListener("click", (e) => {
             e.preventDefault();
             pageCouranteInput.value = page + 1;
