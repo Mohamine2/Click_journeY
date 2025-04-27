@@ -292,6 +292,10 @@ input{
     border: 2px solid grey;
 }
 
+input:focus {
+    outline: none;
+}  
+
 select:hover, input:hover{
     box-shadow: 0px 4px 12px rgba(184, 125, 75, 0.5);
 }
