@@ -793,7 +793,7 @@ input:checked + label .tab-content {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 15px;
-    background-color: #a07415;
+    background-color: #d6bf61;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -801,7 +801,7 @@ input:checked + label .tab-content {
 }
 
 .voyage-link:hover {
-    background-color: #2b2a01;
+    background-color: #bfa849;
 }
 
 .paginationJS{
@@ -810,21 +810,7 @@ input:checked + label .tab-content {
 
 /*//////////////////////////////////////*/
 
-/* lien */
-.voyage-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #a07415;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
 
-.voyage-link:hover {
-    background-color: #2b2a01;
-}
 
 /*code utile à la page admin*/
 
