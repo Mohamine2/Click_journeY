@@ -21,6 +21,10 @@ $utilisateur = $_SESSION["utilisateur"];
 
 $json = file_get_contents('donnees/commandes.json');
 $voyages = json_decode($json, true);
+
+$json2 = file_get_contents('donnees/panier.json');
+$paniers = json_decode($json2,true);
+
 ?>
 
 <!DOCTYPE html>
@@ -93,12 +97,29 @@ $voyages = json_decode($json, true);
         <p>Moyen de paiement: </p>
 
       </div>
-      <div id="achat">
-        <p><b>Mes envies:</b></p>
-        <p>Favoris:</p>
-        <p>Panier:</p>
+      <div class ="achat">
+        <p> <b> PANIER: </b> </p>
       </div>
-      <div id="achat">
+        <?php
+            foreach($paniers as $panier):
+        ?>
+        <?php
+                if($panier['email'] == $utilisateur["email"]):
+        ?>
+          <div class="voyage-container">
+              <div class="voyage-icone">
+                  <div class="voyage-info">
+                      <h3><?= htmlspecialchars($panier['destination']) ?></h3>
+                      <p><strong>Prix :</strong> <?= htmlspecialchars($panier['prix']) ?> €</p>
+                      <p> Ajouté au panier le <?= htmlspecialchars($panier['date_ajout']) ?></p>
+                      <a href="voyages.php?dest=<?= urlencode($panier['destination']) ?>" class="voyage-link">Voir plus</a>
+                  </div>
+              </div>
+          </div>
+
+        <?php endif; ?>
+        <?php endforeach; ?>
+      <div class ="achat">
         <p><b>MES COMMANDES:</b></p>
         </div>
         <?php foreach ($voyages as $voyage): ?>
