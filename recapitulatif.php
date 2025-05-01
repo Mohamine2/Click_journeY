@@ -32,6 +32,7 @@
         }
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $nb_personnes = $_POST['nb_personnes'];
         $hebergement = $_POST['hebergement'];
         $aeroport_depart = $_POST['aeroport_depart'];
         $aeroport_retour = $_POST['aeroport_retour'];
@@ -41,7 +42,7 @@
         $restauration = $_POST['restauration'];
     }
 
-    $montant = calculPrix($hebergement,$aeroport_depart,$aeroport_retour,$activites,$transports,$restauration,$prix_base,$jours);
+    $montant = calculPrix($hebergement,$aeroport_depart,$aeroport_retour,$activites,$transports,$restauration,$prix_base,$jours,$nb_personnes);
     $montant = number_format((float)$montant, 2, ".", "");
 
     
@@ -95,6 +96,7 @@
     <p><strong>Aéroport de départ :</strong> <?= htmlspecialchars($aeroport_depart) ?></p>
     <p><strong>Date de départ :</strong> <?= htmlspecialchars($date_depart) ?></p>
     <p><strong>Durée :</strong> <?= htmlspecialchars($duree) ?></p>
+    <p><strong>Nombre de personnes :</strong> <?= htmlspecialchars($nb_personnes) ?></p>
     <p><strong>Hébergement: </strong> <?= htmlspecialchars($hebergement) ?></p>
     <p><strong>Aéroport de retour :</strong> <?= htmlspecialchars($aeroport_retour) ?></p>
     <?php for ($i=1;$i<=$jours;$i++){ ?>
