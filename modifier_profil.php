@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_SESSION["utilisateur"])) {
         $nouvel_email = $_POST["email"] ?? $_SESSION["utilisateur"]["email"];
@@ -33,6 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             file_put_contents($jsonPath, json_encode($utilisateurs, JSON_PRETTY_PRINT));
         }
     }
+
+
 
     header("Location: profil.php");
     exit();

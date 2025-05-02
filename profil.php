@@ -25,6 +25,14 @@ $voyages = json_decode($json, true);
 $json2 = file_get_contents('donnees/panier.json');
 $paniers = json_decode($json2,true);
 
+//cas date
+$date_formatee = "Indisponible";
+if (!empty($utilisateur["date_inscription"])) {
+    $date_complete = $utilisateur["date_inscription"]; // ex: "18-04-2025 00:45:55"
+    $date_seule = explode(" ", $date_complete)[0];     // "18-04-2025"
+    $date_formatee = str_replace("-", "/", $date_seule); // "18/04/2025"
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +81,7 @@ $paniers = json_decode($json2,true);
   </div>
 
   <div class="champ-non-editable">
-   <label>Numéro :</label>
+  <label>Numéro :</label>
    <input type="numero" name="numero" value="<?= htmlspecialchars($utilisateur["numero"]) ?>" disabled>
   </div>
 
@@ -95,15 +103,14 @@ $paniers = json_decode($json2,true);
   </div>
 
 
-
-
-
-  
-  <button type="submit" id="Soumettre" style="display:none;">Soumettre les modifications</button>
+    <button type="submit" id="Soumettre" style="display:none;">Soumettre les modifications</button>
+    
 
 
 </form>
-        <p>Moyen de paiement: </p>
+        <p style="margin-bottom: 0px;"><b>Date d'inscription</b></p>
+        <p style="margin-top: 0px;"> <?= htmlspecialchars($date_formatee) ?></p>
+              
 
       </div>
       <div class ="achat">
