@@ -977,3 +977,7 @@ button.admin{
 button.logout{
     margin-right: 25px;
 }
+
+.champ-non-editable {
+    margin-top: 10px;
+}

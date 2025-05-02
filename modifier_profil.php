@@ -6,10 +6,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $nouvel_email = $_POST["email"] ?? $_SESSION["utilisateur"]["email"];
         $nouveau_nom = $_POST["nom"] ?? $_SESSION["utilisateur"]["nom"];
         $nouveau_prenom = $_POST["prenom"] ?? $_SESSION["utilisateur"]["prenom"];
+        $nouveau_numero = $_POST["numero"] ?? $_SESSION["utilisateur"]["numero"];
+
 
         // Mettre à jour la session
         $_SESSION["utilisateur"]["nom"] = $nouveau_nom;
         $_SESSION["utilisateur"]["prenom"] = $nouveau_prenom;
+        $utilisateur["numero"] = $nouveau_numero;
+
 
         // Mettre à jour dans le fichier JSON
         $jsonPath = 'donnees/utilisateurs.json'; // Chemin vers ton fichier
@@ -21,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $utilisateur["email"] = $nouvel_email;
                     $utilisateur["nom"] = $nouveau_nom;
                     $utilisateur["prenom"] = $nouveau_prenom;
+                    $utilisateur["numero"] = $nouveau_numero;
                     break;
                 }
             }

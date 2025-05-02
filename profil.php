@@ -68,26 +68,33 @@ $paniers = json_decode($json2,true);
         <form method="POST" action="modifier_profil.php" id="form-profil">
 
   <div class="champ-non-editable">
-   <label>Email:</label>
+   <label>Email :</label>
    <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" disabled>
+  </div>
+
+  <div class="champ-non-editable">
+   <label>Numéro :</label>
+   <input type="numero" name="numero" value="<?= htmlspecialchars($utilisateur["numero"]) ?>" disabled>
   </div>
 
 
   <div class="champ-editable">
-    <label>Nom:</label>
+    <label>Nom :</label>
     <input type="text" name="nom" value="<?= htmlspecialchars($utilisateur["nom"]) ?>" disabled>
     <button type="button" class="modifier">Modifier</button>
     <button type="button" class="valider" style="display:none;">Valider</button>
     <button type="button" class="annuler" style="display:none;">Annuler</button>
   </div>
-
+<br>
   <div class="champ-editable">
-    <label>Prénom:</label>
+    <label>Prénom :</label>
     <input type="text" name="prenom" value="<?= htmlspecialchars($utilisateur["prenom"]) ?>" disabled>
     <button type="button" class="modifier">Modifier</button>
     <button type="button" class="valider" style="display:none;">Valider</button>
     <button type="button" class="annuler" style="display:none;">Annuler</button>
   </div>
+
+
 
 
 

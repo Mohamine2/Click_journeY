@@ -162,12 +162,12 @@
     {
         "nom": "Aaron",
         "prenom": "Cruz",
-        "numero": "<br \/><font size='1'><table class='xdebug-error xe-warning' dir='ltr' border='1' cellspacing='0' cellpadding='1'><tr><th align='left' bgcolor='#f57900' colspan=",
+        "numero": "0645751231",
         "email": "aa@gmail.com",
         "mot_de_passe": "$2y$10$2iDHRqlAEJHXeYcpHB80Fuodbcc1Dq05zF7jpGD7\/pxwB9ymHRcZS",
         "role": "utilisateur",
         "date_inscription": "17-04-2025 17:17:58",
-        "date_connexion": "02-05-2025 16:55:21"
+        "date_connexion": "02-05-2025 18:26:49"
     },
     {
         "nom": "joi",
@@ -187,7 +187,7 @@
         "mot_de_passe": "$2y$10$e9WN\/JTO84J1KWITYbYv3ui2PPWnOKaK.wxYojiOUJL34hzS1og5C",
         "role": "utilisateur",
         "date_inscription": "17-04-2025 23:57:03",
-        "date_connexion": "18-04-2025 00:26:20"
+        "date_connexion": "02-05-2025 18:41:12"
     },
     {
         "nom": "tok",
