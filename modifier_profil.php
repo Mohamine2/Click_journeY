@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $nouveau_prenom = $_POST["prenom"] ?? $_SESSION["utilisateur"]["prenom"];
 
         // Mettre à jour la session
-        $_SESSION["utilisateur"]["email"] = $nouvel_email;
         $_SESSION["utilisateur"]["nom"] = $nouveau_nom;
         $_SESSION["utilisateur"]["prenom"] = $nouveau_prenom;
 

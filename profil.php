@@ -66,10 +66,12 @@ $paniers = json_decode($json2,true);
 
         
         <form method="POST" action="modifier_profil.php" id="form-profil">
-  <div class="modifiable">
-    <label>Email:</label>
-    <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" disabled>
- </div>
+
+  <div class="champ-non-editable">
+   <label>Email:</label>
+   <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" disabled>
+  </div>
+
 
   <div class="champ-editable">
     <label>Nom:</label>
@@ -87,6 +89,9 @@ $paniers = json_decode($json2,true);
     <button type="button" class="annuler" style="display:none;">Annuler</button>
   </div>
 
+
+
+  
   <button type="submit" id="Soumettre" style="display:none;">Soumettre les modifications</button>
 
 
