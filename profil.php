@@ -69,10 +69,7 @@ $paniers = json_decode($json2,true);
   <div class="modifiable">
     <label>Email:</label>
     <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" disabled>
-    <button type="button" class="modifier">Modifier</button>
-    <button type="button" class="valider" style="display:none;">Valider</button>
-    <button type="button" class="annuler" style="display:none;">Annuler</button>
-  </div>
+ </div>
 
   <div class="champ-editable">
     <label>Nom:</label>
