@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const champs = document.querySelectorAll(".modifiable, .champ-editable"); // prends les 2 types de blocs
+  const champs = document.querySelectorAll(".champ-editable");  // prends les 2 types de blocs
     const Soumettre = document.getElementById("Soumettre");
     let modifications = new Set();
   

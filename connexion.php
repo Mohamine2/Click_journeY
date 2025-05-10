@@ -57,7 +57,9 @@ if(isset($_POST["connexion"])){
                     "email" => $compte["email"],
                     "nom" => $compte["nom"],
                     "prenom" => $compte["prenom"],
+                    "numero" => $compte["numero"],
                     "role" => $compte["role"],
+                    "date_inscription" => $compte["date_inscription"],
                     "date_connexion" => $date_connexion
                 ];
                 header("Location: profil.php");
