@@ -62,12 +62,12 @@ $utilisateurs_affiches = array_slice($utilisateurs, $debut, $utilisateurs_par_pa
     Inscription: <?= htmlspecialchars($user["date_inscription"]) ?><br>
     Dernière connexion: <?= htmlspecialchars($user["date_connexion"]) ?><br>
     <em><?= htmlspecialchars($user["role"]) ?></em></p>
-  </div>
+    </div>
 
-  <form method="get" action="modifier_utilisateur.php">
+    <form method="get" action="modifier_utilisateur.php">
     <input type="hidden" name="id" value="<?= $debut + $index ?>">
     <button type="submit">Modifier</button>
-  </form>
+    </form>
     </div>
     <?php endforeach; ?>
 
