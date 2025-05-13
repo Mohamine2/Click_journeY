@@ -154,7 +154,7 @@ if (!isset($_SESSION["transaction"])) {
                 <br><br>
 
                 <h1 id="prix-affichage" >Prix: <?= htmlspecialchars($voyage2) ?> € </h1>
-                <input type="hidden" id="prix_affiche" value="<?= htmlspecialchars($voyage2) ?>">
+                <input type="hidden" id="prix_affiche" name="prix" value="<?= htmlspecialchars($voyage2) ?>">
                 <input type="hidden" id="prix-base" value="<?= htmlspecialchars($voyage2) ?>">
                 <br><br>
 
