@@ -24,32 +24,7 @@ const tarifs = {
 
 let hebergement, transportInputs, restoInputs, activiteInputs, prixBase, prixAffichage, nb_personnes_input;
 
-function recalculerPrix() {
-    let total = parseFloat(prixBase.value) || 0;
-    let jours = parseInt(document.getElementById("duree").value);
-
-    let nb_personnes = parseInt(nb_personnes_input.value);
-
-    if (isNaN(nb_personnes) || nb_personnes < 1) {
-        nb_personnes = 1;  // valeur par défaut si ce n'est pas un nombre
-    }
-
-    total += tarifs.hebergement[hebergement.value] * jours;
-
-    for (let i = 0; i < jours; i++) {
-        const t = transportInputs[i].value;
-        const r = restoInputs[i].value;
-        const a = activiteInputs[i].value;
-
-        total += (tarifs.transport[t]) + (tarifs.restauration[r]) + (tarifs.activites[a]);
-    }
-
-    total *= nb_personnes;
-
-    prixAffichage.textContent = "Prix: " + total + "€";
-}
-
-function recalculerPrixXML() {
+async function recalculerPrixJSON() {
     let total = parseFloat(prixBase.value) || 0;
     let jours = parseInt(document.getElementById("duree").value);
     let nb_personnes = parseInt(nb_personnes_input.value);
@@ -58,41 +33,44 @@ function recalculerPrixXML() {
         nb_personnes = 1;
     }
 
-    // Création du XML
-    let xml = `<donnees>
-        <prixBase>${total}</prixBase>
-        <jours>${jours}</jours>
-        <nb_personnes>${nb_personnes}</nb_personnes>
-        <hebergement>${hebergement.value}</hebergement>
-        <joursDetails>`;
+    // Création de l'objet à envoyer
+    let donnees = {
+        prixBase: total,
+        jours: jours,
+        nb_personnes: nb_personnes,
+        hebergement: hebergement.value,
+        joursDetails: []
+    };
 
     for (let i = 0; i < jours; i++) {
-        const t = transportInputs[i].value;
-        const r = restoInputs[i].value;
-        const a = activiteInputs[i].value;
-
-        xml += `
-            <jour index="${i}">
-                <transport>${t}</transport>
-                <restauration>${r}</restauration>
-                <activite>${a}</activite>
-            </jour>
-        `;
+        donnees.joursDetails.push({
+            transport: transportInputs[i].value,
+            restauration: restoInputs[i].value,
+            activite: activiteInputs[i].value
+        });
     }
 
-    xml += `</joursDetails></donnees>`;
+    try {
+        const response = await fetch('calcul.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(donnees)
+        });
 
-    // Envoi AJAX
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(){
-        if(this.readyState === 4 && this.status === 200){
-            document.getElementById("prix-affichage").innerHTML = this.responseText;
-        }
-    };
-    xhr.open("POST", "calcul.php", true);
-    xhr.setRequestHeader("Content-Type", "text/xml");
-    xhr.send(xml);
+        if (!response.ok) throw new Error("Erreur HTTP : " + response.status);
+
+        const prix = (await response.text()).trim();
+
+        document.getElementById("prix-affichage").innerHTML = "Prix: " + prix + " €";
+        document.querySelector('input[name="prix"]').value = prix;
+
+    } catch (error) {
+        console.error("Erreur lors de l'envoi de la requête :", error);
+    }
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     nb_personnes_input = document.getElementById("nb_personnes");
@@ -105,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let selects = document.querySelectorAll("select");
     for (let i = 0; i < selects.length; i++) {
-        selects[i].addEventListener("change", recalculerPrixXML);
+        selects[i].addEventListener("change", recalculerPrixJSON);
     }
 
-    nb_personnes_input.addEventListener("input",recalculerPrixXML);
+    nb_personnes_input.addEventListener("input",recalculerPrixJSON);
 });
