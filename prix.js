@@ -64,7 +64,7 @@ async function recalculerPrixJSON() {
         const prix = (await response.text()).trim();
 
         document.getElementById("prix-affichage").innerHTML = "Prix: " + prix + " €";
-        document.querySelector('input[name="prix"]').value = prix;
+        document.getElementById("prix_affiche").value = prix;
 
     } catch (error) {
         console.error("Erreur lors de l'envoi de la requête :", error);
