@@ -19,12 +19,13 @@ $destination = $_GET['dest'];
 $voyage = $details_voyages[$destination];
 
 $json2 = file_get_contents('donnees/voyages.json');
-$info_voyage = json_decode($json2, true);
+$info_voyages = json_decode($json2, true);
 
 // Récupérer les données du voyage
-foreach($info_voyage as $info){
+foreach($info_voyages as $info){
     if($info['destination'] == $destination){
         $voyage2 = $info['prix'];
+        $jours = $info['duree'];
         break;
     }
 }
@@ -72,6 +73,7 @@ if (!isset($_SESSION["transaction"])) {
     <section class="onglets">
         <div class="tab-container">
             <?php foreach ($voyage["jours"] as $index => $jour): ?>
+                <input type="hidden" id="duree" value="<?=htmlspecialchars($jours)?>"> 
                 <input type="radio" name="option" id="jour<?= $index + 1 ?>" class="destination" <?= $index === 0 ? 'checked' : '' ?> />
                 <label for="jour<?= $index + 1 ?>">
                     <div class="tab-name">Jour <?= $index + 1 ?></div>
@@ -103,6 +105,8 @@ if (!isset($_SESSION["transaction"])) {
             <div class="personnalisation">
                 <p><b>Personnalisez le séjour:</b></p>
 
+                <input type="number" name="nb_personnes" id="nb_personnes" min="1" value="1" required> Nombre de personnes: </input> 
+
                 <p>Choisissez votre type d'hébergement:</p>
                 <select name="hebergement">
                     <option value="Hotel">Hôtel</option>
@@ -117,7 +121,7 @@ if (!isset($_SESSION["transaction"])) {
                     <option value="Lyon">Lyon</option>
                 </select>
 
-                <?php for ($i = 1; $i <= 7; $i++) { ?>
+                <?php for ($i = 1; $i <= $jours; $i++) { ?>
                     <p><h3>Jour <?= $i ?> : </h3></p>
 
                     <p>Participation aux activités ?</p>

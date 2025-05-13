@@ -1,6 +1,6 @@
 <?php
 
-function calculPrix($hebergement, $aeroport_depart, $aeroport_retour, $activites, $transports, $restauration,$prix_base) {
+function calculPrix($hebergement, $aeroport_depart, $aeroport_retour, $activites, $transports, $restauration,$prix_base,$jours, $nb_personnes) {
 
      // Tarifs hébergement par nuit
      $tarifs_hebergement = [
@@ -33,13 +33,13 @@ function calculPrix($hebergement, $aeroport_depart, $aeroport_retour, $activites
     $prix_total = $prix_base+($tarifs_hebergement[$hebergement] * 7);
 
     // Calcul des frais journaliers (transport, restauration, activités)
-    for ($i = 1; $i <= 7; $i++) {
+    for ($i = 1; $i <= $jours; $i++) {
         $prix_total += $tarifs_transport[$transports[$i]];
         $prix_total += $tarifs_restauration[$restauration[$i]];
         $prix_total += $tarifs_activites[$activites[$i]];
     }
 
-    return $prix_total;
+    return $nb_personnes * $prix_total;
 }
 
 ?>

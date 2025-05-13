@@ -7,7 +7,7 @@
         "mot_de_passe": "$2y$10$7er53CJAcCrh03S5Orlilu0GFr0GX5xKw59HP5xvtpcB0f4hoOgge",
         "role": "admin",
         "date_inscription": "10-03-2025 09:15:42",
-        "date_connexion": "19-04-2025 17:00:28"
+        "date_connexion": "01-05-2025 17:49:49"
     },
     {
         "nom": "MIku",
@@ -27,7 +27,11 @@
         "mot_de_passe": "$2y$10$eN.YbcXx6Y1wetr7oze.4eTRdXi5zb6ANDVU\/U1luPK1DuvI4KXs6",
         "role": "admin",
         "date_inscription": "14-03-2025 08:42:36",
+<<<<<<< HEAD
         "date_connexion": "13-05-2025 06:42:56"
+=======
+        "date_connexion": "01-05-2025 17:45:04"
+>>>>>>> c4767049f16adce389557817d1c0d4876530e8e0
     },
     {
         "nom": "lachgar",
@@ -160,14 +164,14 @@
         "date_connexion": " "
     },
     {
-        "nom": "kopkp",
-        "prenom": "kopkopk",
-        "numero": "0225123123",
+        "nom": "Aaron",
+        "prenom": "Cruz",
+        "numero": "0645751231",
         "email": "aa@gmail.com",
         "mot_de_passe": "$2y$10$2iDHRqlAEJHXeYcpHB80Fuodbcc1Dq05zF7jpGD7\/pxwB9ymHRcZS",
         "role": "utilisateur",
         "date_inscription": "17-04-2025 17:17:58",
-        "date_connexion": "18-04-2025 19:32:53"
+        "date_connexion": "02-05-2025 20:05:34"
     },
     {
         "nom": "joi",
@@ -180,14 +184,14 @@
         "date_connexion": " "
     },
     {
-        "nom": "joi",
-        "prenom": "jok",
+        "nom": "Jae",
+        "prenom": "Young",
         "numero": "0645651231",
         "email": "aaa@gmail.com",
         "mot_de_passe": "$2y$10$e9WN\/JTO84J1KWITYbYv3ui2PPWnOKaK.wxYojiOUJL34hzS1og5C",
         "role": "utilisateur",
         "date_inscription": "17-04-2025 23:57:03",
-        "date_connexion": "18-04-2025 00:26:20"
+        "date_connexion": "02-05-2025 20:12:25"
     },
     {
         "nom": "tok",

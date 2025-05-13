@@ -73,6 +73,31 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     <label for="prixMax">Prix maximum (€) :</label>
     <input type="number" id="prixMax" placeholder="Aucune limite">
 
+    <select id="moisSelect">
+        <option value="">Tous les mois</option>
+        <option value="01">Janvier</option>
+        <option value="02">Février</option>
+        <option value="03">Mars</option>
+        <option value="04">Avril</option>
+        <option value="05">Mai</option>
+        <option value="06">Juin</option>
+        <option value="07">Juillet</option>
+        <option value="08">Août</option>
+        <option value="09">Septembre</option>
+        <option value="10">Octobre</option>
+        <option value="11">Novembre</option>
+        <option value="12">Décembre</option>
+    </select>
+
+    Durée:
+    <select id="duree_value">
+        <option value=""> Tout </option>
+        <option value="7"> 7 jours </option> 
+        <option value="6"> 6 jours </option>
+        <option value="5"> 5 jours </option>
+    </select>
+
+    </br>
 
     <label for="triSelect">Trier par prix :</label>
     <select id="triSelect">
@@ -81,20 +106,26 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
         <option value="decroissant">Prix décroissant</option>
     </select>
 
+    </br>
     <button id="bouton-filtre" type="submit">Appliquer les filtres</button>
 
     </div>
 
-    <div class="voyage-container" id="voyageContainer">
+    <input type="hidden" id="json_voyages" value="<?= htmlspecialchars(json_encode($voyages)) ?>">
+    <input type="hidden" id="pageCourante" value="1">
+
+    <div class="voyage-container" id="voyageContainer" >
         <?php foreach ($voyages_affiches as $voyage): ?>
             
-            <div class="voyage-icone" data-destination="<?= htmlspecialchars($voyage['destination']) ?>" data-prix="<?= htmlspecialchars(number_format($voyage['prix'], 2, '.', '')) ?>">
+            <div class="voyage-icone">
                     <div class="voyage-info">
                     <img src="<?= htmlspecialchars($voyage['image']) ?>" alt="<?= htmlspecialchars($voyage['destination']) ?>" class="voyage-image">
                         <h3><?= htmlspecialchars($voyage['destination']) ?></h3>
                         <p><strong>Départ :</strong> <?= htmlspecialchars($voyage['depart']) ?></p>
                         <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?></p>
                         <p><strong>Prix :</strong> <?= htmlspecialchars($voyage['prix']) ?> €</p>
+                        <p><strong>Date :</strong> <?= htmlspecialchars($voyage['date_depart']) ?> </p>
+                        <p><strong>Durée :</strong> <?= htmlspecialchars($voyage['duree']) ?> </p>
                         <a href="voyages.php?dest=<?= urlencode($voyage['destination']) ?>" class="voyage-link">Voir plus</a>
 
                     </div>
@@ -104,7 +135,7 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
     </div>
 <?php endif; ?>
 
-<div class="pagination">
+<div id="pagination" class="pagination">
     <?php if ($page > 1): ?>
         <a class="pages" href="?q=<?= urlencode($searchQuery) ?>&page=<?= $page - 1 ?>">Page précédente</a>
     <?php endif; ?>
@@ -120,8 +151,5 @@ $voyages_affiches = array_slice($voyages, $debut, $voyages_par_page);
 
     <script src="recherche.js"></script>
     <script src="mode_sombre.js"></script>
-    <script>
-    const TOUS_LES_VOYAGES = <?= json_encode($voyages); ?>;
-</script>
 </body>
 </html>

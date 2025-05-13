@@ -1,137 +1,137 @@
 [
     {
-        "image" : "images/marrakechF.jpg",
+        "image": "images/marrakechF.jpg",
         "depart": "Paris",
         "destination": "Maroc",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "15/02/2025",
         "prix": 850.00
     },
     {
-        "image" : "images/senegalI1.jpg",
+        "image": "images/senegalI1.jpg",
         "depart": "Paris",
         "destination": "Senegal",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "03/05/2025",
         "prix": 950.00
     },
     {
-        "image" : "images/OmanI1.jpg",
+        "image": "images/OmanI1.jpg",
         "depart": "Paris",
         "destination": "Oman",
-        "duree": "7 jours",
+        "duree": "6 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "28/03/2025",
         "prix": 1200.50
     },
     {
-        "image" : "images/algerie4.jpg",
+        "image": "images/algerie4.jpg",
         "depart": "Paris",
         "destination": "Algerie",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "19/06/2025",
         "prix": 950.00
     },
     {
-        "image" : "images/mali.jpg",
+        "image": "images/mali.jpg",
         "depart": "Paris",
         "destination": "Mali",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "09/09/2025",
         "prix": 1200.50
     },
     {
-        "image" : "images/egypte.jpg",
+        "image": "images/egypte.jpg",
         "depart": "Paris",
         "destination": "Egypte",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "27/01/2025",
         "prix": 950.00
     },
     {
-        "image" : "images/tunisie.jpg",
+        "image": "images/tunisie.jpg",
         "depart": "Paris",
         "destination": "Tunisie",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "12/07/2025",
         "prix": 1200.50
     },
     {
-        "image" : "images/libye.jpg",
+        "image": "images/libye.jpg",
         "depart": "Paris",
         "destination": "Libye",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "04/03/2025",
         "prix": 950.00
     },
     {
-        "image" : "images/arabie_saoudite.jpg",
+        "image": "images/arabie_saoudite.jpg",
         "depart": "Paris",
         "destination": "Arabie_Saoudite",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "21/10/2025",
         "prix": 1200.50
     },
     {
-        "image" : "images/emirats_arabes_unis.jpg",
+        "image": "images/emirats_arabes_unis.jpg",
         "depart": "Paris",
         "destination": "Emirats_Arabes_Unis",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "05/11/2025",
         "prix": 950.00
     },
     {
-        "image" : "images/jordanie.jpg",
+        "image": "images/jordanie.jpg",
         "depart": "Paris",
         "destination": "Jordanie",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "14/08/2025",
         "prix": 1200.50
     },
     {
-        "image" : "images/chine.jpg",
+        "image": "images/chine.jpg",
         "depart": "Paris",
         "destination": "Chine",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "23/04/2025",
         "prix": 950.00
     },
     {
-        "image" : "images/mongolie.jpg",
+        "image": "images/mongolie.jpg",
         "depart": "Paris",
         "destination": "Mongolie",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "30/05/2025",
         "prix": 1200.50
     },
     {
-        "image" : "images/namibie.jpg",
+        "image": "images/namibie.jpg",
         "depart": "Paris",
         "destination": "Namibie",
-        "duree": "7 jours",
+        "duree": "5 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "06/12/2025",
         "prix": 950.00
     },
     {
-        "image" : "images/afrique_du_sud.jpg",
+        "image": "images/afrique_du_sud.jpg",
         "depart": "Paris",
         "destination": "Afrique_du_Sud",
         "duree": "7 jours",
         "nb_personnes": "",
-        "date_depart": "01/04/2025",
+        "date_depart": "18/01/2025",
         "prix": 1200.50
     }
 ]

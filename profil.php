@@ -21,6 +21,18 @@ $utilisateur = $_SESSION["utilisateur"];
 
 $json = file_get_contents('donnees/commandes.json');
 $voyages = json_decode($json, true);
+
+$json2 = file_get_contents('donnees/panier.json');
+$paniers = json_decode($json2,true);
+
+//cas date
+$date_formatee = "Indisponible";
+if (!empty($utilisateur["date_inscription"])) {
+    $date_complete = $utilisateur["date_inscription"]; // ex: "18-04-2025 00:45:55"
+    $date_seule = explode(" ", $date_complete)[0];     // "18-04-2025"
+    $date_formatee = str_replace("-", "/", $date_seule); // "18/04/2025"
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -62,43 +74,68 @@ $voyages = json_decode($json, true);
 
         
         <form method="POST" action="modifier_profil.php" id="form-profil">
-  <div class="modifiable">
-    <label>Email:</label>
-    <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" disabled>
-    <button type="button" class="modifier">Modifier</button>
-    <button type="button" class="valider" style="display:none;">Valider</button>
-    <button type="button" class="annuler" style="display:none;">Annuler</button>
+
+  <div class="champ-non-editable">
+   <label>Email :</label>
+   <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" disabled>
   </div>
 
+  <div class="champ-non-editable">
+  <label>Numéro :</label>
+   <input type="numero" name="numero" value="<?= htmlspecialchars($utilisateur["numero"]) ?>" disabled>
+  </div>
+
+
   <div class="champ-editable">
-    <label>Nom:</label>
+    <label>Nom :</label>
     <input type="text" name="nom" value="<?= htmlspecialchars($utilisateur["nom"]) ?>" disabled>
     <button type="button" class="modifier">Modifier</button>
     <button type="button" class="valider" style="display:none;">Valider</button>
     <button type="button" class="annuler" style="display:none;">Annuler</button>
   </div>
-
+<br>
   <div class="champ-editable">
-    <label>Prénom:</label>
+    <label>Prénom :</label>
     <input type="text" name="prenom" value="<?= htmlspecialchars($utilisateur["prenom"]) ?>" disabled>
     <button type="button" class="modifier">Modifier</button>
     <button type="button" class="valider" style="display:none;">Valider</button>
     <button type="button" class="annuler" style="display:none;">Annuler</button>
   </div>
 
-  <button type="submit" id="Soumettre" style="display:none;">Soumettre les modifications</button>
+
+    <button type="submit" id="Soumettre" style="display:none;">Soumettre les modifications</button>
+    
 
 
 </form>
-        <p>Moyen de paiement: </p>
+        <p style="margin-bottom: 0px;"><b>Date d'inscription</b></p>
+        <p style="margin-top: 0px;"> <?= htmlspecialchars($date_formatee) ?></p>
+              
 
       </div>
-      <div id="achat">
-        <p><b>Mes envies:</b></p>
-        <p>Favoris:</p>
-        <p>Panier:</p>
+      <div class ="achat">
+        <p> <b> PANIER: </b> </p>
       </div>
-      <div id="achat">
+        <?php
+            foreach($paniers as $panier):
+        ?>
+        <?php
+                if($panier['email'] == $utilisateur["email"]):
+        ?>
+          <div class="voyage-container">
+              <div class="voyage-icone">
+                  <div class="voyage-info">
+                      <h3><?= htmlspecialchars($panier['destination']) ?></h3>
+                      <p><strong>Prix :</strong> <?= htmlspecialchars($panier['prix']) ?> €</p>
+                      <p> Ajouté au panier le <?= htmlspecialchars($panier['date_ajout']) ?></p>
+                      <a href="voyages.php?dest=<?= urlencode($panier['destination']) ?>" class="voyage-link">Voir plus</a>
+                  </div>
+              </div>
+          </div>
+
+        <?php endif; ?>
+        <?php endforeach; ?>
+      <div class ="achat">
         <p><b>MES COMMANDES:</b></p>
         </div>
         <?php foreach ($voyages as $voyage): ?>

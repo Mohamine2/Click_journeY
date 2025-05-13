@@ -150,4 +150,4 @@ document.addEventListener("DOMContentLoaded", function () {
             field.type = field.type === "password" ? "text" : "password";
         });
     });
-});
+}); 

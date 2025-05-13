@@ -3,30 +3,27 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
     background-image: url('images/desert2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; /* Assure que le fond couvre toute la fenêtre */;
-}
-
-body {
+    background-attachment: fixed; /* <-- C'est ça la clé */
+    
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 
 main {
     flex: 1;
 }
 
-
 footer {
-    margin-top: auto;
     background-color: #c2821c;
     color: white;
     text-align: center;
@@ -140,7 +137,7 @@ footer {
 
 }
 
-.dark-mode .compte, .dark-mode #info, .dark-mode #achat, .dark-mode div.admin{
+.dark-mode .compte, .dark-mode #info, .dark-mode .achat, .dark-mode div.admin {
     background-color: #2c2c2c;
 }
 
@@ -295,6 +292,10 @@ input{
     border: 2px solid grey;
 }
 
+input:focus {
+    outline: none;
+}  
+
 select:hover, input:hover{
     box-shadow: 0px 4px 12px rgba(184, 125, 75, 0.5);
 }
@@ -448,6 +449,7 @@ select, input[type="date"] {
     align-items: center;
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
     margin-top: 100px; /* Ajoute un espace en haut si nécessaire */
+    margin-bottom: 50px;
 }
 
 form.form_connexion{
@@ -519,14 +521,14 @@ input[type="number"] {
     align-items: center;
 }
 
-.compte, #info, #achat {
+.compte, #info, .achat{
     display: flex;
     flex-direction: column;
+    text-align: center;
     /* Empile les box */
     gap: 20px;
     /* Espacement entre les box */
     align-items: left;
-    margin-left: 1cm;
     /* Centre les box horizontalement */
     margin-bottom:1cm;
     background-color: white;
@@ -535,7 +537,7 @@ input[type="number"] {
     height: auto;
     max-height: 80vh;
     padding: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -723,13 +725,13 @@ input:checked + label .tab-content {
 
 .ticket-btn {
     display: inline-block;
-    background: #d6bf61;
+    background-color: #d6bf61;
     color: white;
     padding: 12px 24px;
     font-size: 18px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
 .ticket-btn:hover {
@@ -758,6 +760,7 @@ input:checked + label .tab-content {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    margin-bottom: 1cm;
 }
 
 .voyage-icone:hover {
@@ -795,7 +798,7 @@ input:checked + label .tab-content {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 15px;
-    background-color: #a07415;
+    background-color: #d6bf61;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -803,25 +806,20 @@ input:checked + label .tab-content {
 }
 
 .voyage-link:hover {
-    background-color: #2b2a01;
+    background-color: #bfa849;
 }
+
+#bouton-filtre{
+    margin-left: 15px;
+}
+
+.paginationJS{
+    margin-left:15px;
+}
+
 /*//////////////////////////////////////*/
 
-/* lien */
-.voyage-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #a07415;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
 
-.voyage-link:hover {
-    background-color: #2b2a01;
-}
 
 /*code utile à la page admin*/
 
@@ -887,6 +885,10 @@ button.admin{
     padding-bottom: 50px;
 }
 
+.pages{
+    margin-left:15px;
+}
+
 
 /*/////////////////// formulaire.js  //////////////////////*/
 
@@ -912,7 +914,7 @@ button.admin{
     font-size: 18px;
 }
 
-/*///////////// profile ////////////////////*/
+/*///////////// profil ////////////////////*/
 
 /*inspiré de .voyage */
 
@@ -944,7 +946,7 @@ button.admin{
 }
 
 .panier,
-.bouton{
+.bouton {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 15px;
@@ -954,34 +956,28 @@ button.admin{
     border: none;
     cursor: pointer;
     font-size: 14px;
-    background-color: #9b841f;
-    transition: background-color 0.3s ease;
+    background-color: #9b841f; /* couleur de départ */
+    margin-right: 12px;
+    transition: 
+        background-color 0.3s ease,
+        transform 0.3s ease, 
+        box-shadow 0.3s ease,
+        padding 0.3s ease;
 }
 
-/* copie de ligne 250 */
+/* Animation au survol */
 .panier:hover,
-.bouton:hover{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.bouton:hover {
+    padding: 10px 20px;
     transform: scale(1.1);
     box-shadow: 0px 4px 12px #B87D4B80;
     background: linear-gradient(120deg, #bd8c62, #96673b);
-    cursor: pointer;
 }
 
-.creer_compte{
-    text-decoration: none;
-    background-color: rgb(119, 114, 114);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: none;
-    color: white;
-    border-radius: 5px;
-    font-size: 20px;
+button.logout{
+    margin-right: 25px;
+}
 
-        
+.champ-non-editable {
+    margin-bottom: 20px;
 }

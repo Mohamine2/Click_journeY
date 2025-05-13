@@ -114,10 +114,6 @@
                 "desc": "Exploration du fameux désert, l'occasion rêvée de découvrir ses canyons spectaculaires, des merveilles naturelles et ressentir l'esprit d'un aventurier à travers cette randonnée."
             },
             {
-                "titre": "Wahiba Sands",
-                "desc": "Deuxième jour de randonnée où vous allez pouvoir vivre comme un nomade, vous baigner dans des piscines naturelles et surtout voir les dunes qui s'étendent comme des vagues d'or sous le soleil."
-            },
-            {
                 "titre": "Wadi Shab",
                 "desc": "Voyage unique à travers un safari en 4x4, une balade à dos de chameau et une nuit dans un campement traditionnel où vous pourrez vous installer et vous détendre sous les étoiles."
             },
@@ -681,14 +677,6 @@
             {
                 "titre": "Désert du Kalahari",
                 "desc": "Découverte du désert du Kalahari, un autre joyau de la Namibie. Rencontre avec la faune locale et visite d'un village bushman pour en apprendre davantage sur leur mode de vie ancestral."
-            },
-            {
-                "titre": "Safari dans le parc d'Etosha 1/2",
-                "desc": "Journée consacrée à un safari dans le parc national d'Etosha, célèbre pour ses vastes plaines arides et ses nombreux animaux sauvages."
-            },
-            {
-                "titre": "Safari dans le parc d'Etosha 2/2",
-                "desc": "Deuxième journée consacrée à un safari dans le parc national d'Etosha."
             },
             {
                 "titre": "Boutique & départ",

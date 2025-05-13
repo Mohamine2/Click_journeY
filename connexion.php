@@ -57,7 +57,9 @@ if(isset($_POST["connexion"])){
                     "email" => $compte["email"],
                     "nom" => $compte["nom"],
                     "prenom" => $compte["prenom"],
+                    "numero" => $compte["numero"],
                     "role" => $compte["role"],
+                    "date_inscription" => $compte["date_inscription"],
                     "date_connexion" => $date_connexion
                 ];
                 header("Location: profil.php");
@@ -124,7 +126,7 @@ if(isset($_POST["connexion"])){
             </form>
 
             <p>Pas de compte ? </p>
-            <a href="inscription.php" class="creer_compte">Créer un compte</a>
+            <a href="inscription.php" >Créer un compte</a>
 
         </div>
     </div>
