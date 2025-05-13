@@ -19,7 +19,6 @@
     $voyages = json_decode(file_get_contents('donnees/voyages.json'), true);
 
     require('getapikey.php');
-    require('fonctions_voyages.php');
 
     $destination = $_GET['dest'];
     // Rechercher le voyage
@@ -40,10 +39,8 @@
         $activites = $_POST['activites'];
         $transports = $_POST['transports'];
         $restauration = $_POST['restauration'];
+        $prix = $_POST['prix'];
     }
-
-    $montant = calculPrix($hebergement,$aeroport_depart,$aeroport_retour,$activites,$transports,$restauration,$prix_base,$jours,$nb_personnes);
-    $montant = number_format((float)$montant, 2, ".", "");
 
     
     $transaction = $_SESSION["transaction"];// Un ID de transaction unique
@@ -51,7 +48,7 @@
     $retour = "http://localhost/Click_journeY/retour_paiement.php?session=s&dest=$destination"; //URL de retour
     
     $api_key = getAPIKey($vendeur);
-    $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
+    $control = md5($api_key . "#" . $transaction . "#" . $prix . "#" . $vendeur . "#" . $retour . "#");
 
 ?>
 
@@ -105,13 +102,13 @@
         <p> <b>Moyen de transport: </b> <?= htmlspecialchars($transports[$i])?></p>
         <p><b> Formule de restauration: </b><?= htmlspecialchars($restauration[$i])?></p>
     <?php } ?>
-    <p><strong>Prix :</strong> <?= number_format($montant, 2, ",", " ") ?> €</p>
+    <p><strong>Prix :</strong> <?= $prix ?> €</p>
 
     <div class="kk">
     <!-- /////////  pour panier   ////// -->
     <button class="panier"
     data-destination="<?= htmlspecialchars($destination) ?>"
-    data-montant="<?= htmlspecialchars($montant) ?>">
+    data-montant="<?= htmlspecialchars($prix) ?>">
     Ajouter au panier
     </button>
     
@@ -125,7 +122,7 @@
     <input type="hidden" name="transaction" value="<?= htmlspecialchars($transaction) ?>">
     
     <!-- Montant de la transaction -->
-    <input type="hidden" name="montant" value="<?= htmlspecialchars($montant) ?>">
+    <input type="hidden" name="montant" value="<?= htmlspecialchars($prix) ?>">
     
     <!-- Code vendeur  -->
     <input type="hidden" name="vendeur" value="MI-4_C">

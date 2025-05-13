@@ -24,36 +24,57 @@ const tarifs = {
 
 let hebergement, transportInputs, restoInputs, activiteInputs, prixBase, prixAffichage, nb_personnes_input;
 
-function recalculerPrix() {
+async function recalculerPrixJSON() {
     let total = parseFloat(prixBase.value) || 0;
     let jours = parseInt(document.getElementById("duree").value);
-
     let nb_personnes = parseInt(nb_personnes_input.value);
 
     if (isNaN(nb_personnes) || nb_personnes < 1) {
-        nb_personnes = 1;  // valeur par défaut si ce n'est pas un nombre
+        nb_personnes = 1;
     }
 
-    total += tarifs.hebergement[hebergement.value] * jours;
+    // Création de l'objet à envoyer
+    let donnees = {
+        prixBase: total,
+        jours: jours,
+        nb_personnes: nb_personnes,
+        hebergement: hebergement.value,
+        joursDetails: []
+    };
 
     for (let i = 0; i < jours; i++) {
-        const t = transportInputs[i].value;
-        const r = restoInputs[i].value;
-        const a = activiteInputs[i].value;
-
-        total += (tarifs.transport[t]) + (tarifs.restauration[r]) + (tarifs.activites[a]);
+        donnees.joursDetails.push({
+            transport: transportInputs[i].value,
+            restauration: restoInputs[i].value,
+            activite: activiteInputs[i].value
+        });
     }
 
-    total *= nb_personnes;
+    try {
+        const response = await fetch('calcul.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(donnees)
+        });
 
-    prixAffichage.textContent = "Prix: " + total + "€";
+        if (!response.ok) throw new Error("Erreur HTTP : " + response.status);
+
+        const prix = (await response.text()).trim();
+
+        document.getElementById("prix-affichage").innerHTML = "Prix: " + prix + " €";
+        document.querySelector('input[name="prix"]').value = prix;
+
+    } catch (error) {
+        console.error("Erreur lors de l'envoi de la requête :", error);
+    }
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     nb_personnes_input = document.getElementById("nb_personnes");
-    console.log(nb_personnes_input.value);
     prixAffichage = document.getElementById("prix-affichage");
-    console.log(prixAffichage);
     hebergement = document.querySelector('select[name="hebergement"]');
     transportInputs = document.querySelectorAll('select[name^="transports"]');
     restoInputs = document.querySelectorAll('select[name^="restauration"]');
@@ -62,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let selects = document.querySelectorAll("select");
     for (let i = 0; i < selects.length; i++) {
-        selects[i].addEventListener("change", recalculerPrix);
+        selects[i].addEventListener("change", recalculerPrixJSON);
     }
 
-    nb_personnes_input.addEventListener("input",recalculerPrix);
+    nb_personnes_input.addEventListener("input",recalculerPrixJSON);
 });
