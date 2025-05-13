@@ -57,23 +57,26 @@ $user = $utilisateurs[$id];
     <div class="connexion">
     <h2>Modifier l'utilisateur</h2>
 
-    <form action="enregistrer_modification.php" method="post" class="form_inscription">
-        <input type="hidden" name="id" value="<?= $id ?>">
+    <form id="form-modification" method="post" class="form_inscription">
+    <input type="hidden" name="id" value="<?= $id ?>">
 
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" value="<?= htmlspecialchars($user['nom']) ?>" required>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" value="<?= htmlspecialchars($user['nom']) ?>" required>
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" value="<?= htmlspecialchars($user['prenom']) ?>" required>
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" value="<?= htmlspecialchars($user['prenom']) ?>" required>
 
-        <label for="role">Rôle :</label>
-        <select name="role" id="role" required>
-            <option value="client" <?= $user['role'] === 'client' ? 'selected' : '' ?>>Client</option>
-            <option value="admin" <?= $user['role'] === 'admin' ? 'selected' : '' ?>>Admin</option>
-        </select>
+    <label for="role">Rôle :</label>
+    <select name="role" id="role" required>
+        <option value="client" <?= $user['role'] === 'client' ? 'selected' : '' ?>>Client</option>
+        <option value="admin" <?= $user['role'] === 'admin' ? 'selected' : '' ?>>Admin</option>
+    </select>
 
-        <button id="enregistrement" type="submit">Enregistrer</button>
-    </form>
+    <button type="submit">Enregistrer</button>
+    <span id="loader" style="display:none;">⏳</span>
+    <span id="ok" style="display:none; color:green;">Modifié</span>
+</form>
+
         
         </div>
 </div>

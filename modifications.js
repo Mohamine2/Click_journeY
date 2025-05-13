@@ -1,22 +1,51 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById("enregistrement");
+    const form = document.getElementById("form-modification");
+    const loader = document.getElementById("loader");
+    const ok = document.getElementById("ok");
 
-    if (!button) return; // Sécurité si le bouton n'existe pas
+    if (!form) return;
 
-    const form = button.closest("form"); // Trouve le formulaire parent du bouton
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Empêche la soumission classique
 
-    button.addEventListener("click", (e) => {
-        e.preventDefault(); // Empêche l'envoi immédiat
+        loader.style.display = "inline";
+        ok.style.display = "none";
 
-        // Désactive le bouton
-        button.disabled = true;
-        button.textContent = "Enregistrement...";
-        button.style.opacity = "0.6";
-        button.style.cursor = "not-allowed";
+        const formData = new FormData(form);
 
-        // Attendre 2 secondes avant d'envoyer le formulaire
-        setTimeout(() => {
-            form.submit();
-        }, 2000);
+        try {
+            const response = await fetch("enregistrer_modification.php", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.text();
+
+            loader.style.display = "none";
+
+            if (response.ok && result.trim() === "OK") {
+                ok.textContent = "Modifié";
+                ok.style.color = "green";
+                ok.style.display = "inline";
+
+                // Attendre 2 secondes puis rediriger
+                setTimeout(() => {
+                    // Récupérer le numéro de page éventuellement dans un champ caché
+                    const page = form.querySelector('input[name="page"]')?.value || 1;
+                    window.location.href = `admin.php?page=${page}&modif=ok`;
+                }, 2000);
+            } else {
+                ok.textContent = "Erreur: " + result;
+                ok.style.color = "red";
+                ok.style.display = "inline";
+            }
+
+        } catch (error) {
+            loader.style.display = "none";
+            ok.textContent = "Échec AJAX";
+            ok.style.color = "red";
+            ok.style.display = "inline";
+            console.error("Erreur AJAX :", error);
+        }
     });
 });

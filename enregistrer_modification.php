@@ -2,11 +2,15 @@
 session_start();
 
 if (!isset($_SESSION["utilisateur"]) || $_SESSION["utilisateur"]["role"] !== "admin") {
-    header("Location: accueil.php");
+    http_response_code(403);
+    echo "Accès refusé";
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    sleep(2); //simulation latence serveur
+
     $id = (int)$_POST['id'];
     $nom = trim($_POST['nom']);
     $prenom = trim($_POST['prenom']);
@@ -21,11 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         file_put_contents("donnees/utilisateurs.json", json_encode($utilisateurs, JSON_PRETTY_PRINT));
 
-        $page = isset($_POST['page']) ? (int)$_POST['page'] : 1;
-        header("Location: admin.php?page=$page&modif=ok");
+        echo "OK";
+        exit;
+    } else {
+        http_response_code(400);
+        echo "ID invalide";
         exit;
     }
 }
 
-echo "Erreur lors de la modification.";
-?>
+http_response_code(405);
+echo "Méthode non autorisée";
