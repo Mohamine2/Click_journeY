@@ -30,12 +30,12 @@
         "date_connexion": "13-05-2025 06:42:56"
     },
     {
-        "nom": "lachgar",
-        "prenom": "na\u00efm ",
+        "nom": "lachgar BOUACHRA",
+        "prenom": "na\u00efm",
         "numero": "0989222123",
         "email": "mouus@gmail.com",
         "mot_de_passe": "$2y$10$T7.XhFQYLX2Zu.x2uEa8ZORH1rWJriOQKdUiKcmLNd8b8ah.0qbU.",
-        "role": "utilisateur",
+        "role": "client",
         "date_inscription": "16-03-2025 19:10:05",
         "date_connexion": "24-03-2025 09:55:47"
     },
