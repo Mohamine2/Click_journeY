@@ -108,11 +108,7 @@ if (!isset($_SESSION["transaction"])) {
                 <input type="number" name="nb_personnes" id="nb_personnes" min="1" value="1" required> Nombre de personnes: </input> 
 
                 <p>Choisissez votre type d'hébergement:</p>
-<<<<<<< HEAD
-                <select name="hebergement" id="hebergement-select">
-=======
                 <select name="hebergement" id="hebergement">
->>>>>>> 0794d0697b89ba559d75ad1ba7e3b329da7624e1
                     <option value="Hotel">Hôtel</option>
                     <option value="Maison d'hotes" selected="selected">Maison d'hôtes</option>
                     <option value="Appartement">Appartement</option>
