@@ -134,7 +134,7 @@ if (!isset($_SESSION["transaction"])) {
                     <select name="transports[<?= $i ?>]">
                         <option value="Autonome" selected="selected">Autonome</option>
                         <option value="navette">Navette collective</option>
-                        <option value="taxindiv">Taxis individuels</option>
+                        <option value="Taxi individuel">Taxis individuels</option>
                     </select>
 
                     <p>Choisissez votre formule restauration:</p>

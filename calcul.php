@@ -12,7 +12,7 @@ $tarifs = [
     "transport" => [
         "Autonome" => 0,
         "navette" => 15,
-        "taxindiv" => 30
+        "Taxi individuel" => 30
     ],
     "restauration" => [
         "Aucune" => 0,
