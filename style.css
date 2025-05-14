@@ -912,6 +912,8 @@ button.admin{
     cursor: pointer;
     user-select: none;
     font-size: 18px;
+    width : 24px;
+    height : 24px;
 }
 
 /*///////////// profil ////////////////////*/
