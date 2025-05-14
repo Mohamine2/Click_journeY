@@ -109,16 +109,11 @@ if (!isset($_SESSION["transaction"])) {
 
                 <p>Choisissez votre type d'hébergement:</p>
                 <select name="hebergement" id="hebergement">
-                    <option value="Hotel">Hôtel</option>
-                    <option value="Maison d'hotes" selected="selected">Maison d'hôtes</option>
-                    <option value="Appartement">Appartement</option>
                 </select>
 
                 <p>Choix de l'aéroport de départ:</p>
                 <select name="aeroport_depart" id="aeroport_depart">
-                    <option value="Paris" selected="selected">Paris</option>
-                    <option value="Marseille">Marseille</option>
-                    <option value="Lyon">Lyon</option>
+
                 </select>
 
                 <?php for ($i = 1; $i <= $jours; $i++) { ?>
@@ -126,30 +121,23 @@ if (!isset($_SESSION["transaction"])) {
 
                     <p>Participation aux activités ?</p>
                     <select name="activites[<?= $i ?>]" id="activites_<?= $i ?>">
-                        <option value="Oui" >Oui</option>
-                        <option value="Non" selected="selected">Non</option>
+
                     </select>
 
                     <p>Choisissez votre moyen de transport:</p>
                     <select name="transports[<?= $i ?>]" id="transports_<?= $i ?>">
-                        <option value="Autonome" selected="selected">Autonome</option>
-                        <option value="navette">Navette collective</option>
-                        <option value="Taxi individuel">Taxis individuels</option>
+            
                     </select>
 
                     <p>Choisissez votre formule restauration:</p>
                     <select name="restauration[<?= $i ?>]" id="restauration_<?= $i ?>">
-                        <option value="Aucune" selected="selected" >Aucune</option>
-                        <option value="Demi-pension">Demi-pension</option>
-                        <option value="Pension complète">Pension complète</option>
+                        
                     </select>
                 <?php } ?>
 
                 <p>Choix de l'aéroport de retour:</p>
                 <select name="aeroport_retour" id="aeroport_retour">
-                    <option value="Paris" selected="selected">Paris</option>
-                    <option value="Marseille">Marseille</option>
-                    <option value="Lyon">Lyon</option>
+                    
                 </select>
                 <br><br>
 

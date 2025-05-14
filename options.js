@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         transports: [
             { value: "Autonome", label: "Autonome", selected: true },
             { value: "navette", label: "Navette collective" },
-            { value: "taxindiv", label: "Taxis individuels" }
+            { value: "Taxi individuel", label: "Taxis individuels" }
         ],
         restauration: [
             { value: "Aucune", label: "Aucune", selected: true },
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fonction pour remplir dynamiquement un select avec des options
     function remplirSelect(selectId, options) {
         const selectElement = document.getElementById(selectId);
-        selectElement.innerHTML = ""; // Vide le select avant d'ajouter les options
 
         options.forEach(option => {
             const optionElement = document.createElement("option");
