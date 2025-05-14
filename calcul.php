@@ -27,7 +27,10 @@ $tarifs = [
 
 $prix = floatval($data['prixBase']);
 $jours = intval($data['jours']);
-$nb_personnes = intval($data['nb_personnes']);
+$adultes = intval($data['adultes']);
+$enfants = intval($data['enfants']);
+$enfants = 0.5*$enfants;
+$nb_personnes = $adultes + $enfants;
 $prix += $tarifs["hebergement"][$data["hebergement"]] * $jours;
 
 foreach ($data['joursDetails'] as $jour) {

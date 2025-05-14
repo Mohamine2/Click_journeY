@@ -22,22 +22,28 @@ const tarifs = {
 };
 
 
-let hebergement, transportInputs, restoInputs, activiteInputs, prixBase, prixAffichage, nb_personnes_input;
+let hebergement, transportInputs, restoInputs, activiteInputs, prixBase, prixAffichage, adultes_input,enfants_input;
 
 async function recalculerPrixJSON() {
     let total = parseFloat(prixBase.value) || 0;
     let jours = parseInt(document.getElementById("duree").value);
-    let nb_personnes = parseInt(nb_personnes_input.value);
+    let adultes = parseInt(adultes_input.value);
+    let enfants = parseInt(enfants_input.value);
 
-    if (isNaN(nb_personnes) || nb_personnes < 1) {
-        nb_personnes = 1;
+    if (isNaN(adultes) || adultes < 1) {
+        adultes = 1;
+    }
+
+    if (isNaN(enfants) || enfants < 0) {
+        enfants = 0;
     }
 
     // Création de l'objet à envoyer
     let donnees = {
         prixBase: total,
         jours: jours,
-        nb_personnes: nb_personnes,
+        adultes: adultes,
+        enfants: enfants,
         hebergement: hebergement.value,
         joursDetails: []
     };
@@ -73,7 +79,8 @@ async function recalculerPrixJSON() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    nb_personnes_input = document.getElementById("nb_personnes");
+    adultes_input = document.getElementById("adultes");
+    enfants_input = document.getElementById("enfants");
     prixAffichage = document.getElementById("prix-affichage");
     hebergement = document.querySelector('select[name="hebergement"]');
     transportInputs = document.querySelectorAll('select[name^="transports"]');
@@ -86,5 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
         selects[i].addEventListener("change", recalculerPrixJSON);
     }
 
-    nb_personnes_input.addEventListener("input",recalculerPrixJSON);
+    adultes_input.addEventListener("input",recalculerPrixJSON);
+    enfants_input.addEventListener("input",recalculerPrixJSON);
 });

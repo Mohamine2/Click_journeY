@@ -30,7 +30,8 @@
         }
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $nb_personnes = $_POST['nb_personnes'];
+        $adultes = $_POST['adultes'];
+        $enfants = $_POST['enfants'];
         $hebergement = $_POST['hebergement'];
         $aeroport_depart = $_POST['aeroport_depart'];
         $aeroport_retour = $_POST['aeroport_retour'];
@@ -92,7 +93,7 @@
     <p><strong>Aéroport de départ :</strong> <?= htmlspecialchars($aeroport_depart) ?></p>
     <p><strong>Date de départ :</strong> <?= htmlspecialchars($date_depart) ?></p>
     <p><strong>Durée :</strong> <?= htmlspecialchars($duree) ?></p>
-    <p><strong>Nombre de personnes :</strong> <?= htmlspecialchars($nb_personnes) ?></p>
+    <p><strong>Nombre de personnes :</strong> <?= htmlspecialchars($adultes) ?> adulte(s) et <?= htmlspecialchars($enfants) ?> enfant(s) </p>
     <p><strong>Hébergement: </strong> <?= htmlspecialchars($hebergement) ?></p>
     <p><strong>Aéroport de retour :</strong> <?= htmlspecialchars($aeroport_retour) ?></p>
     <?php for ($i=1;$i<=$jours;$i++){ ?>

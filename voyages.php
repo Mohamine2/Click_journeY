@@ -105,7 +105,8 @@ if (!isset($_SESSION["transaction"])) {
             <div class="personnalisation">
                 <p><b>Personnalisez le séjour:</b></p>
 
-                <input type="number" name="nb_personnes" id="nb_personnes" min="1" value="1" required> Nombre de personnes: </input> 
+                <input type="number" name="adultes" id="adultes" min="1" value="1" required> Adulte(s)    </input>
+                <input type="number" name="enfants" id="enfants" min="0" value="0" required> Enfant(s)    </input> 
 
                 <p>Choisissez votre type d'hébergement:</p>
                 <select name="hebergement" id="hebergement">
