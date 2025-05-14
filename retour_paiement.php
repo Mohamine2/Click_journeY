@@ -14,7 +14,7 @@ if (!isset($_GET["transaction"]) || !isset($_GET["montant"]) || !isset($_GET["ve
 
 // Récupérer et nettoyer les valeurs reçues
 $transaction = trim($_GET["transaction"]); 
-$montant = number_format(floatval($_GET["montant"]), 2, ".", ""); // Assurer le bon format
+$prix = trim($_GET["montant"]);
 $vendeur = trim($_GET["vendeur"]);
 $status = trim($_GET["status"]);
 $control_recu = trim($_GET["control"]);
@@ -24,7 +24,7 @@ $destination = trim($_GET['dest']);
 $api_key = getAPIKey($vendeur);
 
 // Générer la valeur de contrôle attendue
-$control_attendu = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $status . "#");
+$control_attendu = md5($api_key . "#" . $transaction . "#" . $prix . "#" . $vendeur . "#" . $status . "#");
 
 // Vérifier si la valeur de contrôle reçue est correcte
 if ($control_recu !== $control_attendu) {
@@ -54,7 +54,7 @@ else {
                     "email" => $_SESSION["utilisateur"]["email"],
                     "numero_transaction" => $transaction,
                     "date_commande" => $date_du_jour,
-                    "prix" => $montant,
+                    "prix" => $prix,
                     "destination" => $destination
                 ];
             
@@ -109,7 +109,7 @@ else {
     <h1>Confirmation de Paiement</h1>
     <p><?= htmlspecialchars($message_paiement) ?></p>
     <p><strong>Numéro de transaction :</strong> <?= htmlspecialchars($transaction) ?></p>
-    <p><strong>Montant :</strong> <?= number_format($montant, 2, ",", " ") ?> €</p>
+    <p><strong>Montant :</strong> <?= number_format($prix, 2, ",", " ") ?> €</p>
     <p><strong>Statut :</strong> <?php 
         if ($status === "accepted") { 
             echo "Accepté, votre paiement a été validé avec succès.";

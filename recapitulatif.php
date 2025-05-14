@@ -26,7 +26,6 @@
         if ($voyage["destination"] == $destination) {
             $date_depart=$voyage['date_depart'];
             $duree=$voyage['duree'];
-            $prix_base=$voyage['prix'];
             $jours=$voyage['duree'];
         }
     }
@@ -56,7 +55,7 @@
 <html lang="fr">
 
 <head>
-    <script src="panier.js" defer></script>
+    <script src="panier.js" ></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css"/>
