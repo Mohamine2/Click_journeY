@@ -108,14 +108,18 @@ if (!isset($_SESSION["transaction"])) {
                 <input type="number" name="nb_personnes" id="nb_personnes" min="1" value="1" required> Nombre de personnes: </input> 
 
                 <p>Choisissez votre type d'hébergement:</p>
+<<<<<<< HEAD
                 <select name="hebergement" id="hebergement-select">
+=======
+                <select name="hebergement" id="hebergement">
+>>>>>>> 0794d0697b89ba559d75ad1ba7e3b329da7624e1
                     <option value="Hotel">Hôtel</option>
                     <option value="Maison d'hotes" selected="selected">Maison d'hôtes</option>
                     <option value="Appartement">Appartement</option>
                 </select>
 
                 <p>Choix de l'aéroport de départ:</p>
-                <select name="aeroport_depart">
+                <select name="aeroport_depart" id="aeroport_depart">
                     <option value="Paris" selected="selected">Paris</option>
                     <option value="Marseille">Marseille</option>
                     <option value="Lyon">Lyon</option>
@@ -125,20 +129,20 @@ if (!isset($_SESSION["transaction"])) {
                     <p><h3>Jour <?= $i ?> : </h3></p>
 
                     <p>Participation aux activités ?</p>
-                    <select name="activites[<?= $i ?>]">
+                    <select name="activites[<?= $i ?>]" id="activites_<?= $i ?>">
                         <option value="Oui" >Oui</option>
                         <option value="Non" selected="selected">Non</option>
                     </select>
 
                     <p>Choisissez votre moyen de transport:</p>
-                    <select name="transports[<?= $i ?>]">
+                    <select name="transports[<?= $i ?>]" id="transports_<?= $i ?>">
                         <option value="Autonome" selected="selected">Autonome</option>
                         <option value="navette">Navette collective</option>
                         <option value="Taxi individuel">Taxis individuels</option>
                     </select>
 
                     <p>Choisissez votre formule restauration:</p>
-                    <select name="restauration[<?= $i ?>]">
+                    <select name="restauration[<?= $i ?>]" id="restauration_<?= $i ?>">
                         <option value="Aucune" selected="selected" >Aucune</option>
                         <option value="Demi-pension">Demi-pension</option>
                         <option value="Pension complète">Pension complète</option>
@@ -146,7 +150,7 @@ if (!isset($_SESSION["transaction"])) {
                 <?php } ?>
 
                 <p>Choix de l'aéroport de retour:</p>
-                <select name="aeroport_retour">
+                <select name="aeroport_retour" id="aeroport_retour">
                     <option value="Paris" selected="selected">Paris</option>
                     <option value="Marseille">Marseille</option>
                     <option value="Lyon">Lyon</option>
@@ -170,6 +174,7 @@ if (!isset($_SESSION["transaction"])) {
         <button id="bouton-mode">Mode sombre</button>
     </footer>
 
+    <script src="options.js"></script>
     <script src="mode_sombre.js"></script>
 </body>
 </html>
