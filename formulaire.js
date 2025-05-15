@@ -140,18 +140,21 @@ document.addEventListener("DOMContentLoaded", function () {
         field.parentNode.insertBefore(wrapper, field); 
         wrapper.appendChild(field);
 
-        const eye = document.createElement("img");
-        eye.src = "images/oeil2.png"; // par défaut, mot de passe masqué
-        eye.alt = "Afficher/Masquer le mot de passe";
-        eye.classList.add("eye-icon");
-        wrapper.appendChild(eye)
+        const eye = document.createElement("span");
+        eye.classList.add("eye-icon", "eye-hidden");
+        wrapper.appendChild(eye);
+
+        eye.classList.add("eye-hidden");
+
+
 
         // effet du clique (mode texte/mdp)
         eye.addEventListener("click", () => {
             const isPassword = field.type === "password";
             field.type = isPassword ? "text" : "password";
-            eye.src = isPassword ? "images/oeil1.png" : "images/oeil2.png";
 
+            eye.classList.toggle("eye-hidden", !isPassword); // change oeil2 ou oeil4
+            eye.classList.toggle("eye-visible", isPassword); // change oeil1 ou oeil3
         });
     });
 }); 

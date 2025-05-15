@@ -906,6 +906,10 @@ button.admin{
 }
 
 .eye-icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+
     position: absolute;
     right: 10px;
     bottom: 7px;
@@ -916,6 +920,21 @@ button.admin{
     height : 24px;
 }
 
+/* mode clair */
+.eye-icon.eye-hidden {
+    background-image: url("images/oeil2.png");
+}
+.eye-icon.eye-visible {
+    background-image: url("images/oeil1.png");
+}
+
+/* mode sombre */
+.dark-mode .eye-icon.eye-hidden {
+    background-image: url("images/oeil4.png"); 
+}
+.dark-mode .eye-icon.eye-visible {
+    background-image: url("images/oeil3.png"); 
+}
 /*///////////// profil ////////////////////*/
 
 /*inspiré de .voyage */
