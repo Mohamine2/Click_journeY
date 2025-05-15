@@ -922,18 +922,18 @@ button.admin{
 
 /* mode clair */
 .eye-icon.eye-hidden {
-    background-image: url("images/oeil2.png");
+    background-image: url("images/oeil1.png");
 }
 .eye-icon.eye-visible {
-    background-image: url("images/oeil1.png");
+    background-image: url("images/oeil2.png");
 }
 
 /* mode sombre */
 .dark-mode .eye-icon.eye-hidden {
-    background-image: url("images/oeil4.png"); 
+    background-image: url("images/oeil3.png"); 
 }
 .dark-mode .eye-icon.eye-visible {
-    background-image: url("images/oeil3.png"); 
+    background-image: url("images/oeil4.png"); 
 }
 /*///////////// profil ////////////////////*/
 
