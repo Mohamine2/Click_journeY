@@ -1,55 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const champs = document.querySelectorAll(".champ-editable");  // prends les 2 types de blocs
-    const Soumettre = document.getElementById("Soumettre");
-    let modifications = new Set();
-  
-    champs.forEach(champ => {
+  const champsEditables = document.querySelectorAll(".champ-editable");
+  const boutonSoumettre = document.getElementById("Soumettre");
+  let modificationValidee = false;
+
+  champsEditables.forEach(champ => {
       const input = champ.querySelector("input");
-      const Modifier = champ.querySelector(".modifier");
-      const Valider = champ.querySelector(".valider");
-      const Annuler = champ.querySelector(".annuler");
-      const valeurInitiale = input.value;
-  
-      Modifier.addEventListener("click", () => {
-        input.disabled = false;
-        Modifier.style.display = "none";
-        Valider.style.display = "inline";
-        Annuler.style.display = "inline";
+      const boutonModifier = champ.querySelector(".modifier");
+      const boutonValider = champ.querySelector(".valider");
+      const boutonAnnuler = champ.querySelector(".annuler");
+
+      let ancienneValeur = input.value;
+
+      boutonModifier.addEventListener("click", () => {
+          input.removeAttribute("readonly");
+          boutonModifier.style.display = "none";
+          boutonValider.style.display = "inline";
+          boutonAnnuler.style.display = "inline";
+          ancienneValeur = input.value;
       });
-  
-      Annuler.addEventListener("click", () => {
-        input.value = valeurInitiale;
-        input.disabled = true;
-        Modifier.style.display = "inline";
-        Valider.style.display = "none";
-        Annuler.style.display = "none";
-        modifications.delete(input.name);
-        Soumettre.style.display = modifications.size > 0 ? "block" : "none";
+
+      boutonAnnuler.addEventListener("click", () => {
+          input.value = ancienneValeur;
+          input.setAttribute("readonly", true);
+          boutonModifier.style.display = "inline";
+          boutonValider.style.display = "none";
+          boutonAnnuler.style.display = "none";
       });
-  
-      Valider.addEventListener("click", () => {
-        input.disabled = true;
-        Modifier.style.display = "inline";
-        Valider.style.display = "none";
-        Annuler.style.display = "none";
-  
-        if (input.value !== valeurInitiale) {
-          modifications.add(input.name);
-        } else {
-          modifications.delete(input.name);
-        }
-  
-        Soumettre.style.display = modifications.size > 0 ? "block" : "none";
+
+      boutonValider.addEventListener("click", () => {
+          input.setAttribute("readonly", true);
+          boutonModifier.style.display = "inline";
+          boutonValider.style.display = "none";
+          boutonAnnuler.style.display = "none";
+
+          modificationValidee = true;
+          boutonSoumettre.style.display = "inline";
       });
-    });
-  
-    // Réactive les champs avant envoi du formulaire
-    const form = document.getElementById("form-profil");
-    form.addEventListener("submit", () => {
-      champs.forEach(champ => {
-        const input = champ.querySelector("input");
-        input.disabled = false;
-      });
-    });
   });
-  
+
+  document.getElementById("form-profil").addEventListener("submit", function (e) {
+      e.preventDefault(); // Empêche le rechargement de la page
+
+      const formData = new FormData(this);
+
+      fetch("modifier_profil.php", {
+          method: "POST",
+          body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.succes) {
+              alert("Modifications enregistrées avec succès !");
+              boutonSoumettre.style.display = "none";
+          } else {
+              alert("Erreur : " + data.message);
+          }
+      })
+      .catch(error => {
+          console.error("Erreur lors de l'envoi du formulaire :", error);
+          alert("Une erreur est survenue lors de la communication avec le serveur.");
+      });
+  });
+});
