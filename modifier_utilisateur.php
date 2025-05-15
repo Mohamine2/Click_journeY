@@ -72,7 +72,10 @@ $user = $utilisateurs[$id];
         <option value="admin" <?= $user['role'] === 'admin' ? 'selected' : '' ?>>Admin</option>
     </select>
 
-    <button type="submit">Enregistrer</button>
+    <button type="submit" id="enregistrer-btn">Enregistrer</button>
+    <button type="button" id="supprimer-btn">Supprimer l'utilisateur</button>
+
+
     <!-- From Uiverse.io by barisdogansutcu --> 
     <span id="loader" style="display:none;">
     <svg id="tkt" viewBox="25 25 50 50" width="40" height="40">

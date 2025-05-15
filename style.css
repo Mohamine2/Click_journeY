@@ -200,6 +200,8 @@ footer {
     border: 1px solid white;
 
 }
+
+
 /*code utile à toutes les pages*/
 
 header {
@@ -864,6 +866,25 @@ button.admin{
     text-decoration: none;
 }
 
+#supprimer-btn{
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    color: white;
+    background-color: #d02424;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+#supprimer-btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 /*code utile à la page résultat*/
 
