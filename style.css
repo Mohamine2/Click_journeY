@@ -204,58 +204,51 @@ footer {
 
 /*code utile à toutes les pages*/
 
-header {
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #c2821c;
-    border: none;
-    font-size: 50px;
-    padding-left: 2cm;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 0 20px;
+    height: 100px;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
 
-header > a{
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
     text-decoration: none;
     color: white;
-}
-
-
-nav {
-    display: flex;         /* Active le mode flexbox */
-    align-items: center;   /* Centre verticalement */
-    justify-content: space-between; /* Répartit les éléments */
-    background-color: #f0f0f0;
-    padding: 10px 20px;
+    font-weight: bold;
 }
 
 a{
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 li a:hover{
     display: inline-block;
     transform:scale(1.1);
 }
-
-nav ul {
-    list-style: none; /* Supprime les puces */
-    display: flex;    /* Met les <li> en ligne */
-    gap: 20px;        /* Espacement entre les liens */
-    padding: 0;
-    margin: 0;
+nav li.logo img {
+    height: 90px;
+    display: block;
 }
 
-nav li {
-    display: inline;
+nav form {
+    display: flex;
+    align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.barre input {
+nav input[type="search"] {
     padding: 5px;
     font-size: 16px;
     border: 1px solid #ccc;

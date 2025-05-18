@@ -45,13 +45,14 @@ if (!empty($utilisateur["date_inscription"])) {
     <title>Profil - Dunes Seekers</title>
   </head>
   <body>
-    <header>
-      <a href="accueil.php"> Dunes Seekers </a>
-    </header>
 
     <nav>
       <ul>
-        <li><a href="accueil.php"> Accueil </a></li>
+      <li class="logo">
+            <a href="accueil.php">
+                <img src="images/logov2.png" alt="Logo Dunes Seekers">
+            </a>
+        </li>
         <li><a href="recherche.php"> Recherche </a></li>
         <?php if(!isset($_SESSION["utilisateur"])): ?>
             <li><a href="connexion.php"> Connectez-vous</a></li>
