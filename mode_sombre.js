@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-        const toggleButton = document.getElementById('bouton-mode');
+        const bouton = document.getElementById('bouton-mode');
         const html = document.documentElement;
 
         // Lire un cookie spécifique
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function updateButtonText() {
-            toggleButton.textContent = html.classList.contains('dark-mode')
+            bouton.textContent = html.classList.contains('dark-mode')
                 ? 'Mode clair'
                 : 'Mode sombre';
         }
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         updateButtonText();
 
-        toggleButton.addEventListener('click', () => {
+        bouton.addEventListener('click', () => {
             html.classList.toggle('dark-mode');
             const newTheme = html.classList.contains('dark-mode') ? 'dark' : 'light';
             setCookie('theme', newTheme);
