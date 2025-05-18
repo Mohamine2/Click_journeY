@@ -77,18 +77,18 @@ if (!empty($utilisateur["date_inscription"])) {
 
   <div class="champ-non-editable">
    <label>Email :</label>
-   <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" disabled>
+   <input type="email" name="email" value="<?= htmlspecialchars($utilisateur["email"]) ?>" readonly>
   </div>
 
   <div class="champ-non-editable">
   <label>Numéro :</label>
-   <input type="numero" name="numero" value="<?= htmlspecialchars($utilisateur["numero"]) ?>" disabled>
+   <input type="numero" name="numero" value="<?= htmlspecialchars($utilisateur["numero"]) ?>" readonly>
   </div>
 
 
   <div class="champ-editable">
     <label>Nom :</label>
-    <input type="text" name="nom" value="<?= htmlspecialchars($utilisateur["nom"]) ?>" disabled>
+    <input type="text" name="nom" value="<?= htmlspecialchars($utilisateur["nom"]) ?>" readonly>
     <button type="button" class="modifier">Modifier</button>
     <button type="button" class="valider" style="display:none;">Valider</button>
     <button type="button" class="annuler" style="display:none;">Annuler</button>
@@ -96,7 +96,7 @@ if (!empty($utilisateur["date_inscription"])) {
 <br>
   <div class="champ-editable">
     <label>Prénom :</label>
-    <input type="text" name="prenom" value="<?= htmlspecialchars($utilisateur["prenom"]) ?>" disabled>
+    <input type="text" name="prenom" value="<?= htmlspecialchars($utilisateur["prenom"]) ?>" readonly>
     <button type="button" class="modifier">Modifier</button>
     <button type="button" class="valider" style="display:none;">Valider</button>
     <button type="button" class="annuler" style="display:none;">Annuler</button>
