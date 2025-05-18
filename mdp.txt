@@ -12,7 +12,8 @@ Fichier pour permettre au chargé de TD de tester les connexions puisque les mot
 "email": "roidespirates@gmail.com"
 "mot_de_passe": "LUFFY"
 
-
+"email": "mouus@gmail.com",
+"mot_de_passe": "LACHGAR"
 
 "email": "oc@yahoo.fr",
 "mot_de_passe": "memoire"

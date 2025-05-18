@@ -59,7 +59,7 @@ $user = $utilisateurs[$id];
 
     <form id="form-modification" method="post" class="form_inscription">
     <input type="hidden" name="id" value="<?= $id ?>">
-
+    
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" value="<?= htmlspecialchars($user['nom']) ?>" required>
 

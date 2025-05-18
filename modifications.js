@@ -35,9 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Attendre 2 secondes puis rediriger
                 setTimeout(() => {
-                    // Récupérer le numéro de page éventuellement dans un champ caché
-                    const page = form.querySelector('input[name="page"]')?.value || 1;
-                    window.location.href = `admin.php?page=${page}&modif=ok`;
+                    window.location.href = `admin.php?modif=ok`;
                 }, 2000);
             } else {
                 ok.textContent = "Erreur: " + result;

@@ -27,7 +27,7 @@
         "mot_de_passe": "$2y$10$eN.YbcXx6Y1wetr7oze.4eTRdXi5zb6ANDVU\/U1luPK1DuvI4KXs6",
         "role": "admin",
         "date_inscription": "14-03-2025 08:42:36",
-        "date_connexion": "15-05-2025 17:12:31"
+        "date_connexion": "18-05-2025 19:56:14"
     },
     {
         "nom": "lachgar BOUACHRA",
@@ -37,7 +37,7 @@
         "mot_de_passe": "$2y$10$T7.XhFQYLX2Zu.x2uEa8ZORH1rWJriOQKdUiKcmLNd8b8ah.0qbU.",
         "role": "client",
         "date_inscription": "16-03-2025 19:10:05",
-        "date_connexion": "24-03-2025 09:55:47"
+        "date_connexion": "18-05-2025 20:00:33"
     },
     {
         "nom": "kaizoku",
@@ -120,16 +120,6 @@
         "date_connexion": "17-04-2025 15:54:27"
     },
     {
-        "nom": "aaa",
-        "prenom": "kk",
-        "numero": "0215246454",
-        "email": "kopk@gmail.com",
-        "mot_de_passe": "$2y$10$RRKPYKxAwt27ikqkPB3UzO75rzBn5RjI5ZV7jVj82xN7mPxFUm4Nu",
-        "role": "utilisateur",
-        "date_inscription": "17-04-2025 16:19:07",
-        "date_connexion": "17-04-2025 16:20:12"
-    },
-    {
         "nom": "sa",
         "prenom": "ko",
         "numero": "0123554456",
@@ -141,11 +131,11 @@
     },
     {
         "nom": "kja",
-        "prenom": "jiojoi",
+        "prenom": "jiojo",
         "numero": "0545646879",
         "email": "tik@gmail.com",
         "mot_de_passe": "$2y$10$mT2B.TfaFMbAmACNgZBXFuG7wbsdtueCvMu\/H3QRzum3zJ3vLRci6",
-        "role": "utilisateur",
+        "role": "client",
         "date_inscription": "17-04-2025 16:31:47",
         "date_connexion": " "
     },
