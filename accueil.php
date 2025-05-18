@@ -21,7 +21,7 @@
     <nav>
         <ul>
         <li class="logo">
-            <a href="accueil.php">
+            <a href="accueil.php"> 
                 <img src="images/logov2.png" alt="Logo Dunes Seekers">
             </a>
         </li>
