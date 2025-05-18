@@ -7,7 +7,7 @@ $searchQuery = isset($_GET['q']) ? $_GET['q'] : '';
 
 // Vérifier si l'utilisateur est connecté
 if (isset($_SESSION["utilisateur"])) {
-    // Rediriger vers la page de connexion si non connecté
+    // Rediriger vers la page profil si l'utilisateur est connecté
     header("Location: profil.php");
     exit();
 }
