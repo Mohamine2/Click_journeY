@@ -40,7 +40,7 @@ Un espace **administrateur** est également disponible pour gérer les voyages e
    git clone https://github.com/Mohamine2/Click_journeY.git
 
 ## Sécurité (simplifiée pour projet scolaire)
--Utilisation des sessions PHP pour la gestion des utilisateurs connectés.
--Mots de passe stockés avec hashage (password_hash).
--Vérification côté serveur pour éviter les failles simples (ex: accès non autorisé à l’admin).
+- Utilisation des sessions PHP pour la gestion des utilisateurs connectés.
+- Mots de passe stockés avec hashage (password_hash).
+- Vérification côté serveur pour éviter les failles simples (ex: accès non autorisé à l’admin).
 
