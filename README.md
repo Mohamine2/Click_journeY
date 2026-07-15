@@ -1,46 +1,52 @@
-# 🌵 Dunes Seekers – Site de voyages dans le désert  
+# 🌵 Dunes Seekers – Desert Travel Platform
 
-## 📌 Description  
-**Desert Travel** est une application web développée dans le cadre d’un projet universitaire.  
-Elle permet aux utilisateurs de :  
-- Créer un compte et se connecter.  
-- Rechercher et consulter des voyages dans le désert.  
-- Personnaliser leur voyage avec différentes options.  
-- Voir le prix du voyage calculé dynamiquement en fonction des choix.  
-- Réserver/acheter un voyage directement en ligne.  
+**Dunes Seekers** is a web application developed as part of an academic project. It provides a comprehensive platform for users to discover, customize, and book desert expeditions.
 
-Un espace **administrateur** est également disponible pour gérer les voyages et les utilisateurs.  
+Key user features include:
+- Secure account creation and authentication.
+- Advanced search and exploration of desert travel itineraries.
+- Dynamic trip customization with various add-on options.
+- Real-time dynamic pricing calculated based on user selections.
+- Seamless online booking and purchase simulation.
 
----
-
-## 🚀 Fonctionnalités principales  
-- 🔑 **Gestion des comptes** : inscription, connexion et déconnexion sécurisées.  
-- 🗺️ **Recherche de voyages** : filtrage et affichage des offres disponibles.  
-- ⚡ **Personnalisation dynamique** : choix des options avec mise à jour en temps réel du prix (AJAX + JS).  
-- 🛒 **Réservation/Achat** : simulation d’achat avec enregistrement en base de données.  
-- 🛠️ **Espace Admin** : ajout, modification et suppression de voyages / gestion des utilisateurs.  
-- 🔄 **Requêtes asynchrones (AJAX)** pour améliorer l’expérience utilisateur (ex. mise à jour des prix sans rechargement de page).  
+A dedicated **Admin Dashboard** is also integrated to manage travel packages, bookings, and user accounts.
 
 ---
 
-## 🏗️ Technologies utilisées  
-- **Frontend :** HTML5, CSS3, JavaScript  
-- **Backend :** PHP  
-- **Base de données :** Fichiers JSON
-- **Asynchrone :** AJAX pour certaines requêtes  
-- **Gestion des sessions :** PHP Sessions  
+## 🚀 Key Features
+- **Account Management:** Secure registration, login, and logout functionalities.
+- **Travel Search Engine:** Intuitive filtering and display of available travel offers.
+- **Dynamic Customization:** Real-time price updates driven by JavaScript and AJAX based on selected trip options.
+- **Booking & Purchase:** Simulates an online checkout process and records orders directly in the database.
+- **Admin Dashboard:** Full CRUD capabilities (Create, Read, Update, Delete) for travel packages and user management.
+- **Asynchronous Requests (AJAX):** Enhanced User Experience (UX) allowing seamless pricing and data updates without page reloads.
 
 ---
 
+## 🛠️ Tech Stack
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend:** PHP
+- **Database:** JSON flat files
+- **Asynchronicity:** AJAX (Asynchronous JavaScript and XML)
+- **Session Management:** Native PHP Sessions
+
 ---
 
-## ⚙️ Installation & utilisation  
-1. **Cloner le projet** :  
+## ⚙️ Installation & Setup
+
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Mohamine2/Click_journeY.git
+   git clone [https://github.com/Mohamine2/Click_journeY.git](https://github.com/Mohamine2/Click_journeY.git)
+   ```
 
-## Sécurité (simplifiée pour projet scolaire)
-- Utilisation des sessions PHP pour la gestion des utilisateurs connectés.
-- Mots de passe stockés avec hashage (password_hash).
-- Vérification côté serveur pour éviter les failles simples (ex: accès non autorisé à l’admin).
+2. **Deployment**
+* Move the project folder to your local server directory (e.g., htdocs for XAMPP, www for WampServer).
+* Start your Apache server.
+* Access the application through your browser at `http://localhost/Click_journeY`.
 
+## 🛡️ Security (Academic Implementation)
+Note: Designed for educational purposes with simplified yet essential security layers.
+
+* **Session Security:** Native PHP sessions ensure strict user state management and access control.
+* **Credential Protection:** Passwords are securely processed using industry-standard hashing `password_hash`.
+* **Access Control:** Server-side route verification blocks unauthorized users from accessing administrative folders and dashboards.
